@@ -16,7 +16,7 @@ struct MathGameCardView: View {
                 Card1StressFactors()
                 VStack {
                     NavigationLink(
-                        destination: GameView(),
+                        destination: GameView(viewModel: GameViewModel()),
                         label: {
                             RoundedButton1(enabled: .constant(true),
                                            title: "Play",

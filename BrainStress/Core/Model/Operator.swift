@@ -18,7 +18,7 @@ enum Operator {
         case .add: return "+"
         case .substract: return "-"
         case .multiply: return "*"
-        case .division: return "."
+        case .division: return "/"
         }
     }
     

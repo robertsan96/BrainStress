@@ -13,6 +13,7 @@ struct Quiz {
     var items: [QuizItem]
     
     var category: Category
+    var difficulty: Difficulty
 }
 
 struct QuizItem {
