@@ -31,7 +31,7 @@ class GameModel: ObservableObject {
     
     @Published var timeRemainingQuizItem: Int = 5
     @Published var timeRemainingFeedback: Int = 2
-    @Published var timeRemainingFoWarmUp: Int = 5
+    @Published var timeRemainingFoWarmUp: Int = 0
     
     let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     var timerCancellables: Set<AnyCancellable> = Set()
@@ -74,7 +74,14 @@ extension GameModel {
         timeRemainingFoWarmUp -= 1
     }
     
-    func timerRanPlaying() {}
+    func timerRanPlaying() {
+        guard timeRemainingQuizItem > 0 else {
+            itemRemove()
+            itemLoad()
+            return
+        }
+        timeRemainingQuizItem -= 1
+    }
     
     func timerRanPaused() {}
     
@@ -105,6 +112,12 @@ extension GameModel {
             return
         }
         quizItem = firstItem
+        timeRemainingQuizItem = Int(quizItem?.time.time[quiz.difficulty] ?? 5)
+    }
+    
+    func itemRemove() {
+        guard quiz.items.first != nil else { return }
+        quiz.items.removeFirst()
     }
     
     func itemCheck() {}

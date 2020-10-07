@@ -11,6 +11,7 @@
 		460A7F14252C5E9200BD260F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F13252C5E9200BD260F /* Constants.swift */; };
 		46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */; };
 		46240C24252E5F8B000F34E7 /* GameWarmUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */; };
+		46240C29252E675E000F34E7 /* GameTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C28252E675E000F34E7 /* GameTopView.swift */; };
 		464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */; };
 		464E25CB252C8D5300BBB877 /* Card1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E25CA252C8D5300BBB877 /* Card1.swift */; };
 		465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF09F252B75D300524ED9 /* BrainStressApp.swift */; };
@@ -66,6 +67,7 @@
 		460A7F13252C5E9200BD260F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressFont.swift; sourceTree = "<group>"; };
 		46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWarmUpView.swift; sourceTree = "<group>"; };
+		46240C28252E675E000F34E7 /* GameTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopView.swift; sourceTree = "<group>"; };
 		464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToSoftwareKeyboard.swift; sourceTree = "<group>"; };
 		464E25CA252C8D5300BBB877 /* Card1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1.swift; sourceTree = "<group>"; };
 		465AF09C252B75D300524ED9 /* BrainStress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStress.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +294,7 @@
 				467FCFAF252CBEE300AF4A9B /* GameView.swift */,
 				467FCFDA252DC27700AF4A9B /* GameViewModel.swift */,
 				46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */,
+				46240C28252E675E000F34E7 /* GameTopView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -464,6 +467,7 @@
 				467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */,
 				46989000252C77BF006EF37B /* FilterButton.swift in Sources */,
 				467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */,
+				46240C29252E675E000F34E7 /* GameTopView.swift in Sources */,
 				467FCFC3252DB12100AF4A9B /* Difficulty.swift in Sources */,
 				467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */,
 				46988FFB252C7761006EF37B /* CategoryScroller.swift in Sources */,

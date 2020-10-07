@@ -17,7 +17,7 @@ struct QuizData {
         
         static func dummyLevel() -> Quiz {
             return Quiz(title: "Additions",
-                        items: QuizItemData.MathItems.generate(mathItems: 1, difficulty: .easy, qOperator: .add),
+                        items: QuizItemData.MathItems.generate(mathItems: 4, difficulty: .easy, qOperator: .add),
                         category: QuizCategoryData.math,
                         difficulty: .easy)
         }
