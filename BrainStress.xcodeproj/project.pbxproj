@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		460A7F03252C5D0C00BD260F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */; };
 		460A7F14252C5E9200BD260F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F13252C5E9200BD260F /* Constants.swift */; };
+		46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */; };
+		46240C24252E5F8B000F34E7 /* GameWarmUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */; };
 		464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */; };
 		464E25CB252C8D5300BBB877 /* Card1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464E25CA252C8D5300BBB877 /* Card1.swift */; };
 		465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF09F252B75D300524ED9 /* BrainStressApp.swift */; };
@@ -62,6 +64,8 @@
 /* Begin PBXFileReference section */
 		460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		460A7F13252C5E9200BD260F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressFont.swift; sourceTree = "<group>"; };
+		46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameWarmUpView.swift; sourceTree = "<group>"; };
 		464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToSoftwareKeyboard.swift; sourceTree = "<group>"; };
 		464E25CA252C8D5300BBB877 /* Card1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1.swift; sourceTree = "<group>"; };
 		465AF09C252B75D300524ED9 /* BrainStress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStress.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -146,6 +150,14 @@
 			path = Core;
 			sourceTree = "<group>";
 		};
+		46240C1A252E5EE6000F34E7 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 		464E25C9252C8D3300BBB877 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +194,7 @@
 				465AF0EC252B8FB400524ED9 /* Screens */,
 				465AF0D6252B8DF400524ED9 /* View */,
 				465AF0CD252B8D0000524ED9 /* Extensions */,
+				46240C1A252E5EE6000F34E7 /* Modifiers */,
 				465AF09F252B75D300524ED9 /* BrainStressApp.swift */,
 				465AF0A3252B75D500524ED9 /* Assets.xcassets */,
 				465AF0A8252B75D500524ED9 /* Info.plist */,
@@ -278,6 +291,7 @@
 			children = (
 				467FCFAF252CBEE300AF4A9B /* GameView.swift */,
 				467FCFDA252DC27700AF4A9B /* GameViewModel.swift */,
+				46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */,
 			);
 			path = Games;
 			sourceTree = "<group>";
@@ -443,8 +457,10 @@
 				465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */,
 				467FCF9C252CBCD700AF4A9B /* Card1Header.swift in Sources */,
 				46989005252C7D85006EF37B /* UIColor.swift in Sources */,
+				46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */,
 				465AF0EE252B900F00524ED9 /* EnrollView.swift in Sources */,
 				465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */,
+				46240C24252E5F8B000F34E7 /* GameWarmUpView.swift in Sources */,
 				467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */,
 				46989000252C77BF006EF37B /* FilterButton.swift in Sources */,
 				467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */,
