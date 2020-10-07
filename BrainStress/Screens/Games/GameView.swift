@@ -17,6 +17,9 @@ struct GameView: View {
         ZStack {
             BackgroundView().edgesIgnoringSafeArea(.all)
             VStack {
+                ForEach(QuizItemData.MathItems.generate(mathItems: 10, difficulty: .easy, qOperator: .add), id: \.text) { item in
+                    Text(item.text)
+                }
                 Text("\(String(timerDidEnd)) da")
                 GameTopView(timeRemaining: 5, timerDidEnd: $timerDidEnd)
                 Spacer()

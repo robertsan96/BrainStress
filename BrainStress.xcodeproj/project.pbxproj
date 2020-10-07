@@ -28,6 +28,10 @@
 		467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */; };
 		467FCFA7252CBD8700AF4A9B /* MathGameCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFA6252CBD8700AF4A9B /* MathGameCardView.swift */; };
 		467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFAF252CBEE300AF4A9B /* GameView.swift */; };
+		467FCFBB252DB01100AF4A9B /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFBA252DB01100AF4A9B /* QuizItem.swift */; };
+		467FCFC3252DB12100AF4A9B /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFC2252DB12100AF4A9B /* Difficulty.swift */; };
+		467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFC8252DB1E200AF4A9B /* Data.swift */; };
+		467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFD0252DB33D00AF4A9B /* Operator.swift */; };
 		46988FED252C6B22006EF37B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FEC252C6B22006EF37B /* MainView.swift */; };
 		46988FF3252C7559006EF37B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FF2252C7559006EF37B /* Category.swift */; };
 		46988FFB252C7761006EF37B /* CategoryScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FFA252C7761006EF37B /* CategoryScroller.swift */; };
@@ -80,6 +84,10 @@
 		467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1StressFactors.swift; sourceTree = "<group>"; };
 		467FCFA6252CBD8700AF4A9B /* MathGameCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathGameCardView.swift; sourceTree = "<group>"; };
 		467FCFAF252CBEE300AF4A9B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		467FCFBA252DB01100AF4A9B /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
+		467FCFC2252DB12100AF4A9B /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
+		467FCFC8252DB1E200AF4A9B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		467FCFD0252DB33D00AF4A9B /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		46988FEC252C6B22006EF37B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		46988FF2252C7559006EF37B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		46988FFA252C7761006EF37B /* CategoryScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScroller.swift; sourceTree = "<group>"; };
@@ -123,6 +131,7 @@
 		460A7F12252C5E8700BD260F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				467FCFC7252DB1D200AF4A9B /* Data */,
 				46988FF1252C754E006EF37B /* Model */,
 				460A7F01252C5CFF00BD260F /* Managers */,
 				460A7F13252C5E9200BD260F /* Constants.swift */,
@@ -262,10 +271,21 @@
 			path = Games;
 			sourceTree = "<group>";
 		};
+		467FCFC7252DB1D200AF4A9B /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				467FCFC8252DB1E200AF4A9B /* Data.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		46988FF1252C754E006EF37B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				46988FF2252C7559006EF37B /* Category.swift */,
+				467FCFBA252DB01100AF4A9B /* QuizItem.swift */,
+				467FCFC2252DB12100AF4A9B /* Difficulty.swift */,
+				467FCFD0252DB33D00AF4A9B /* Operator.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +425,7 @@
 				464E25CB252C8D5300BBB877 /* Card1.swift in Sources */,
 				467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */,
 				464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */,
+				467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */,
 				465AF0D8252B8E0A00524ED9 /* LogoView.swift in Sources */,
 				465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */,
 				467FCF9C252CBCD700AF4A9B /* Card1Header.swift in Sources */,
@@ -413,10 +434,13 @@
 				465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */,
 				467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */,
 				46989000252C77BF006EF37B /* FilterButton.swift in Sources */,
+				467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */,
+				467FCFC3252DB12100AF4A9B /* Difficulty.swift in Sources */,
 				467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */,
 				46988FFB252C7761006EF37B /* CategoryScroller.swift in Sources */,
 				460A7F03252C5D0C00BD260F /* UserDefaultsManager.swift in Sources */,
 				465AF0E5252B8EE100524ED9 /* RoundedButton1.swift in Sources */,
+				467FCFBB252DB01100AF4A9B /* QuizItem.swift in Sources */,
 				46988FF3252C7559006EF37B /* Category.swift in Sources */,
 				46988FED252C6B22006EF37B /* MainView.swift in Sources */,
 				465AF0CF252B8D0A00524ED9 /* Color.swift in Sources */,
