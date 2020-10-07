@@ -23,7 +23,7 @@ struct ContentView: View {
                     NavigationLink(
                         destination: nickname.isEmpty ?
                             AnyView(EnrollView()) :
-                            AnyView(HomeView(nickname: nickname)),
+                            AnyView(MainView(nickname: nickname)),
                         label: {
                             RoundedButton1(enabled: .constant(true), title: "Start")
                         })

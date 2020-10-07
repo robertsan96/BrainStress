@@ -1,5 +1,5 @@
 //
-//  ShapeCard.swift
+//  Card1.swift
 //  BrainStress
 //
 //  Created by Robert Sandru on 06/10/2020.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ShapeCard: View {
+struct Card1: View {
     
     var srAxisX = CGFloat(Int.random(in: 50...100))
     var srAxisY = CGFloat(Int.random(in: 200...300))
@@ -51,6 +51,6 @@ struct ShapeCard: View {
 
 struct ShapeCard_Previews: PreviewProvider {
     static var previews: some View {
-        ShapeCard().previewLayout(.fixed(width: 400, height: 400))
+        Card1().previewLayout(.fixed(width: 400, height: 400))
     }
 }
