@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2AAF0E14FE20276AA0AED992 /* Pods_BrainStressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */; };
+		31B4386EE88CD4391C40E706 /* Pods_BrainStress_BrainStressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E096370BBDEA694138C307E5 /* Pods_BrainStress_BrainStressUITests.framework */; };
 		460A7F03252C5D0C00BD260F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */; };
 		460A7F14252C5E9200BD260F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F13252C5E9200BD260F /* Constants.swift */; };
 		46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */; };
@@ -38,12 +40,15 @@
 		467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFD0252DB33D00AF4A9B /* Operator.swift */; };
 		467FCFD6252DB85000AF4A9B /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFD5252DB85000AF4A9B /* Double.swift */; };
 		467FCFDB252DC27700AF4A9B /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFDA252DC27700AF4A9B /* GameViewModel.swift */; };
+		4686DAEE252F6D590048B7C1 /* KeyboardObserving.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686DAED252F6D590048B7C1 /* KeyboardObserving.swift */; };
+		4686DAF3252F6D6D0048B7C1 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4686DAF2252F6D6D0048B7C1 /* View.swift */; };
 		46988FED252C6B22006EF37B /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FEC252C6B22006EF37B /* MainView.swift */; };
 		46988FF3252C7559006EF37B /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FF2252C7559006EF37B /* Category.swift */; };
 		46988FFB252C7761006EF37B /* CategoryScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FFA252C7761006EF37B /* CategoryScroller.swift */; };
 		46989000252C77BF006EF37B /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FFF252C77BF006EF37B /* FilterButton.swift */; };
 		46989005252C7D85006EF37B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46989004252C7D85006EF37B /* UIColor.swift */; };
 		46D90953252DF81900E40E6F /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D90952252DF81900E40E6F /* TestScreen.swift */; };
+		93032DFB78D07D2EFC407670 /* Pods_BrainStress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2742EA28EE527A66462709 /* Pods_BrainStress.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +69,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0D840A695BD3B7E1BAF296F7 /* Pods-BrainStress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress.debug.xcconfig"; path = "Target Support Files/Pods-BrainStress/Pods-BrainStress.debug.xcconfig"; sourceTree = "<group>"; };
+		380AC4173F7C9B229A464F85 /* Pods-BrainStressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStressTests.debug.xcconfig"; path = "Target Support Files/Pods-BrainStressTests/Pods-BrainStressTests.debug.xcconfig"; sourceTree = "<group>"; };
 		460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		460A7F13252C5E9200BD260F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressFont.swift; sourceTree = "<group>"; };
@@ -101,6 +108,8 @@
 		467FCFD0252DB33D00AF4A9B /* Operator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operator.swift; sourceTree = "<group>"; };
 		467FCFD5252DB85000AF4A9B /* Double.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		467FCFDA252DC27700AF4A9B /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		4686DAED252F6D590048B7C1 /* KeyboardObserving.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardObserving.swift; sourceTree = "<group>"; };
+		4686DAF2252F6D6D0048B7C1 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		46988FEC252C6B22006EF37B /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		46988FF2252C7559006EF37B /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		46988FFA252C7761006EF37B /* CategoryScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryScroller.swift; sourceTree = "<group>"; };
@@ -108,6 +117,13 @@
 		46989004252C7D85006EF37B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		46D9094E252DCDF900E40E6F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		46D90952252DF81900E40E6F /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9B4232A655BB98BB0233DC22 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress-BrainStressUITests.release.xcconfig"; path = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C8839068A2B54B3785DE3162 /* Pods-BrainStressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStressTests.release.xcconfig"; path = "Target Support Files/Pods-BrainStressTests/Pods-BrainStressTests.release.xcconfig"; sourceTree = "<group>"; };
+		CB2742EA28EE527A66462709 /* Pods_BrainStress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStress.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DFC4675DC0CA995753BC0DFD /* Pods-BrainStress-BrainStressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress-BrainStressUITests.debug.xcconfig"; path = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		E096370BBDEA694138C307E5 /* Pods_BrainStress_BrainStressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStress_BrainStressUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED3C714129E19E49F19B62F7 /* Pods-BrainStress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress.release.xcconfig"; path = "Target Support Files/Pods-BrainStress/Pods-BrainStress.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +131,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93032DFB78D07D2EFC407670 /* Pods_BrainStress.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AAF0E14FE20276AA0AED992 /* Pods_BrainStressTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,12 +147,26 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31B4386EE88CD4391C40E706 /* Pods_BrainStress_BrainStressUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0DC48F61D1860EA5A93625CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0D840A695BD3B7E1BAF296F7 /* Pods-BrainStress.debug.xcconfig */,
+				ED3C714129E19E49F19B62F7 /* Pods-BrainStress.release.xcconfig */,
+				DFC4675DC0CA995753BC0DFD /* Pods-BrainStress-BrainStressUITests.debug.xcconfig */,
+				9B4232A655BB98BB0233DC22 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */,
+				380AC4173F7C9B229A464F85 /* Pods-BrainStressTests.debug.xcconfig */,
+				C8839068A2B54B3785DE3162 /* Pods-BrainStressTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		460A7F01252C5CFF00BD260F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
@@ -158,6 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */,
+				4686DAED252F6D590048B7C1 /* KeyboardObserving.swift */,
 			);
 			path = Modifiers;
 			sourceTree = "<group>";
@@ -178,6 +211,8 @@
 				465AF0B0252B75D600524ED9 /* BrainStressTests */,
 				465AF0BB252B75D600524ED9 /* BrainStressUITests */,
 				465AF09D252B75D300524ED9 /* Products */,
+				0DC48F61D1860EA5A93625CA /* Pods */,
+				C0F8C943D6DB4AF34C362538 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -241,6 +276,7 @@
 				465AF0CE252B8D0A00524ED9 /* Color.swift */,
 				46989004252C7D85006EF37B /* UIColor.swift */,
 				467FCFD5252DB85000AF4A9B /* Double.swift */,
+				4686DAF2252F6D6D0048B7C1 /* View.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -321,6 +357,16 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		C0F8C943D6DB4AF34C362538 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CB2742EA28EE527A66462709 /* Pods_BrainStress.framework */,
+				E096370BBDEA694138C307E5 /* Pods_BrainStress_BrainStressUITests.framework */,
+				5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -328,9 +374,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 465AF0C1252B75D600524ED9 /* Build configuration list for PBXNativeTarget "BrainStress" */;
 			buildPhases = (
+				997F9EC32475F5CAD73E1B96 /* [CP] Check Pods Manifest.lock */,
 				465AF098252B75D300524ED9 /* Sources */,
 				465AF099252B75D300524ED9 /* Frameworks */,
 				465AF09A252B75D300524ED9 /* Resources */,
+				984B39932C2449F83C38290D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -345,6 +393,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 465AF0C4252B75D600524ED9 /* Build configuration list for PBXNativeTarget "BrainStressTests" */;
 			buildPhases = (
+				C840D512F4C9AD4EA1619C2D /* [CP] Check Pods Manifest.lock */,
 				465AF0A9252B75D600524ED9 /* Sources */,
 				465AF0AA252B75D600524ED9 /* Frameworks */,
 				465AF0AB252B75D600524ED9 /* Resources */,
@@ -363,9 +412,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 465AF0C7252B75D600524ED9 /* Build configuration list for PBXNativeTarget "BrainStressUITests" */;
 			buildPhases = (
+				E7E8578C1C344AB30B343B4D /* [CP] Check Pods Manifest.lock */,
 				465AF0B4252B75D600524ED9 /* Sources */,
 				465AF0B5252B75D600524ED9 /* Frameworks */,
 				465AF0B6252B75D600524ED9 /* Resources */,
+				00AD575F564BB1FC3512B88D /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -445,6 +496,109 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		00AD575F564BB1FC3512B88D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		984B39932C2449F83C38290D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrainStress/Pods-BrainStress-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BrainStress/Pods-BrainStress-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BrainStress/Pods-BrainStress-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		997F9EC32475F5CAD73E1B96 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrainStress-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C840D512F4C9AD4EA1619C2D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrainStressTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E7E8578C1C344AB30B343B4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-BrainStress-BrainStressUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		465AF098252B75D300524ED9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -452,6 +606,7 @@
 			files = (
 				465AF0A2252B75D300524ED9 /* ContentView.swift in Sources */,
 				467FCFA7252CBD8700AF4A9B /* MathGameCardView.swift in Sources */,
+				4686DAEE252F6D590048B7C1 /* KeyboardObserving.swift in Sources */,
 				460A7F14252C5E9200BD260F /* Constants.swift in Sources */,
 				46D90953252DF81900E40E6F /* TestScreen.swift in Sources */,
 				464E25CB252C8D5300BBB877 /* Card1.swift in Sources */,
@@ -461,6 +616,7 @@
 				46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */,
 				467FCFD6252DB85000AF4A9B /* Double.swift in Sources */,
 				465AF0D8252B8E0A00524ED9 /* LogoView.swift in Sources */,
+				4686DAF3252F6D6D0048B7C1 /* View.swift in Sources */,
 				465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */,
 				467FCF9C252CBCD700AF4A9B /* Card1Header.swift in Sources */,
 				46989005252C7D85006EF37B /* UIColor.swift in Sources */,
@@ -636,6 +792,7 @@
 		};
 		465AF0C2252B75D600524ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D840A695BD3B7E1BAF296F7 /* Pods-BrainStress.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -658,6 +815,7 @@
 		};
 		465AF0C3252B75D600524ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ED3C714129E19E49F19B62F7 /* Pods-BrainStress.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -680,6 +838,7 @@
 		};
 		465AF0C5252B75D600524ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 380AC4173F7C9B229A464F85 /* Pods-BrainStressTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -702,6 +861,7 @@
 		};
 		465AF0C6252B75D600524ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C8839068A2B54B3785DE3162 /* Pods-BrainStressTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -724,6 +884,7 @@
 		};
 		465AF0C8252B75D600524ED9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFC4675DC0CA995753BC0DFD /* Pods-BrainStress-BrainStressUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -744,6 +905,7 @@
 		};
 		465AF0C9252B75D600524ED9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9B4232A655BB98BB0233DC22 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

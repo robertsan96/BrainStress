@@ -16,7 +16,6 @@ struct GameTopView: View {
     
     var body: some View {
         VStack {
-            LogoView()
             HStack {
                 Button(action: {
                     showingQuitAlert.toggle()

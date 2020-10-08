@@ -30,18 +30,16 @@ struct GameEndView: View {
                         }
                     Text("CHICKEN\nDINNER")
                         .multilineTextAlignment(.center)
-                        .modifier(BrainStressFont(color: Color.white, size: 52))
-                        .scaleEffect(celebrateAnimationRunning ? 1 : 0.8)
-                        .animation(Animation
-                                    .linear(duration: 0.3)
-                                    .repeatForever(autoreverses: true))
+                        .modifier(BrainStressFont(size: 52))
+                        .scaleEffect(celebrateAnimationRunning ? 1 : 0)
+                        .animation(.linear(duration: 0.3))
                     Spacer()
                     Text(QuizMessageData
                                     .EndingMessages
                                     .winningMessages()
                                     .randomElement()!)
                         .multilineTextAlignment(.center)
-                        .modifier(BrainStressFont(color: Color.white, size: 24))
+                        .modifier(BrainStressFont(size: 24))
                         .scaleEffect(celebrateAnimationRunning ? 1 : 0)
                         .animation(.linear(duration: 0.3))
                 } else {
@@ -55,7 +53,7 @@ struct GameEndView: View {
                         }
                     Text("FAILED\n")
                         .multilineTextAlignment(.center)
-                        .modifier(BrainStressFont(color: Color.white, size: 68))
+                        .modifier(BrainStressFont(size: 68))
                         .scaleEffect(celebrateAnimationRunning ? 1 : 0)
                         .animation(.linear(duration: 0.1))
                     Text(QuizMessageData
@@ -63,7 +61,7 @@ struct GameEndView: View {
                             .failingMessages()
                             .randomElement()!)
                         .multilineTextAlignment(.center)
-                        .modifier(BrainStressFont(color: Color.white, size: 24))
+                        .modifier(BrainStressFont(size: 24))
                         .animation(.linear(duration: 0.3))
                 }
                 Spacer()

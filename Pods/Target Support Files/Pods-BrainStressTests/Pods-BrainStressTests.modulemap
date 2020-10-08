@@ -1,0 +1,6 @@
+framework module Pods_BrainStressTests {
+  umbrella header "Pods-BrainStressTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
