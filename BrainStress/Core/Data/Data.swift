@@ -17,7 +17,7 @@ struct QuizData {
         
         static func dummyLevel() -> Quiz {
             return Quiz(title: "Additions",
-                        items: QuizItemData.MathItems.generate(mathItems: 4, difficulty: .easy, qOperator: .add),
+                        items: QuizItemData.MathItems.generate(mathItems: 5, difficulty: .easy, qOperator: .add),
                         category: QuizCategoryData.math,
                         difficulty: .easy)
         }
@@ -63,6 +63,39 @@ struct QuizItemData {
                 generatedQuizItems.append(quizItem)
             }
             return generatedQuizItems
+        }
+    }
+}
+
+struct QuizMessageData {
+    
+    struct EndingMessages {
+        
+        static func winningMessages() -> [String] {
+            return [
+                "Nailed it!",
+                "You'll fail next time!",
+                "Don't feel so good about you.",
+                "Look at you shining!",
+                "OMG, this was good!",
+                "You're grounded!",
+                "Awesome! 😎",
+                "🥳🤩😍",
+                "Perfect!"
+            ]
+        }
+        
+        static func failingMessages() -> [String] {
+            return [
+                "Stressy?!",
+                "Plz don't uninstall the app, we'll provide easier ones :(. Kidding.",
+                "Better luck next time!",
+                "Failing is not an option, you say?",
+                "Ugh.. bad",
+                "Cool story, bro",
+                "I hope your day is as pleasant as your personality!",
+                "I don't care what everyone else says. I don't think you're that bad."
+            ]
         }
     }
 }

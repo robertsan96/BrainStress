@@ -20,8 +20,18 @@ class GameModel: ObservableObject {
     
     // Quiz
     
+    /// Used for score computing.
+    private let originalQuiz: Quiz
+    
     @Published var quiz: Quiz
     @Published var quizItem: QuizItem?
+    
+    @Published var quizItemsSolved: [QuizItem] = []
+    @Published var quizItemsFailed: [QuizItem] = []
+    
+    /// Array of strings (in case of multi choice items etc)
+    @Published var quizItemUAnswers: [String] = []
+    @Published var quizItemUAnswer: String = "" // will only be binded.
     
     // Current Game State
     
@@ -38,6 +48,7 @@ class GameModel: ObservableObject {
     
     init(quiz: Quiz) {
         self.quiz = quiz
+        self.originalQuiz = quiz
         
         timerConfig()
     }
@@ -76,6 +87,7 @@ extension GameModel {
     
     func timerRanPlaying() {
         guard timeRemainingQuizItem > 0 else {
+            itemCheck()
             itemRemove()
             itemLoad()
             return
@@ -98,7 +110,8 @@ extension GameModel {
     }
     
     func quizEnd() {
-        gameState = .end(win: true)
+        let won = quizItemsSolved.count == originalQuiz.items.count
+        gameState = .end(win: won)
     }
     
     func quizPause() {
@@ -120,5 +133,37 @@ extension GameModel {
         quiz.items.removeFirst()
     }
     
-    func itemCheck() {}
+    func itemCheck() {
+        guard let activeQuizItem = quizItem else { return }
+        switch activeQuizItem.answer.type {
+        case .text:
+            guard let firstAnswer = quizItemUAnswers.first,
+                  let textQuizAns = activeQuizItem.answer.answer.first,
+                  firstAnswer == textQuizAns else {
+                quizItemsFailed.append(activeQuizItem)
+                return
+            }
+            quizItemsSolved.append(activeQuizItem)
+            // That's required as we only need one entry for text answers per item.
+            quizItemUAnswers.removeAll()
+            quizItemUAnswer = ""
+        default: break
+        }
+    }
+    
+    /// Kind of hacky.
+    func addAnswerToList(answer: String) {
+        guard let activeQuizItem = quizItem else { return }
+        quizItemUAnswers.append(answer)
+        switch activeQuizItem.answer.type {
+        case .text:
+            itemCheck()
+            itemRemove()
+            itemLoad()
+        case .multipleChoice:
+            // We won't end the quiz item if multiple choice.
+            break
+        default: break
+        }
+    }
 }

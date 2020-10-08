@@ -21,11 +21,15 @@ struct GameView: View {
                     GameTopView()
                     Spacer()
                     GameMidView()
+                    Spacer()
                     GameBottomView()
                 }
+            case .end(_):
+                GameEndView()
             default: Text("Ok dk")
             }
         }
+        .modifier(AdaptsToSoftwareKeyboard())
     }
 }
 
@@ -46,7 +50,17 @@ struct GameMidView: View {
     
     var body: some View {
         VStack {
+            Spacer()
             Text("\(gameModel.quizItem?.text ?? "")")
+                .modifier(BrainStressFont(color: Color.pink, size: 36))
+            Spacer()
+            TextField("Your Answer", text: $gameModel.quizItemUAnswer, onCommit: {
+                gameModel.addAnswerToList(answer: gameModel.quizItemUAnswer)
+            })
+            .multilineTextAlignment(.center)
+            .modifier(BrainStressFont(color: Color.white, size: 46))
+            Spacer()
+            Spacer()
         }
     }
 }
