@@ -8,16 +8,20 @@
 import SwiftUI
 
 struct Card1Header: View {
+    
+    @State var title: String = ""
+    @State var description: String = ""
+    
     var body: some View {
         HStack {
-            Text("Maths")
+            Text(title)
                 .font(.custom("Marker Felt", size: 36))
                 .foregroundColor(Color.white)
             Spacer()
         }
         .padding()
         HStack {
-            Text("Frustration guarateed.")
+            Text(description)
                 .foregroundColor(Color.white)
                 .font(.custom("Marker Felt", size: 24))
             Spacer()

@@ -19,7 +19,10 @@ struct HomeView: View {
                 CategoryScroller(activeCategory: $activeCategory)
                 
                 ScrollView(.vertical, showsIndicators: false) {
-                    MathGameCardView()
+                    MathGameCardView(quiz: QuizData.Math.addition1())
+                    MathGameCardView(quiz: QuizData.Math.addition2())
+                    MathGameCardView(quiz: QuizData.Math.subtraction1())
+                    MathGameCardView(quiz: QuizData.Math.subtraction2())
                     
                 }
             }

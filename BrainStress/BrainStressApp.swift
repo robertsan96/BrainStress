@@ -9,9 +9,18 @@ import SwiftUI
 
 @main
 struct BrainStressApp: App {
+    
+    @ObservedObject var appModel: AppModel = AppModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            GeometryReader { (proxy: GeometryProxy) in
+                ContentView()
+                    .environmentObject(appModel)
+                    .onAppear() {
+                        appModel.geometryProxy = proxy
+                    }
+            }
         }
     }
 }

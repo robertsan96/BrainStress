@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameEndView: View {
     
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @EnvironmentObject var gameModel: GameModel
     
     @State var celebrateAnimationRunning: Bool = false
@@ -71,7 +72,11 @@ struct GameEndView: View {
                     .modifier(BrainStressFont(color: Color.red))
                 Spacer()
                 HStack {
-                    RoundedButton1(enabled: .constant(true), title: "Home")
+                    Button(action: {
+                        presentationMode.wrappedValue.dismiss()
+                    }, label: {
+                        RoundedButton1(enabled: .constant(true), title: "Home")
+                    })
                 }
                 Spacer()
             default: Text("")

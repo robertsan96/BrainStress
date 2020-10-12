@@ -7,11 +7,11 @@
 
 import Foundation
 
-enum Difficulty {
-    case easy
-    case normal
-    case hard
-    case insane
+enum Difficulty: String, CaseIterable {
+    case easy = "Easy"
+    case normal = "Normal"
+    case hard = "Hard"
+    case insane = "Insane"
     
     func mathInterval(forOperator: Operator) -> ClosedRange<Int> {
         switch forOperator {

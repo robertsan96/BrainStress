@@ -9,11 +9,19 @@ import Foundation
 
 struct Quiz {
     
+    var id: String
     var title: String
+    var description: String = ""
     var items: [QuizItem]
     
     var category: Category
     var difficulty: Difficulty
+    
+    func getTime() -> Double {
+        guard let firstItem = items.first else { return 0 }
+        guard let time = firstItem.time.time[difficulty] else { return 0 }
+        return time
+    }
 }
 
 struct QuizItem {

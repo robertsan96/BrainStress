@@ -111,6 +111,11 @@ extension GameModel {
     
     func quizEnd() {
         let won = quizItemsSolved.count == originalQuiz.items.count
+        if won {
+            UserDefaultsManager.shared.increaseWins(quizId: quiz.id)
+        } else {
+            UserDefaultsManager.shared.increaseFails(quizId: quiz.id)
+        }
         gameState = .end(win: won)
     }
     

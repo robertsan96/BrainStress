@@ -23,14 +23,16 @@ struct Card1: View {
             ZStack {
                 Rectangle()
                     .foregroundColor(primaryColor)
+                    .clipped()
                 BackgroundView(justSymbols: true,
                                symbolColor: backgroundSymbolColor)
                 Rectangle()
                     .foregroundColor(secondaryColor)
                     .rotationEffect(.degrees(100))
-                    .scaleEffect(0.8)
-                    .position(CGPoint(x: proxy.size.width/2 + srAxisX,
-                                      y: proxy.size.height/2 - srAxisY))
+                    .frame(width: proxy.size.width / 2, height: proxy.size.height/2)
+                    .position(CGPoint(x: proxy.size.width / 2.8 + srAxisX,
+                                      y: proxy.size.height / 1.2 - srAxisY))
+                    .clipped()
                 Rectangle()
                     .frame(width: proxy.size.width/3, height: proxy.size.height / 3)
                     .foregroundColor(secondaryColor)
@@ -39,11 +41,12 @@ struct Card1: View {
                     .scaleEffect(0.8)
                     .position(CGPoint(x: 0 + srAxisX,
                                       y: proxy.size.height - srAxisY/2))
-                
+                    .clipped()
                 if overlay {
                     Rectangle()
                         .opacity(0.2)
                 }
+                    
             }
         }
     }

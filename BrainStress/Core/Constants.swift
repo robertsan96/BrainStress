@@ -17,4 +17,13 @@ struct Constants {
         Category(name: "Capitals"),
         Category(name: "Countries")
     ]
+    
+    static func kQuizWins(quizId: String) -> String {
+        return "\(quizId)_QUIZ_WINS"
+    }
+    
+    static func kQuizFails(quizId: String) -> String {
+        return "\(quizId)_QUIZ_FAILS"
+    }
+    
 }

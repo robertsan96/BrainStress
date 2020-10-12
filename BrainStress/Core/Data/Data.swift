@@ -16,22 +16,58 @@ struct QuizData {
     struct Math {
         
         static func dummyLevel() -> Quiz {
-            return Quiz(title: "Additions",
-                        items: QuizItemData.MathItems.generate(mathItems: 5, difficulty: .easy, qOperator: .add),
+            return Quiz(id: "QM_DUMMY_1",
+                        title: "Additions",
+                        description: "Some basic maths for first graders.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .easy,
+                                                               qOperator: .add),
                         category: QuizCategoryData.math,
                         difficulty: .easy)
         }
         
-        static func level1() -> Quiz {
-            return Quiz(title: "Additions",
-                        items: QuizItemData.MathItems.generate(mathItems: 20, difficulty: .easy, qOperator: .add),
+        static func addition1() -> Quiz {
+            return Quiz(id: "QM_ADDITIONS_1",
+                        title: "Additions",
+                        description: "Some basic maths for first graders.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .easy,
+                                                               qOperator: .add),
                         category: QuizCategoryData.math,
                         difficulty: .easy)
         }
         
-        static func level2() -> Quiz {
-            return Quiz(title: "Subtractions",
-                        items: QuizItemData.MathItems.generate(mathItems: 20, difficulty: .easy, qOperator: .substract),
+        static func addition2() -> Quiz {
+            return Quiz(id: "QM_ADDITIONS_2",
+                        title: "2 Second Additions",
+                        description: "Can you solve easy additions in 2 seconds?",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               timeConfig: QuizItemTime(time: [.easy: 2]),
+                                                               difficulty: .easy,
+                                                               qOperator: .add),
+                        category: QuizCategoryData.math,
+                        difficulty: .easy)
+        }
+        
+        static func subtraction1() -> Quiz {
+            return Quiz(id: "QM_SUBTRACTIONS_1",
+                        title: "Subtractions",
+                        description: "The soul grows by subtraction, not addition.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .easy,
+                                                               qOperator: .substract),
+                        category: QuizCategoryData.math,
+                        difficulty: .easy)
+        }
+        
+        static func subtraction2() -> Quiz {
+            return Quiz(id: "QM_SUBTRACTIONS_2",
+                        title: "2 Second Subtractions",
+                        description: "Looks easy? It isn't.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               timeConfig: QuizItemTime(time: [.easy: 2]),
+                                                               difficulty: .easy,
+                                                               qOperator: .substract),
                         category: QuizCategoryData.math,
                         difficulty: .easy)
         }
@@ -42,7 +78,13 @@ struct QuizItemData {
     
     struct MathItems {
         
-        static func generate(mathItems items: Int, difficulty: Difficulty, qOperator: Operator) -> [QuizItem] {
+        static func generate(mathItems items: Int,
+                             timeConfig time: QuizItemTime = QuizItemTime(time: [.easy: 5,
+                                                                                 .normal: 8,
+                                                                                 .hard: 12,
+                                                                                 .insane: 20]),
+                             difficulty: Difficulty,
+                             qOperator: Operator) -> [QuizItem] {
             var generatedQuizItems: [QuizItem] = []
             for _ in 0..<items {
                 
@@ -51,9 +93,7 @@ struct QuizItemData {
                 let qA = qOperator.compute(left: r1, right: r2).clean
                 let qT = "\(r1.clean) \(qOperator.symbol()) \(r2.clean)"
                 
-                let quizTime = QuizItemTime(time: [.easy: 5,
-                                                   .normal: 8,
-                                                   .hard: 12])
+                let quizTime = time
                 let quizAnsw = QuizItemAnswer(type: .text, answer: [qA])
                 let quizItem = QuizItem(text: qT,
                                         time: quizTime,
