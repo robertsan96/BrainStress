@@ -22,6 +22,7 @@ struct GameView: View {
                     GameTopView()
                     Spacer()
                     GameMidView()
+                        .padding(.top, 20)
                     Spacer()
                     GameBottomView()
                         .padding(.bottom, 10)

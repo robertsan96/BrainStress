@@ -14,7 +14,7 @@ struct MathKeyboardView: View {
     var onSubmit: () -> Void = {}
     
     var body: some View {
-        VStack {
+        VStack(spacing: 5) {
             HStack {
                 ForEach(0 ..< 3) { item in
                     Button(action: {

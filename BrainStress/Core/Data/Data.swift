@@ -39,14 +39,35 @@ struct QuizData {
         
         static func addition2() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_2",
-                        title: "2 Second Additions",
-                        description: "Can you solve easy additions in 2 seconds?",
+                        title: "Additions",
+                        description: "A bit more advanced.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
-                                                               timeConfig: QuizItemTime(time: [.easy: 2]),
-                                                               difficulty: .easy,
+                                                               difficulty: .normal,
                                                                qOperator: .add),
                         category: QuizCategoryData.math,
-                        difficulty: .easy)
+                        difficulty: .normal)
+        }
+        
+        static func addition3() -> Quiz {
+            return Quiz(id: "QM_ADDITIONS_3",
+                        title: "Additions",
+                        description: "Ugh, it gets harder here.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .hard,
+                                                               qOperator: .add),
+                        category: QuizCategoryData.math,
+                        difficulty: .hard)
+        }
+        
+        static func addition4() -> Quiz {
+            return Quiz(id: "QM_ADDITIONS_4",
+                        title: "Additions",
+                        description: "No way you can finalize this.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .insane,
+                                                               qOperator: .add),
+                        category: QuizCategoryData.math,
+                        difficulty: .insane)
         }
         
         static func subtraction1() -> Quiz {
@@ -62,14 +83,123 @@ struct QuizData {
         
         static func subtraction2() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_2",
-                        title: "2 Second Subtractions",
-                        description: "Looks easy? It isn't.",
+                        title: "Subtractions",
+                        description: "Feeling angry? Let's add some more stress.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
-                                                               timeConfig: QuizItemTime(time: [.easy: 2]),
-                                                               difficulty: .easy,
+                                                               difficulty: .normal,
                                                                qOperator: .substract),
                         category: QuizCategoryData.math,
+                        difficulty: .normal)
+        }
+        
+        static func subtraction3() -> Quiz {
+            return Quiz(id: "QM_SUBTRACTIONS_3",
+                        title: "Subtractions",
+                        description: "If you have a bad day, play this. Your day will get even worse.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .hard,
+                                                               qOperator: .substract),
+                        category: QuizCategoryData.math,
+                        difficulty: .hard)
+        }
+        
+        static func subtraction4() -> Quiz {
+            return Quiz(id: "QM_SUBTRACTIONS_4",
+                        title: "Subtractions",
+                        description: "This game shouldn't be here... no one can finalize it.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .insane,
+                                                               qOperator: .substract),
+                        category: QuizCategoryData.math,
+                        difficulty: .insane)
+        }
+        
+        static func multiplications1() -> Quiz {
+            return Quiz(id: "QM_MULTIPLICATIONS_1",
+                        title: "Multiplications",
+                        description: "Some basic maths for first graders.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .easy,
+                                                               qOperator: .multiply),
+                        category: QuizCategoryData.math,
                         difficulty: .easy)
+        }
+        
+        static func multiplications2() -> Quiz {
+            return Quiz(id: "QM_MULTIPLICATIONS_2",
+                        title: "Multiplications",
+                        description: "Really?",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .normal,
+                                                               qOperator: .multiply),
+                        category: QuizCategoryData.math,
+                        difficulty: .normal)
+        }
+        
+        static func multiplications3() -> Quiz {
+            return Quiz(id: "QM_MULTIPLICATIONS_3",
+                        title: "Multiplications",
+                        description: "We promise you have no chance.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .hard,
+                                                               qOperator: .multiply),
+                        category: QuizCategoryData.math,
+                        difficulty: .hard)
+        }
+        
+        static func multiplications4() -> Quiz {
+            return Quiz(id: "QM_MULTIPLICATIONS_4",
+                        title: "Multiplications",
+                        description: "Feeling useless? Think about this game.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .insane,
+                                                               qOperator: .multiply),
+                        category: QuizCategoryData.math,
+                        difficulty: .insane)
+        }
+        
+        static func divisions1() -> Quiz {
+            return Quiz(id: "QM_DIVISIONS_1",
+                        title: "Divisions",
+                        description: "Easy-peasy.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .easy,
+                                                               qOperator: .division),
+                        category: QuizCategoryData.math,
+                        difficulty: .easy)
+        }
+        
+        static func divisions2() -> Quiz {
+            return Quiz(id: "QM_DIVISIONS_2",
+                        title: "Divisions",
+                        description: "Gets harder..",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .normal,
+                                                               qOperator: .division),
+                        category: QuizCategoryData.math,
+                        difficulty: .normal)
+        }
+        
+        static func divisions3() -> Quiz {
+            return Quiz(id: "QM_DIVISIONS_3",
+                        title: "Divisions",
+                        description: "Hahahaha! No chance.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .hard,
+                                                               qOperator: .division),
+                        category: QuizCategoryData.math,
+                        difficulty: .hard)
+        }
+        
+        static func divisions4() -> Quiz {
+            return Quiz(id: "QM_DIVISIONS_4",
+                        title: "Divisions",
+                        description: "Ain't nobody got time for that.",
+                        items: QuizItemData.MathItems.generate(mathItems: 20,
+                                                               difficulty: .insane,
+                                                               qOperator: .division),
+                        category: QuizCategoryData.math,
+                        difficulty: .insane)
         }
     }
 }

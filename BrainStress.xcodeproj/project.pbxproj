@@ -30,6 +30,7 @@
 		465AF0EE252B900F00524ED9 /* EnrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0ED252B900F00524ED9 /* EnrollView.swift */; };
 		465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0F5252B903800524ED9 /* BackgroundView.swift */; };
 		466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */; };
+		466B23BD2534980600DCCC5A /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23BC2534980600DCCC5A /* KeyView.swift */; };
 		467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCF92252CBC3100AF4A9B /* HomeView.swift */; };
 		467FCF9C252CBCD700AF4A9B /* Card1Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCF9B252CBCD700AF4A9B /* Card1Header.swift */; };
 		467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */; };
@@ -103,6 +104,7 @@
 		465AF0ED252B900F00524ED9 /* EnrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollView.swift; sourceTree = "<group>"; };
 		465AF0F5252B903800524ED9 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathKeyboardView.swift; sourceTree = "<group>"; };
+		466B23BC2534980600DCCC5A /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
 		467FCF92252CBC3100AF4A9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		467FCF9B252CBCD700AF4A9B /* Card1Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1Header.swift; sourceTree = "<group>"; };
 		467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1StressFactors.swift; sourceTree = "<group>"; };
@@ -294,6 +296,7 @@
 		465AF0D6252B8DF400524ED9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				466B23BB253497FB00DCCC5A /* Keyboard */,
 				464E25C9252C8D3300BBB877 /* Cards */,
 				465AF0D7252B8E0A00524ED9 /* LogoView.swift */,
 				465AF0DF252B8E4D00524ED9 /* RotatingGearView.swift */,
@@ -302,7 +305,6 @@
 				46988FFA252C7761006EF37B /* CategoryScroller.swift */,
 				46988FFF252C77BF006EF37B /* FilterButton.swift */,
 				4686DB01253054A10048B7C1 /* BrainStressKeyboard.swift */,
-				466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -318,6 +320,15 @@
 				46D90952252DF81900E40E6F /* TestScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		466B23BB253497FB00DCCC5A /* Keyboard */ = {
+			isa = PBXGroup;
+			children = (
+				466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */,
+				466B23BC2534980600DCCC5A /* KeyView.swift */,
+			);
+			path = Keyboard;
 			sourceTree = "<group>";
 		};
 		467FCF9A252CBCAA00AF4A9B /* Card1 */ = {
@@ -655,6 +666,7 @@
 				460A7F03252C5D0C00BD260F /* UserDefaultsManager.swift in Sources */,
 				465AF0E5252B8EE100524ED9 /* RoundedButton1.swift in Sources */,
 				467FCFBB252DB01100AF4A9B /* QuizItem.swift in Sources */,
+				466B23BD2534980600DCCC5A /* KeyView.swift in Sources */,
 				46988FF3252C7559006EF37B /* Category.swift in Sources */,
 				46988FED252C6B22006EF37B /* MainView.swift in Sources */,
 				465AF0CF252B8D0A00524ED9 /* Color.swift in Sources */,

@@ -15,13 +15,12 @@ struct GameMidView: View {
     
     var body: some View {
         VStack {
-            Spacer()
             Text("\(gameModel.quizItem?.text ?? "")")
+                .frame(height: 50)
                 .modifier(BrainStressFont(color: Color.pink, size: 36))
+            Spacer()
             Text(gameModel.quizItemUAnswer)
                 .modifier(BrainStressFont(color: Color.pink, size: 52))
-            Spacer()
-            Spacer()
         }
     }
     

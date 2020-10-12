@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Quiz {
+struct Quiz: Hashable {
+    
     
     var id: String
     var title: String
@@ -22,15 +23,23 @@ struct Quiz {
         guard let time = firstItem.time.time[difficulty] else { return 0 }
         return time
     }
+    
+    static func == (lhs: Quiz, rhs: Quiz) -> Bool {
+        lhs.id == rhs.id
+    }
 }
 
-struct QuizItem {
+struct QuizItem: Hashable {
     
     var text: String
     var time: QuizItemTime
     
     var answer: QuizItemAnswer
     var category: Category
+    
+    static func == (lhs: QuizItem, rhs: QuizItem) -> Bool {
+        lhs.text == rhs.text
+    }
 }
 
 enum QuizItemAnswerType {
@@ -41,14 +50,22 @@ enum QuizItemAnswerType {
     case singleChoice
 }
 
-struct QuizItemAnswer {
+struct QuizItemAnswer: Hashable {
     
     var type: QuizItemAnswerType
     
     var answer: [String]
+    
+    static func == (lhs: QuizItemAnswer, rhs: QuizItemAnswer) -> Bool {
+        lhs.answer == rhs.answer
+    }
 }
 
-struct QuizItemTime {
+struct QuizItemTime: Hashable {
     
     var time: [Difficulty: Double] = [:]
+    
+    static func == (lhs: QuizItemTime, rhs: QuizItemTime) -> Bool {
+        lhs.time == rhs.time
+    }
 }
