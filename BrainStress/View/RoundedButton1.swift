@@ -17,6 +17,7 @@ struct RoundedButton1: View {
     var width: CGFloat = 25
     var height: CGFloat = 25
     var cornerRadius: CGFloat = 60
+    var showsIcon: Bool = true
 
     var body: some View {
         ZStack {
@@ -24,10 +25,12 @@ struct RoundedButton1: View {
                 Text(title)
                     .font(.custom("Marker Felt", size: fontSize))
                     .foregroundColor(Color.white)
-                Image(systemName: "arrowshape.turn.up.right.fill")
-                    .resizable()
-                    .frame(width: width, height: height)
-                    .foregroundColor(.white)
+                if showsIcon {
+                    Image(systemName: "arrowshape.turn.up.right.fill")
+                        .resizable()
+                        .frame(width: width, height: height)
+                        .foregroundColor(.white)
+                }
             }
         }
         .padding(padding)

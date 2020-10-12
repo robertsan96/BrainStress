@@ -18,9 +18,8 @@ struct GameMidView: View {
             Spacer()
             Text("\(gameModel.quizItem?.text ?? "")")
                 .modifier(BrainStressFont(color: Color.pink, size: 36))
-            BrainStressKeyboard() { text in
-                gameModel.addAnswerToList(answer: text)
-            }
+            Text(gameModel.quizItemUAnswer)
+                .modifier(BrainStressFont(color: Color.pink, size: 52))
             Spacer()
             Spacer()
         }

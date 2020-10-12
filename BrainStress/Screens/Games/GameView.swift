@@ -24,6 +24,7 @@ struct GameView: View {
                     GameMidView()
                     Spacer()
                     GameBottomView()
+                        .padding(.bottom, 10)
                 }
             case .end(_):
                 GameEndView()

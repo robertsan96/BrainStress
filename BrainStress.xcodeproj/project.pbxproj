@@ -29,6 +29,7 @@
 		465AF0E5252B8EE100524ED9 /* RoundedButton1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0E4252B8EE100524ED9 /* RoundedButton1.swift */; };
 		465AF0EE252B900F00524ED9 /* EnrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0ED252B900F00524ED9 /* EnrollView.swift */; };
 		465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0F5252B903800524ED9 /* BackgroundView.swift */; };
+		466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */; };
 		467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCF92252CBC3100AF4A9B /* HomeView.swift */; };
 		467FCF9C252CBCD700AF4A9B /* Card1Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCF9B252CBCD700AF4A9B /* Card1Header.swift */; };
 		467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */; };
@@ -101,6 +102,7 @@
 		465AF0E4252B8EE100524ED9 /* RoundedButton1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton1.swift; sourceTree = "<group>"; };
 		465AF0ED252B900F00524ED9 /* EnrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnrollView.swift; sourceTree = "<group>"; };
 		465AF0F5252B903800524ED9 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
+		466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathKeyboardView.swift; sourceTree = "<group>"; };
 		467FCF92252CBC3100AF4A9B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		467FCF9B252CBCD700AF4A9B /* Card1Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1Header.swift; sourceTree = "<group>"; };
 		467FCFA0252CBD0400AF4A9B /* Card1StressFactors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card1StressFactors.swift; sourceTree = "<group>"; };
@@ -300,6 +302,7 @@
 				46988FFA252C7761006EF37B /* CategoryScroller.swift */,
 				46988FFF252C77BF006EF37B /* FilterButton.swift */,
 				4686DB01253054A10048B7C1 /* BrainStressKeyboard.swift */,
+				466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				46D90953252DF81900E40E6F /* TestScreen.swift in Sources */,
 				4686DAFD253054640048B7C1 /* GameBottomView.swift in Sources */,
 				464E25CB252C8D5300BBB877 /* Card1.swift in Sources */,
+				466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */,
 				4686DB07253433D00048B7C1 /* AppModel.swift in Sources */,
 				467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */,
 				464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */,

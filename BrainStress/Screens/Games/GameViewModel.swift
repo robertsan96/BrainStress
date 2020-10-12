@@ -146,6 +146,8 @@ extension GameModel {
                   let textQuizAns = activeQuizItem.answer.answer.first,
                   firstAnswer == textQuizAns else {
                 quizItemsFailed.append(activeQuizItem)
+                quizItemUAnswers.removeAll()
+                quizItemUAnswer = ""
                 return
             }
             quizItemsSolved.append(activeQuizItem)
