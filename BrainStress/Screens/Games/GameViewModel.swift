@@ -142,8 +142,8 @@ extension GameModel {
         guard let activeQuizItem = quizItem else { return }
         switch activeQuizItem.answer.type {
         case .text:
-            guard let firstAnswer = quizItemUAnswers.first,
-                  let textQuizAns = activeQuizItem.answer.answer.first,
+            guard let firstAnswer = quizItemUAnswers.first?.lowercased(),
+                  let textQuizAns = activeQuizItem.answer.answer.first?.lowercased(),
                   firstAnswer == textQuizAns else {
                 quizItemsFailed.append(activeQuizItem)
                 quizItemUAnswers.removeAll()
@@ -154,6 +154,20 @@ extension GameModel {
             // That's required as we only need one entry for text answers per item.
             quizItemUAnswers.removeAll()
             quizItemUAnswer = ""
+        case .singleChoice:
+            guard let firstAnswer = quizItemUAnswers.first?.lowercased(),
+                  let textQuizAns = activeQuizItem.answer.answer.first?.lowercased(),
+                  firstAnswer == textQuizAns else {
+                quizItemsFailed.append(activeQuizItem)
+                quizItemUAnswers.removeAll()
+                quizItemUAnswer = ""
+                return
+            }
+            quizItemsSolved.append(activeQuizItem)
+            // That's required as we only need one entry for text answers per item.
+            quizItemUAnswers.removeAll()
+            quizItemUAnswer = ""
+            break
         default: break
         }
     }
@@ -163,7 +177,7 @@ extension GameModel {
         guard let activeQuizItem = quizItem else { return }
         quizItemUAnswers.append(answer)
         switch activeQuizItem.answer.type {
-        case .text:
+        case .text, .singleChoice:
             itemCheck()
             itemRemove()
             itemLoad()

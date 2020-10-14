@@ -6,9 +6,13 @@
 //
 
 import Foundation
+import SwiftCSV
 
-struct QuizCategoryData {
-    static let math = Category(name: "Math")
+enum QuizCategory: Category, CaseIterable {
+    
+    
+    case math = "Math"
+    case geography = "Geography"
 }
 
 struct QuizData {
@@ -22,18 +26,19 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .add),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .easy)
         }
         
         static func addition1() -> Quiz {
+            
             return Quiz(id: "QM_ADDITIONS_1",
                         title: "Additions",
                         description: "Some basic maths for first graders.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .add),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .easy)
         }
         
@@ -44,7 +49,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .add),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .normal)
         }
         
@@ -55,7 +60,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .add),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .hard)
         }
         
@@ -66,7 +71,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .add),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .insane)
         }
         
@@ -77,7 +82,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .substract),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .easy)
         }
         
@@ -88,7 +93,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .substract),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .normal)
         }
         
@@ -99,7 +104,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .substract),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .hard)
         }
         
@@ -110,7 +115,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .substract),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .insane)
         }
         
@@ -121,7 +126,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .multiply),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .easy)
         }
         
@@ -132,7 +137,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .multiply),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .normal)
         }
         
@@ -143,7 +148,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .multiply),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .hard)
         }
         
@@ -154,7 +159,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .multiply),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .insane)
         }
         
@@ -165,7 +170,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .division),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .easy)
         }
         
@@ -176,7 +181,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .division),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .normal)
         }
         
@@ -187,7 +192,7 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .division),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .hard)
         }
         
@@ -198,8 +203,31 @@ struct QuizData {
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .division),
-                        category: QuizCategoryData.math,
+                        category: QuizCategory.math,
                         difficulty: .insane)
+        }
+    }
+    
+    struct Geography {
+        
+        static func capitals1() -> Quiz {
+            
+            return Quiz(id: "QM_CAPITALS_1",
+                        title: "Capitals",
+                        description: "Let's find out how much geography you know!",
+                        items: QuizItemData.GeneralQuestions.generate(items: 5),
+                        category: QuizCategory.geography,
+                        difficulty: .normal)
+        }
+        
+        static func geography1() -> Quiz {
+            
+            return Quiz(id: "QM_GEOGRAPHY_1",
+                        title: "Mix",
+                        description: "Rivers, mountains, volcanos ...",
+                        items: QuizItemData.GeneralQuestions.generateGeneral(items: 20),
+                        category: QuizCategory.geography,
+                        difficulty: .normal)
         }
     }
 }
@@ -228,7 +256,93 @@ struct QuizItemData {
                 let quizItem = QuizItem(text: qT,
                                         time: quizTime,
                                         answer: quizAnsw,
-                                        category: QuizCategoryData.math)
+                                        category: QuizCategory.math)
+                
+                generatedQuizItems.append(quizItem)
+            }
+            return generatedQuizItems
+        }
+    }
+    
+    struct GeneralQuestions {
+        
+        static func generateGeneral(items: Int) -> [QuizItem] {
+            var generatedQuizItems: [QuizItem] = []
+            var parsedGeneralQuestions = CSVManager.parseGeneralQuestions(csv: .geography1)
+            for _ in 0..<items {
+                guard let r1 = parsedGeneralQuestions.randomElement() else {
+                    return generatedQuizItems
+                }
+                parsedGeneralQuestions.removeAll { gq -> Bool in
+                    gq.question == r1.question
+                }
+                let qA = r1.answer
+                let qT = r1.question
+                let answerType: QuizItemAnswerType = r1.incorrects.count > 0 ?
+                    .singleChoice :
+                    .text
+                
+                let quizTime = QuizItemTime(time: [.normal: 15])
+                let quizAnsw: QuizItemAnswer
+                
+                if answerType == .text {
+                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
+                } else if answerType == .singleChoice {
+                    quizAnsw = QuizItemAnswer(type: answerType,
+                                              answer: [qA],
+                                              incorrects: r1.incorrects)
+                } else {
+                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
+                }
+                
+                let quizItem = QuizItem(text: qT,
+                                        time: quizTime,
+                                        answer: quizAnsw,
+                                        category: QuizCategory.geography)
+                
+                generatedQuizItems.append(quizItem)
+            }
+            return generatedQuizItems
+        }
+
+        
+        static func generate(items: Int) -> [QuizItem] {
+            var generatedQuizItems: [QuizItem] = []
+            let parsedCountries = CSVManager.parseCountryCapitalsCSV()
+            for _ in 0..<items {
+                let r1 = parsedCountries.randomElement()!
+                let qA = r1.capital
+                let qT = "Capital of \n\(r1.name)"
+                let answerType: QuizItemAnswerType = Bool.random() ?
+                    .singleChoice :
+                    .text
+                
+                let quizTime = QuizItemTime(time: [.normal: 15])
+                let quizAnsw: QuizItemAnswer
+                
+                if answerType == .text {
+                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
+                } else if answerType == .singleChoice {
+                    let possibleIncorrects = parsedCountries
+                        .filter { country -> Bool in
+                            country.name != r1.name
+                        }
+                        .shuffled()
+                        .prefix(Int.random(in: 1...3))
+                        .map({ c in
+                            c.capital
+                        })
+                    quizAnsw = QuizItemAnswer(type: answerType,
+                                              answer: [qA],
+                                              incorrects: possibleIncorrects)
+                } else {
+                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
+                }
+                
+                let quizItem = QuizItem(text: qT,
+                                        time: quizTime,
+                                        answer: quizAnsw,
+                                        category: QuizCategory.geography)
                 
                 generatedQuizItems.append(quizItem)
             }

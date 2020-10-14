@@ -7,7 +7,7 @@ target 'BrainStress' do
 
   # Pods for BrainStress
   
-  pod "Introspect"
+  pod "SwiftCSV"
 
   target 'BrainStressTests' do
     inherit! :search_paths

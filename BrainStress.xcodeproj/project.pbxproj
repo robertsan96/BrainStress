@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		2AAF0E14FE20276AA0AED992 /* Pods_BrainStressTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */; };
 		31B4386EE88CD4391C40E706 /* Pods_BrainStress_BrainStressUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E096370BBDEA694138C307E5 /* Pods_BrainStress_BrainStressUITests.framework */; };
+		46076AAC25358D0400B5C5D2 /* Country_Capitals.csv in Resources */ = {isa = PBXBuildFile; fileRef = 46076AAB25358D0400B5C5D2 /* Country_Capitals.csv */; };
+		46076AB72535949F00B5C5D2 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076AB62535949F00B5C5D2 /* Country.swift */; };
+		46076ABC253594BF00B5C5D2 /* CSVManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076ABB253594BF00B5C5D2 /* CSVManager.swift */; };
+		46076AC62536DEBC00B5C5D2 /* GeneralQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46076AC52536DEBC00B5C5D2 /* GeneralQuestion.swift */; };
+		46076AD62536E2E900B5C5D2 /* Geography_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 46076AD52536E2E900B5C5D2 /* Geography_1.csv */; };
 		460A7F03252C5D0C00BD260F /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */; };
 		460A7F14252C5E9200BD260F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 460A7F13252C5E9200BD260F /* Constants.swift */; };
 		46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */; };
@@ -77,6 +82,11 @@
 /* Begin PBXFileReference section */
 		0D840A695BD3B7E1BAF296F7 /* Pods-BrainStress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress.debug.xcconfig"; path = "Target Support Files/Pods-BrainStress/Pods-BrainStress.debug.xcconfig"; sourceTree = "<group>"; };
 		380AC4173F7C9B229A464F85 /* Pods-BrainStressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStressTests.debug.xcconfig"; path = "Target Support Files/Pods-BrainStressTests/Pods-BrainStressTests.debug.xcconfig"; sourceTree = "<group>"; };
+		46076AAB25358D0400B5C5D2 /* Country_Capitals.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Country_Capitals.csv; sourceTree = "<group>"; };
+		46076AB62535949F00B5C5D2 /* Country.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		46076ABB253594BF00B5C5D2 /* CSVManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVManager.swift; sourceTree = "<group>"; };
+		46076AC52536DEBC00B5C5D2 /* GeneralQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralQuestion.swift; sourceTree = "<group>"; };
+		46076AD52536E2E900B5C5D2 /* Geography_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Geography_1.csv; sourceTree = "<group>"; };
 		460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		460A7F13252C5E9200BD260F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		46240C1B252E5EFD000F34E7 /* BrainStressFont.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressFont.swift; sourceTree = "<group>"; };
@@ -179,10 +189,23 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		46076AA725358CD500B5C5D2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				46076AD52536E2E900B5C5D2 /* Geography_1.csv */,
+				46076AAB25358D0400B5C5D2 /* Country_Capitals.csv */,
+				465AF0A3252B75D500524ED9 /* Assets.xcassets */,
+				465AF0A8252B75D500524ED9 /* Info.plist */,
+				46D9094E252DCDF900E40E6F /* MyPlayground.playground */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		460A7F01252C5CFF00BD260F /* Managers */ = {
 			isa = PBXGroup;
 			children = (
 				460A7F02252C5D0C00BD260F /* UserDefaultsManager.swift */,
+				46076ABB253594BF00B5C5D2 /* CSVManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -190,6 +213,7 @@
 		460A7F12252C5E8700BD260F /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */,
 				467FCFC7252DB1D200AF4A9B /* Data */,
 				46988FF1252C754E006EF37B /* Model */,
 				460A7F01252C5CFF00BD260F /* Managers */,
@@ -241,17 +265,14 @@
 		465AF09E252B75D300524ED9 /* BrainStress */ = {
 			isa = PBXGroup;
 			children = (
+				46076AA725358CD500B5C5D2 /* Supporting Files */,
 				460A7F12252C5E8700BD260F /* Core */,
 				465AF0EC252B8FB400524ED9 /* Screens */,
 				465AF0D6252B8DF400524ED9 /* View */,
 				465AF0CD252B8D0000524ED9 /* Extensions */,
 				46240C1A252E5EE6000F34E7 /* Modifiers */,
 				465AF09F252B75D300524ED9 /* BrainStressApp.swift */,
-				465AF0A3252B75D500524ED9 /* Assets.xcassets */,
-				465AF0A8252B75D500524ED9 /* Info.plist */,
 				465AF0A5252B75D500524ED9 /* Preview Content */,
-				464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */,
-				46D9094E252DCDF900E40E6F /* MyPlayground.playground */,
 			);
 			path = BrainStress;
 			sourceTree = "<group>";
@@ -379,6 +400,8 @@
 				467FCFC2252DB12100AF4A9B /* Difficulty.swift */,
 				467FCFD0252DB33D00AF4A9B /* Operator.swift */,
 				4686DB06253433D00048B7C1 /* AppModel.swift */,
+				46076AB62535949F00B5C5D2 /* Country.swift */,
+				46076AC52536DEBC00B5C5D2 /* GeneralQuestion.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -503,6 +526,8 @@
 			files = (
 				465AF0A7252B75D500524ED9 /* Preview Assets.xcassets in Resources */,
 				465AF0A4252B75D500524ED9 /* Assets.xcassets in Resources */,
+				46076AAC25358D0400B5C5D2 /* Country_Capitals.csv in Resources */,
+				46076AD62536E2E900B5C5D2 /* Geography_1.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -640,6 +665,7 @@
 				466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */,
 				4686DB07253433D00048B7C1 /* AppModel.swift in Sources */,
 				467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */,
+				46076AC62536DEBC00B5C5D2 /* GeneralQuestion.swift in Sources */,
 				464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */,
 				467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */,
 				46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */,
@@ -657,7 +683,9 @@
 				46240C24252E5F8B000F34E7 /* GameWarmUpView.swift in Sources */,
 				467FCF93252CBC3100AF4A9B /* HomeView.swift in Sources */,
 				46989000252C77BF006EF37B /* FilterButton.swift in Sources */,
+				46076ABC253594BF00B5C5D2 /* CSVManager.swift in Sources */,
 				467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */,
+				46076AB72535949F00B5C5D2 /* Country.swift in Sources */,
 				46240C29252E675E000F34E7 /* GameTopView.swift in Sources */,
 				467FCFC3252DB12100AF4A9B /* Difficulty.swift in Sources */,
 				467FCFA1252CBD0400AF4A9B /* Card1StressFactors.swift in Sources */,
@@ -832,13 +860,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BrainStress/Preview Content\"";
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BrainStress/Info.plist;
+				INFOPLIST_FILE = "BrainStress/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lorerobi.BrainStress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roloprodev.brainstress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -855,13 +883,13 @@
 				DEVELOPMENT_ASSET_PATHS = "\"BrainStress/Preview Content\"";
 				DEVELOPMENT_TEAM = FZSAPS42SZ;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = BrainStress/Info.plist;
+				INFOPLIST_FILE = "BrainStress/Supporting Files/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.lorerobi.BrainStress;
+				PRODUCT_BUNDLE_IDENTIFIER = com.roloprodev.brainstress;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

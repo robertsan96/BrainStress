@@ -45,7 +45,6 @@ struct BrainStressKeyboard: UIViewRepresentable {
         textField.placeholder = "Write here..."
         textField.delegate = context.coordinator
         textField.becomeFirstResponder()
-        textField.keyboardType = .decimalPad
         
         textField.textContentType = .oneTimeCode
         textField.autocorrectionType = .no

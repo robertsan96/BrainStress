@@ -21,12 +21,12 @@ struct CategoryScroller: View {
                         FilterButton(title: "All",
                                      active: activeCategory == "All")
                     })
-                    ForEach(Constants.categories) { category in
+                    ForEach(QuizCategory.allCases, id:\.self) { category in
                         Button(action: {
-                            activeCategory = category.name
+                            activeCategory = category.rawValue.name
                         }, label: {
-                            FilterButton(title: category.name,
-                                         active: activeCategory == category.name)
+                            FilterButton(title: category.rawValue.name,
+                                         active: activeCategory == category.rawValue.name)
                         })
                     }
                 }

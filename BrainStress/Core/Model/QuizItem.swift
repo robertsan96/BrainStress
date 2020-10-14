@@ -15,7 +15,7 @@ struct Quiz: Hashable {
     var description: String = ""
     var items: [QuizItem]
     
-    var category: Category
+    var category: QuizCategory
     var difficulty: Difficulty
     
     func getTime() -> Double {
@@ -35,7 +35,7 @@ struct QuizItem: Hashable {
     var time: QuizItemTime
     
     var answer: QuizItemAnswer
-    var category: Category
+    var category: QuizCategory
     
     static func == (lhs: QuizItem, rhs: QuizItem) -> Bool {
         lhs.text == rhs.text
@@ -56,8 +56,22 @@ struct QuizItemAnswer: Hashable {
     
     var answer: [String]
     
+    /// Single choice / multiple choice incorrects to show on screen.
+    var incorrects: [String] = []
+    
+    var mergeShuffle: [String] = []
+    
     static func == (lhs: QuizItemAnswer, rhs: QuizItemAnswer) -> Bool {
         lhs.answer == rhs.answer
+    }
+    
+    init(type: QuizItemAnswerType,
+         answer: [String],
+         incorrects: [String] = []) {
+        self.type = type
+        self.answer = answer
+        self.incorrects = incorrects
+        self.mergeShuffle = (answer + incorrects).shuffled()
     }
 }
 

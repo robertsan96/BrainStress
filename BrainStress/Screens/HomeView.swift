@@ -32,11 +32,14 @@ struct HomeView: View {
         QuizData.Math.divisions2(),
         QuizData.Math.divisions3(),
         QuizData.Math.divisions4(),
+        
+        QuizData.Geography.capitals1(),
+        QuizData.Geography.geography1()
     ]
     
     func setShownQuizzes() {
         shownQuizzes = quizzes.filter({ q -> Bool in
-            (q.category.name == activeCategory) || activeCategory == "All"
+            (q.category.rawValue.name == activeCategory) || activeCategory == "All"
         })
     }
     
@@ -52,7 +55,7 @@ struct HomeView: View {
                         ForEach(shownQuizzes, id: \.self) { sq in
                             MathGameCardView(quiz: sq)
                         }
-                    }
+                    }.zIndex(-1)
                 } else {
                     VStack {
                         Spacer()

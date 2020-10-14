@@ -16,11 +16,11 @@ struct GameMidView: View {
     var body: some View {
         VStack {
             Text("\(gameModel.quizItem?.text ?? "")")
-                .frame(height: 50)
-                .modifier(BrainStressFont(color: Color.pink, size: 36))
-            Spacer()
+                .multilineTextAlignment(.center)
+                .modifier(BrainStressFont(color: Color.pink, size: gameModel.quizItem?.text.count ?? 0 > 10 ? 14 : 36))
             Text(gameModel.quizItemUAnswer)
                 .modifier(BrainStressFont(color: Color.pink, size: 52))
+                .padding()
         }
     }
     

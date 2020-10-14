@@ -1,16 +1,16 @@
 PODS:
-  - Introspect (0.1.0)
+  - SwiftCSV (0.5.6)
 
 DEPENDENCIES:
-  - Introspect
+  - SwiftCSV
 
 SPEC REPOS:
   trunk:
-    - Introspect
+    - SwiftCSV
 
 SPEC CHECKSUMS:
-  Introspect: ad32f2b7b9e7ac2c008b9dfec3d5325fbd3660fa
+  SwiftCSV: efb4a15dd7f2f1212b3d6986f97a3369ff6c5100
 
-PODFILE CHECKSUM: 31d13ab311c48594fa854037f68a4f83926a17d1
+PODFILE CHECKSUM: 63ce20e33704d4f960f628645e8d7291ab292472
 
 COCOAPODS: 1.9.3

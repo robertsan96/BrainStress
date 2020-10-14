@@ -7,11 +7,15 @@
 
 import Foundation
 
-class Category: Identifiable, Hashable {
+class Category: Identifiable,
+                Hashable,
+                Equatable,
+                ExpressibleByStringLiteral {
+    typealias StringLiteralType = String
     
     var name: String
     
-    init(name: String) {
+    required init(stringLiteral name: String) {
         self.name = name
     }
 
