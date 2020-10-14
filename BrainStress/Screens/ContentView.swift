@@ -17,8 +17,8 @@ struct ContentView: View {
                 BackgroundView().edgesIgnoringSafeArea(.all)
                 VStack {
                     Spacer()
-                    Spacer()
                     LogoView()
+                        .frame(maxHeight: 200)
                     Spacer()
                     NavigationLink(
                         destination: nickname.isEmpty ?

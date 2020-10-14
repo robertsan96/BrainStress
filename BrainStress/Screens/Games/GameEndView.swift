@@ -17,6 +17,7 @@ struct GameEndView: View {
     var body: some View {
         VStack {
             LogoView()
+                .frame(maxHeight: 200)
             Spacer()
             switch gameModel.gameState {
             case .end(let won):

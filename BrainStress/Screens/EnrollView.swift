@@ -23,6 +23,7 @@ struct EnrollView: View {
             VStack {
                 Spacer()
                 LogoView()
+                    .frame(maxHeight: 200)
                 Spacer()
                 VStack(alignment: .leading) {
                     Text("Howdy, \(getTextfieldName)!")
@@ -46,7 +47,7 @@ struct EnrollView: View {
                 .cornerRadius(5)
                 .padding()
                 NavigationLink(
-                    destination: BackgroundView(),
+                    destination: MainView(),
                     label: {
                         RoundedButton1(enabled: $nextButtonEnabled, title: "Next")
                     })

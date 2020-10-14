@@ -47,7 +47,9 @@ struct HomeView: View {
         ZStack {
             BackgroundView().edgesIgnoringSafeArea(.all)
             VStack {
+                Spacer()
                 LogoView()
+                    .frame(maxHeight: 100)
                 CategoryScroller(activeCategory: $activeCategory)
                 
                 if shownQuizzes.count > 0 {

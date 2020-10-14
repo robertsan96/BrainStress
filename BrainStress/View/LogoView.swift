@@ -9,26 +9,18 @@ import SwiftUI
 
 struct LogoView: View {
     
-    var nickname: String {
-        let storedNickname = UserDefaultsManager.shared.getNickname()
-        guard !storedNickname.isEmpty else { return "the brain" }
-        return storedNickname
-    }
-    
     var body: some View {
         VStack {
-            Text("BrainStress")
-                .font(.custom("Marker Felt", size: 42))
-                .fontWeight(.black)
-                .foregroundColor(.pink)
-            Text("Here comes \(nickname) again")
-                .foregroundColor(Color.gray)
+            Image("Logo")
+                .resizable()
+                .antialiased(true)
+                .scaledToFit()
         }
     }
 }
 
 struct LogoView_Previews: PreviewProvider {
     static var previews: some View {
-        LogoView().previewLayout(.sizeThatFits)
+        LogoView()
     }
 }
