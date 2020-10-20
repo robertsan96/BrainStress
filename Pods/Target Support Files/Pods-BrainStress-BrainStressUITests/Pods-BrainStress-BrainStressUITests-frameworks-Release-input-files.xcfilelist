@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/SwiftCSV/SwiftCSV.framework
+${BUILT_PRODUCTS_DIR}/SwiftUIPager/SwiftUIPager.framework

@@ -7,48 +7,82 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01C505CD32507FAE5CFD33E02DFD618E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		0741320F4029C077E6C87F24FBBE1921 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D16ACDE2AE4B3E0207DFE4596ECCF28 /* CSV.swift */; };
-		0F799B0B4B01A851D35C8150894F4798 /* Pods-BrainStress-BrainStressUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 284F7F90EBC8BD6A79F227311248B63F /* Pods-BrainStress-BrainStressUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		154DA87F9CFE7544E755F5D133AD4E2E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC1A17313467692513DF3C7C0488069 /* Parser.swift */; };
-		173F13BC3ED8649A80E9233614AC4D3E /* Pods-BrainStress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0276017CF8D28CD0E037F2DE981098C1 /* Pods-BrainStress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		18E8699E19BF79678DE08904FCB53F2B /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D33DD3908FA544F294024AB4150AD13 /* String+Lines.swift */; };
-		5D7F9243C47FDAE33C85C4E38E3420F2 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24267885B60F44D4DD36723C982754C1 /* EnumeratedView.swift */; };
+		0741320F4029C077E6C87F24FBBE1921 /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = A991E033C1FEE440D595078E2A0E8452 /* CSV.swift */; };
+		0A7157252020A15EF3966A072F0A9810 /* PagerContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EEF9264539A8758E876B72045DB28 /* PagerContent.swift */; };
+		0E74D4D474CCD3A2D771716D3AFE2537 /* View+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E02A9EBA158FDB2F422080C39233A9D /* View+Helper.swift */; };
+		154DA87F9CFE7544E755F5D133AD4E2E /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B5E19D2061FE8A7FEDEE9D0106F283A /* Parser.swift */; };
+		18E8699E19BF79678DE08904FCB53F2B /* String+Lines.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CBDA8D39376E9E112A58A300AA6470 /* String+Lines.swift */; };
+		1DD3BFB8101138C9C6FCC93A82F1813F /* PositionAlignment.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1E917802D475002388AEBD4A55C62D7 /* PositionAlignment.swift */; };
+		1EF5DB8D2DE4334C390DD6AA844DCDC0 /* PagerContent+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BD4E715D31A1DE417A9E22DA9777735 /* PagerContent+Buildable.swift */; };
+		273317304F927FF3386BE90A3ACCF089 /* PagerContent+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = F407AF486101C39C1FACC52C11890B2D /* PagerContent+Helper.swift */; };
+		2D85A6357BED5F14D79DDC562CDA568D /* SwipeDirection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2420F9E9A676E3EC41D1D68800236561 /* SwipeDirection.swift */; };
+		2E5BA995773DF242F54C9E9A636F69EF /* PagerProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B846AF4292103EAE60EF3C3CDD60B4D /* PagerProxy.swift */; };
+		456714378A776A2D7C8C1B1D297797E0 /* SwiftUIPager-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C880909443289212A4D3BDACD083A4AF /* SwiftUIPager-dummy.m */; };
+		468DD3A5CADCE038A35C2101B8672378 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		48DD08BB06349631EA38D0982E8A325E /* SwipeInteractionArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C2D6A41397D7C5CE2C0F8291B36F3A4 /* SwipeInteractionArea.swift */; };
+		490D33D51316373E6DC0A3C4A7EF8528 /* Pods-BrainStress-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0276017CF8D28CD0E037F2DE981098C1 /* Pods-BrainStress-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FA7D04FC0DB58C58D37102AFD35BAAF /* OnDeactivateModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EC622AEA23FA375E27CAE6D436DA1B /* OnDeactivateModifier.swift */; };
+		5D7F9243C47FDAE33C85C4E38E3420F2 /* EnumeratedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6134AEEE9F3F04A988FD7195919CD37 /* EnumeratedView.swift */; };
 		663F2C2CE8DF0028A29D6616DA1DE4D2 /* Pods-BrainStressTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 546170899B1B8951E5F446F000977F03 /* Pods-BrainStressTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6A6B66DFF4843FACA957A070FADA7BD1 /* Pods-BrainStress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 219121D2797F441A98715BB29B35AC47 /* Pods-BrainStress-dummy.m */; };
+		7DC30D3A94A98B060F95CAA267BA10D6 /* Pager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 965C297E82BB4383035F1D79F752D7C3 /* Pager.swift */; };
 		7EB5BD1E24B29DCEA851F29DF904CD12 /* Pods-BrainStressTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 31F2628BC1AA3CF0781B87181FF5B574 /* Pods-BrainStressTests-dummy.m */; };
-		837565F200CD03AD302FB1FEADDBD6DB /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A12861A7AD26E770421EDCDF7CB70C /* ParsingState.swift */; };
-		84112F18613059B65E11D65807D62426 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		86AA9FC981C6AD5D03CA1D4BFD51FD1D /* SwiftCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F395B92D2B1E5E7B6A441DB5B1F939A /* SwiftCSV-dummy.m */; };
-		8B8F97E3E9420ED84BD808DA37F07B7B /* Pods-BrainStress-BrainStressUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 089056D6BD324B71F9ABE42D5E2DBAD1 /* Pods-BrainStress-BrainStressUITests-dummy.m */; };
-		A86CFB0F97C95200549E59C87E18DD82 /* SwiftCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 54DE705C92D7D2D35F65FB4767C55DA7 /* SwiftCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		AC3A9BBBC696D7F15419180CBE24DE2A /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD18AA0E13FC4664F24D4A7DF51D275B /* NamedView.swift */; };
+		837565F200CD03AD302FB1FEADDBD6DB /* ParsingState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D176DD00F2A5ED002B3F333093103 /* ParsingState.swift */; };
+		84DCCCF9858466E77452F44D0FFFD453 /* Pods-BrainStress-BrainStressUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 089056D6BD324B71F9ABE42D5E2DBAD1 /* Pods-BrainStress-BrainStressUITests-dummy.m */; };
+		86AA9FC981C6AD5D03CA1D4BFD51FD1D /* SwiftCSV-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 74D8922B6C49D7F297EBA25C79D06B0A /* SwiftCSV-dummy.m */; };
+		8E504939631F5E1ABC8C45BD9EE2A052 /* PageWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E19209E7E0C351D3FA7EC823A3442810 /* PageWrapper.swift */; };
+		A86CFB0F97C95200549E59C87E18DD82 /* SwiftCSV-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C4F4EA57D04FE4EA6F436986C9C7043B /* SwiftCSV-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC3A9BBBC696D7F15419180CBE24DE2A /* NamedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4991BFBC76218E2562BD08E05328470 /* NamedView.swift */; };
+		B229C14C42A579ED2D764FF2F1EA4779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
 		B31A8515386081B70C5A5ACC5150F203 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		B9E8F4A66478C69CFBCFEB0F1BFE2486 /* Pods-BrainStress-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 219121D2797F441A98715BB29B35AC47 /* Pods-BrainStress-dummy.m */; };
 		CD58BF8B0960DE52D142D58A3092F2B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
-		E4326632509DC119D9F20A4ADF1A5EDB /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026EDA9B2C54C6EEE0FA5B5DBF16B79 /* Description.swift */; };
+		D64F1C32B2FB50CFDBC63BF7ADF21206 /* CGPoint+Angle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7D410B32CE52024338F059CABA34E0 /* CGPoint+Angle.swift */; };
+		DA866CB14DDA0CDB876FB19DAB49106B /* Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7635814A3000BCCA36213DD9C2A255DC /* Buildable.swift */; };
+		DCF9441AAEA54C44FC110584364FB839 /* SwiftUIPager-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F99B20A56F6CEF6BD39E62088D9033F /* SwiftUIPager-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3559A24F472EEE4A2C49533C5F5D425 /* PagingAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40262E7100928D41E1A65BE89400A77A /* PagingAnimation.swift */; };
+		E4326632509DC119D9F20A4ADF1A5EDB /* Description.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABC08660E96B5B8E7C715145EB39A7B /* Description.swift */; };
+		E8736D33CC6E4E5DBC25748C5A7A7B1A /* Pods-BrainStress-BrainStressUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 284F7F90EBC8BD6A79F227311248B63F /* Pods-BrainStress-BrainStressUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EB62ECD3396EBAF8B8FBD8E920299E73 /* GesturePriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F6EF3925F2ECC9190649FD37F896DFE /* GesturePriority.swift */; };
+		ED35BD1CB8DD3C5E4BBBDB8291B13C8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */; };
+		EF9A8F4244B6E8667BBFBBD24CCBF78F /* Pager+Buildable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD52F1637B99C8FC3E3621E2157920F /* Pager+Buildable.swift */; };
+		FD5E28378B71EC65A3F3AD421CB1E458 /* ContentLoadingPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5A9FED009673D4F58C1885E1F036636 /* ContentLoadingPolicy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2CB1606DA314526B38A9E7CC94A081DD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B7465E4C13FFC9CE6D359E31F65D6825;
-			remoteInfo = SwiftCSV;
-		};
-		E7585A46448C763C38A0F692447FAD8D /* PBXContainerItemProxy */ = {
+		3493A53C582DC0256FB9CD24625E39EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 14CCACFAEF7651A6CD8F590F53CFFAED;
 			remoteInfo = "Pods-BrainStress";
 		};
-		F7EF48CFDE2ADCA4AC6F2AF98E9B88DF /* PBXContainerItemProxy */ = {
+		8F2584DD4920771074082AD4C47E1CBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B7465E4C13FFC9CE6D359E31F65D6825;
 			remoteInfo = SwiftCSV;
+		};
+		9D4F0A8ABCDF31DF047BDD78F60749E2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EDD561B01B453B33504B0EACB2107CC;
+			remoteInfo = SwiftUIPager;
+		};
+		A1373A40304BAF2F4E3836070F62D477 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7465E4C13FFC9CE6D359E31F65D6825;
+			remoteInfo = SwiftCSV;
+		};
+		BAFFB1FD4DB5B9AE8157CB9F3C59A00E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7EDD561B01B453B33504B0EACB2107CC;
+			remoteInfo = SwiftUIPager;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -56,57 +90,90 @@
 		00C050EB681253EDCD18260521AD46BD /* Pods-BrainStress-BrainStressUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BrainStress-BrainStressUITests.modulemap"; sourceTree = "<group>"; };
 		0276017CF8D28CD0E037F2DE981098C1 /* Pods-BrainStress-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrainStress-umbrella.h"; sourceTree = "<group>"; };
 		089056D6BD324B71F9ABE42D5E2DBAD1 /* Pods-BrainStress-BrainStressUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrainStress-BrainStressUITests-dummy.m"; sourceTree = "<group>"; };
-		1AC6233D9BBF6AAF53FAAA76A4D06E98 /* SwiftCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.debug.xcconfig; sourceTree = "<group>"; };
-		2026EDA9B2C54C6EEE0FA5B5DBF16B79 /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = SwiftCSV/Description.swift; sourceTree = "<group>"; };
+		174D176DD00F2A5ED002B3F333093103 /* ParsingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParsingState.swift; path = SwiftCSV/ParsingState.swift; sourceTree = "<group>"; };
+		1ABC08660E96B5B8E7C715145EB39A7B /* Description.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Description.swift; path = SwiftCSV/Description.swift; sourceTree = "<group>"; };
+		1B846AF4292103EAE60EF3C3CDD60B4D /* PagerProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerProxy.swift; path = Sources/SwiftUIPager/Proxy/PagerProxy.swift; sourceTree = "<group>"; };
+		1E02A9EBA158FDB2F422080C39233A9D /* View+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "View+Helper.swift"; path = "Sources/SwiftUIPager/Helpers/View+Helper.swift"; sourceTree = "<group>"; };
+		1E877DFEC02843738E1FA081A2A459C3 /* SwiftCSV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCSV-Info.plist"; sourceTree = "<group>"; };
 		219121D2797F441A98715BB29B35AC47 /* Pods-BrainStress-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrainStress-dummy.m"; sourceTree = "<group>"; };
 		2225110F2845A67C281D2A0523E1A4D9 /* Pods-BrainStress-BrainStressUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStress-BrainStressUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		23ECEF553D17237979EB229192CBF868 /* SwiftCSV-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftCSV-Info.plist"; sourceTree = "<group>"; };
-		24267885B60F44D4DD36723C982754C1 /* EnumeratedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumeratedView.swift; path = SwiftCSV/EnumeratedView.swift; sourceTree = "<group>"; };
-		24FFB183F026935545290C55237C3FF3 /* SwiftCSV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-prefix.pch"; sourceTree = "<group>"; };
+		2420F9E9A676E3EC41D1D68800236561 /* SwipeDirection.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeDirection.swift; path = Sources/SwiftUIPager/PageConfiguration/SwipeDirection.swift; sourceTree = "<group>"; };
+		24CBDA8D39376E9E112A58A300AA6470 /* String+Lines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "SwiftCSV/String+Lines.swift"; sourceTree = "<group>"; };
 		284F7F90EBC8BD6A79F227311248B63F /* Pods-BrainStress-BrainStressUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrainStress-BrainStressUITests-umbrella.h"; sourceTree = "<group>"; };
 		2912CA390AC54DF0A5B70746758FBBE8 /* Pods-BrainStressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStressTests.release.xcconfig"; sourceTree = "<group>"; };
 		2A235C6ECECF14E625644B27C537A866 /* Pods-BrainStressTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStressTests.debug.xcconfig"; sourceTree = "<group>"; };
-		2D16ACDE2AE4B3E0207DFE4596ECCF28 /* CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCSV/CSV.swift; sourceTree = "<group>"; };
-		2F395B92D2B1E5E7B6A441DB5B1F939A /* SwiftCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCSV-dummy.m"; sourceTree = "<group>"; };
+		2C2D6A41397D7C5CE2C0F8291B36F3A4 /* SwipeInteractionArea.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwipeInteractionArea.swift; path = Sources/SwiftUIPager/PageConfiguration/SwipeInteractionArea.swift; sourceTree = "<group>"; };
+		2E0EEF9264539A8758E876B72045DB28 /* PagerContent.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagerContent.swift; path = Sources/SwiftUIPager/PagerContent.swift; sourceTree = "<group>"; };
+		2F6EF3925F2ECC9190649FD37F896DFE /* GesturePriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GesturePriority.swift; path = Sources/SwiftUIPager/PageConfiguration/GesturePriority.swift; sourceTree = "<group>"; };
 		31F2628BC1AA3CF0781B87181FF5B574 /* Pods-BrainStressTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BrainStressTests-dummy.m"; sourceTree = "<group>"; };
 		3212113385A8FBBDB272BD23C409FF61 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.2.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		3917F61B04029DF5EB37D6F427F82957 /* Pods-BrainStress-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrainStress-acknowledgements.markdown"; sourceTree = "<group>"; };
 		39A49B96E75F6DA51AA25E5D6D765ECD /* Pods-BrainStressTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BrainStressTests.modulemap"; sourceTree = "<group>"; };
+		3A7D410B32CE52024338F059CABA34E0 /* CGPoint+Angle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGPoint+Angle.swift"; path = "Sources/SwiftUIPager/Helpers/CGPoint+Angle.swift"; sourceTree = "<group>"; };
 		3C4E12AD325B9C0EE4CF41A110AE1909 /* Pods-BrainStress.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStress.debug.xcconfig"; sourceTree = "<group>"; };
 		3D2B73F5F4470B84A0756B80364F964B /* Pods-BrainStress-BrainStressUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrainStress-BrainStressUITests-frameworks.sh"; sourceTree = "<group>"; };
+		3E00EB67445D42D45B89C40F7CEA500D /* SwiftCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCSV.modulemap; sourceTree = "<group>"; };
+		3F989850CECCDD45EB34E8A365F26D77 /* SwiftUIPager.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftUIPager.modulemap; sourceTree = "<group>"; };
+		3F99B20A56F6CEF6BD39E62088D9033F /* SwiftUIPager-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftUIPager-umbrella.h"; sourceTree = "<group>"; };
+		40262E7100928D41E1A65BE89400A77A /* PagingAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PagingAnimation.swift; path = Sources/SwiftUIPager/PageConfiguration/PagingAnimation.swift; sourceTree = "<group>"; };
+		42923D5E3FD6EB049DB389E86C982C0E /* SwiftCSV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.debug.xcconfig; sourceTree = "<group>"; };
 		44AF477A8AA5059C120A02F141F15827 /* Pods-BrainStressTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStressTests-Info.plist"; sourceTree = "<group>"; };
-		4D33DD3908FA544F294024AB4150AD13 /* String+Lines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Lines.swift"; path = "SwiftCSV/String+Lines.swift"; sourceTree = "<group>"; };
-		4EC1A17313467692513DF3C7C0488069 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftCSV/Parser.swift; sourceTree = "<group>"; };
 		546170899B1B8951E5F446F000977F03 /* Pods-BrainStressTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BrainStressTests-umbrella.h"; sourceTree = "<group>"; };
-		54DE705C92D7D2D35F65FB4767C55DA7 /* SwiftCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-umbrella.h"; sourceTree = "<group>"; };
 		5A6CBEAC7212DCE694AC28667C36D2D1 /* SwiftCSV.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftCSV.framework; path = SwiftCSV.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61B16FD28E9FF94684882E2D54704F81 /* SwiftUIPager.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftUIPager.debug.xcconfig; sourceTree = "<group>"; };
+		683A0EBF7E0947744F26C8DB4A331B11 /* SwiftCSV-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-prefix.pch"; sourceTree = "<group>"; };
+		695D6706C434639951A42817800073A5 /* SwiftCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.release.xcconfig; sourceTree = "<group>"; };
+		6B5E19D2061FE8A7FEDEE9D0106F283A /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = SwiftCSV/Parser.swift; sourceTree = "<group>"; };
+		6BD4E715D31A1DE417A9E22DA9777735 /* PagerContent+Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PagerContent+Buildable.swift"; path = "Sources/SwiftUIPager/PagerContent+Buildable.swift"; sourceTree = "<group>"; };
 		6E4AFC1145B6A3E641B28E7CFA6F9F4C /* Pods_BrainStress_BrainStressUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BrainStress_BrainStressUITests.framework; path = "Pods-BrainStress-BrainStressUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		709EC0482228BD39C3A0D472FB9035DF /* SwiftCSV.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftCSV.modulemap; sourceTree = "<group>"; };
 		714DBB48C70D59F997613969C887A703 /* Pods-BrainStress.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-BrainStress.modulemap"; sourceTree = "<group>"; };
+		74D8922B6C49D7F297EBA25C79D06B0A /* SwiftCSV-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftCSV-dummy.m"; sourceTree = "<group>"; };
+		7635814A3000BCCA36213DD9C2A255DC /* Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Buildable.swift; path = Sources/SwiftUIPager/Helpers/Buildable.swift; sourceTree = "<group>"; };
+		79D804570484EFA258E876A1EB2EDEC6 /* SwiftUIPager.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftUIPager.release.xcconfig; sourceTree = "<group>"; };
+		85EC622AEA23FA375E27CAE6D436DA1B /* OnDeactivateModifier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = OnDeactivateModifier.swift; path = Sources/SwiftUIPager/Helpers/OnDeactivateModifier.swift; sourceTree = "<group>"; };
 		87C95C6EE823F81D98E429935E4DD4A4 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStress-BrainStressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		901E909F8941EFC84891CDA1CF5523A5 /* Pods-BrainStress-BrainStressUITests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStress-BrainStressUITests-Info.plist"; sourceTree = "<group>"; };
+		965C297E82BB4383035F1D79F752D7C3 /* Pager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Pager.swift; path = Sources/SwiftUIPager/Pager.swift; sourceTree = "<group>"; };
 		9979018B46593B96D49234855C114725 /* Pods-BrainStress-BrainStressUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStress-BrainStressUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		9BD52F1637B99C8FC3E3621E2157920F /* Pager+Buildable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Pager+Buildable.swift"; path = "Sources/SwiftUIPager/Pager+Buildable.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9FE3DEA0FAB619912919BB5EC1754F72 /* SwiftUIPager-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftUIPager-prefix.pch"; sourceTree = "<group>"; };
 		A03F094B5D4B5200A5933ABA300E66E0 /* Pods_BrainStressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BrainStressTests.framework; path = "Pods-BrainStressTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A18112E23504479EA1D8101ADC22F61E /* Pods-BrainStress-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStress-Info.plist"; sourceTree = "<group>"; };
 		A8D29DA3C184E0A4CF9A26B958E06A50 /* Pods-BrainStress-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStress-acknowledgements.plist"; sourceTree = "<group>"; };
+		A991E033C1FEE440D595078E2A0E8452 /* CSV.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CSV.swift; path = SwiftCSV/CSV.swift; sourceTree = "<group>"; };
+		B5A9FED009673D4F58C1885E1F036636 /* ContentLoadingPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ContentLoadingPolicy.swift; path = Sources/SwiftUIPager/PageConfiguration/ContentLoadingPolicy.swift; sourceTree = "<group>"; };
 		BBEDE8B2FBF8EA32EFB9C4509A52CE87 /* Pods-BrainStressTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrainStressTests-acknowledgements.markdown"; sourceTree = "<group>"; };
-		C6A12861A7AD26E770421EDCDF7CB70C /* ParsingState.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ParsingState.swift; path = SwiftCSV/ParsingState.swift; sourceTree = "<group>"; };
+		C4991BFBC76218E2562BD08E05328470 /* NamedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NamedView.swift; path = SwiftCSV/NamedView.swift; sourceTree = "<group>"; };
+		C4F4EA57D04FE4EA6F436986C9C7043B /* SwiftCSV-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftCSV-umbrella.h"; sourceTree = "<group>"; };
 		C7D269EC02E612F658184EC4E03BAB6B /* Pods-BrainStress-BrainStressUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BrainStress-BrainStressUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C880909443289212A4D3BDACD083A4AF /* SwiftUIPager-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftUIPager-dummy.m"; sourceTree = "<group>"; };
 		C8E6C616AF1B05B2D4DAEC60E475BA40 /* Pods-BrainStressTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BrainStressTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		CD18AA0E13FC4664F24D4A7DF51D275B /* NamedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NamedView.swift; path = SwiftCSV/NamedView.swift; sourceTree = "<group>"; };
-		D9F1FE174D4DCA81C375E5E7BC60B487 /* SwiftCSV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftCSV.release.xcconfig; sourceTree = "<group>"; };
+		D1452CC8169287E30F6D7C17E46379EC /* SwiftUIPager-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftUIPager-Info.plist"; sourceTree = "<group>"; };
+		E19209E7E0C351D3FA7EC823A3442810 /* PageWrapper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PageWrapper.swift; path = Sources/SwiftUIPager/PageWrapper.swift; sourceTree = "<group>"; };
+		E1E917802D475002388AEBD4A55C62D7 /* PositionAlignment.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PositionAlignment.swift; path = Sources/SwiftUIPager/PageConfiguration/PositionAlignment.swift; sourceTree = "<group>"; };
+		E6134AEEE9F3F04A988FD7195919CD37 /* EnumeratedView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EnumeratedView.swift; path = SwiftCSV/EnumeratedView.swift; sourceTree = "<group>"; };
+		EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftUIPager.framework; path = SwiftUIPager.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F407AF486101C39C1FACC52C11890B2D /* PagerContent+Helper.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PagerContent+Helper.swift"; path = "Sources/SwiftUIPager/PagerContent+Helper.swift"; sourceTree = "<group>"; };
 		FA6FACC44731F43CE01BB8CFB8FF005C /* Pods-BrainStress-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BrainStress-frameworks.sh"; sourceTree = "<group>"; };
 		FC7FDBCF4D81100E4176C10456205106 /* Pods-BrainStress.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BrainStress.release.xcconfig"; sourceTree = "<group>"; };
 		FFFF38F898212B50359D00D09ACC5C54 /* Pods_BrainStress.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_BrainStress.framework; path = "Pods-BrainStress.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		319F6C97C22FDECF19F70CE7344BE2DA /* Frameworks */ = {
+		400A3E2BDFFB4DB89CB9110028C739FA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01C505CD32507FAE5CFD33E02DFD618E /* Foundation.framework in Frameworks */,
+				ED35BD1CB8DD3C5E4BBBDB8291B13C8D /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		837528AEFECA7DDC2BA05B227DBB9F6A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B229C14C42A579ED2D764FF2F1EA4779 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,32 +193,17 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B968D7C6D963819869DCBD7AD4182BF2 /* Frameworks */ = {
+		C0DACEB49A5818F3690AB43F8EF919C8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84112F18613059B65E11D65807D62426 /* Foundation.framework in Frameworks */,
+				468DD3A5CADCE038A35C2101B8672378 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A3D164F168DCE8490382F0C953781A2 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				709EC0482228BD39C3A0D472FB9035DF /* SwiftCSV.modulemap */,
-				2F395B92D2B1E5E7B6A441DB5B1F939A /* SwiftCSV-dummy.m */,
-				23ECEF553D17237979EB229192CBF868 /* SwiftCSV-Info.plist */,
-				24FFB183F026935545290C55237C3FF3 /* SwiftCSV-prefix.pch */,
-				54DE705C92D7D2D35F65FB4767C55DA7 /* SwiftCSV-umbrella.h */,
-				1AC6233D9BBF6AAF53FAAA76A4D06E98 /* SwiftCSV.debug.xcconfig */,
-				D9F1FE174D4DCA81C375E5E7BC60B487 /* SwiftCSV.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftCSV";
-			sourceTree = "<group>";
-		};
 		269F6DAA96329048B45CBB8D43171947 /* Pods-BrainStress */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,13 +221,64 @@
 			path = "Target Support Files/Pods-BrainStress";
 			sourceTree = "<group>";
 		};
-		5329068A102F3EDCFE59C2015520AC44 /* Products */ = {
+		2B11F8FC6DE5E20DB165D050C8DEC6E7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C1257D4382010E537A2BD8423CC76C55 /* SwiftCSV */,
+				3291F5EBA302C3359A7EFB1EC0C4A71B /* SwiftUIPager */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3291F5EBA302C3359A7EFB1EC0C4A71B /* SwiftUIPager */ = {
+			isa = PBXGroup;
+			children = (
+				7635814A3000BCCA36213DD9C2A255DC /* Buildable.swift */,
+				3A7D410B32CE52024338F059CABA34E0 /* CGPoint+Angle.swift */,
+				B5A9FED009673D4F58C1885E1F036636 /* ContentLoadingPolicy.swift */,
+				2F6EF3925F2ECC9190649FD37F896DFE /* GesturePriority.swift */,
+				85EC622AEA23FA375E27CAE6D436DA1B /* OnDeactivateModifier.swift */,
+				965C297E82BB4383035F1D79F752D7C3 /* Pager.swift */,
+				9BD52F1637B99C8FC3E3621E2157920F /* Pager+Buildable.swift */,
+				2E0EEF9264539A8758E876B72045DB28 /* PagerContent.swift */,
+				6BD4E715D31A1DE417A9E22DA9777735 /* PagerContent+Buildable.swift */,
+				F407AF486101C39C1FACC52C11890B2D /* PagerContent+Helper.swift */,
+				1B846AF4292103EAE60EF3C3CDD60B4D /* PagerProxy.swift */,
+				E19209E7E0C351D3FA7EC823A3442810 /* PageWrapper.swift */,
+				40262E7100928D41E1A65BE89400A77A /* PagingAnimation.swift */,
+				E1E917802D475002388AEBD4A55C62D7 /* PositionAlignment.swift */,
+				2420F9E9A676E3EC41D1D68800236561 /* SwipeDirection.swift */,
+				2C2D6A41397D7C5CE2C0F8291B36F3A4 /* SwipeInteractionArea.swift */,
+				1E02A9EBA158FDB2F422080C39233A9D /* View+Helper.swift */,
+				4438F531AF99DF82EC0EA5948C473C7B /* Support Files */,
+			);
+			name = SwiftUIPager;
+			path = SwiftUIPager;
+			sourceTree = "<group>";
+		};
+		4438F531AF99DF82EC0EA5948C473C7B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				3F989850CECCDD45EB34E8A365F26D77 /* SwiftUIPager.modulemap */,
+				C880909443289212A4D3BDACD083A4AF /* SwiftUIPager-dummy.m */,
+				D1452CC8169287E30F6D7C17E46379EC /* SwiftUIPager-Info.plist */,
+				9FE3DEA0FAB619912919BB5EC1754F72 /* SwiftUIPager-prefix.pch */,
+				3F99B20A56F6CEF6BD39E62088D9033F /* SwiftUIPager-umbrella.h */,
+				61B16FD28E9FF94684882E2D54704F81 /* SwiftUIPager.debug.xcconfig */,
+				79D804570484EFA258E876A1EB2EDEC6 /* SwiftUIPager.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftUIPager";
+			sourceTree = "<group>";
+		};
+		5057BC63D15C2BCE3DBA207BB0920948 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				FFFF38F898212B50359D00D09ACC5C54 /* Pods_BrainStress.framework */,
 				6E4AFC1145B6A3E641B28E7CFA6F9F4C /* Pods_BrainStress_BrainStressUITests.framework */,
 				A03F094B5D4B5200A5933ABA300E66E0 /* Pods_BrainStressTests.framework */,
 				5A6CBEAC7212DCE694AC28667C36D2D1 /* SwiftCSV.framework */,
+				EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -190,12 +293,19 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		7CB4D4DE785B19188C1DB656AF8A000B /* Pods */ = {
+		8A7ACDF00A5D802BA8346C97AA944FA7 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				CE91C188822E0641020E38AD9DE0338C /* SwiftCSV */,
+				3E00EB67445D42D45B89C40F7CEA500D /* SwiftCSV.modulemap */,
+				74D8922B6C49D7F297EBA25C79D06B0A /* SwiftCSV-dummy.m */,
+				1E877DFEC02843738E1FA081A2A459C3 /* SwiftCSV-Info.plist */,
+				683A0EBF7E0947744F26C8DB4A331B11 /* SwiftCSV-prefix.pch */,
+				C4F4EA57D04FE4EA6F436986C9C7043B /* SwiftCSV-umbrella.h */,
+				42923D5E3FD6EB049DB389E86C982C0E /* SwiftCSV.debug.xcconfig */,
+				695D6706C434639951A42817800073A5 /* SwiftCSV.release.xcconfig */,
 			);
-			name = Pods;
+			name = "Support Files";
+			path = "../Target Support Files/SwiftCSV";
 			sourceTree = "<group>";
 		};
 		983C201F2D384EC3D3C6D0EF7577273F /* Pods-BrainStress-BrainStressUITests */ = {
@@ -223,17 +333,17 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		CE91C188822E0641020E38AD9DE0338C /* SwiftCSV */ = {
+		C1257D4382010E537A2BD8423CC76C55 /* SwiftCSV */ = {
 			isa = PBXGroup;
 			children = (
-				2D16ACDE2AE4B3E0207DFE4596ECCF28 /* CSV.swift */,
-				2026EDA9B2C54C6EEE0FA5B5DBF16B79 /* Description.swift */,
-				24267885B60F44D4DD36723C982754C1 /* EnumeratedView.swift */,
-				CD18AA0E13FC4664F24D4A7DF51D275B /* NamedView.swift */,
-				4EC1A17313467692513DF3C7C0488069 /* Parser.swift */,
-				C6A12861A7AD26E770421EDCDF7CB70C /* ParsingState.swift */,
-				4D33DD3908FA544F294024AB4150AD13 /* String+Lines.swift */,
-				0A3D164F168DCE8490382F0C953781A2 /* Support Files */,
+				A991E033C1FEE440D595078E2A0E8452 /* CSV.swift */,
+				1ABC08660E96B5B8E7C715145EB39A7B /* Description.swift */,
+				E6134AEEE9F3F04A988FD7195919CD37 /* EnumeratedView.swift */,
+				C4991BFBC76218E2562BD08E05328470 /* NamedView.swift */,
+				6B5E19D2061FE8A7FEDEE9D0106F283A /* Parser.swift */,
+				174D176DD00F2A5ED002B3F333093103 /* ParsingState.swift */,
+				24CBDA8D39376E9E112A58A300AA6470 /* String+Lines.swift */,
+				8A7ACDF00A5D802BA8346C97AA944FA7 /* Support Files */,
 			);
 			name = SwiftCSV;
 			path = SwiftCSV;
@@ -244,8 +354,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				7CB4D4DE785B19188C1DB656AF8A000B /* Pods */,
-				5329068A102F3EDCFE59C2015520AC44 /* Products */,
+				2B11F8FC6DE5E20DB165D050C8DEC6E7 /* Pods */,
+				5057BC63D15C2BCE3DBA207BB0920948 /* Products */,
 				7630CB940C517ED227CCCCC444EE9C13 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -277,19 +387,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		1CB9F13F0FCC21FFDEA193445EA8F98D /* Headers */ = {
+		5F41E8A2E4E81E619B97E0B66BAF61A0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0F799B0B4B01A851D35C8150894F4798 /* Pods-BrainStress-BrainStressUITests-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		391530538CF493D04EEF737D2A338866 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				173F13BC3ED8649A80E9233614AC4D3E /* Pods-BrainStress-umbrella.h in Headers */,
+				490D33D51316373E6DC0A3C4A7EF8528 /* Pods-BrainStress-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,22 +411,39 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		B9B94CEA428FA3EE1EA70B97B49A908E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8736D33CC6E4E5DBC25748C5A7A7B1A /* Pods-BrainStress-BrainStressUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6569E62557A8327C2F0F7A41A30B641 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DCF9441AAEA54C44FC110584364FB839 /* SwiftUIPager-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		14CCACFAEF7651A6CD8F590F53CFFAED /* Pods-BrainStress */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 8BECF73EF03AFB96753609B6C8E201DF /* Build configuration list for PBXNativeTarget "Pods-BrainStress" */;
+			buildConfigurationList = 8AC795718DA6E0EBA89BF56595C1926E /* Build configuration list for PBXNativeTarget "Pods-BrainStress" */;
 			buildPhases = (
-				391530538CF493D04EEF737D2A338866 /* Headers */,
-				888E869D8AA8DF843AA605000F305242 /* Sources */,
-				319F6C97C22FDECF19F70CE7344BE2DA /* Frameworks */,
-				6049A9FE4C5DF01449F47EB9DB9401A9 /* Resources */,
+				5F41E8A2E4E81E619B97E0B66BAF61A0 /* Headers */,
+				10E0EF43B7BB4941BB190AE1C6000251 /* Sources */,
+				C0DACEB49A5818F3690AB43F8EF919C8 /* Frameworks */,
+				7E9A0B2E6E919D5197D1755CEF816A38 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				1829126CC378E99FF53B67F85CCC3424 /* PBXTargetDependency */,
+				D55E403C828E4C5E8D58BF7BE24B125C /* PBXTargetDependency */,
+				A43FA8F107B93FFDB54856463F1EB04C /* PBXTargetDependency */,
 			);
 			name = "Pods-BrainStress";
 			productName = "Pods-BrainStress";
@@ -333,21 +452,40 @@
 		};
 		2201C9209F9F950572996421909CE8DE /* Pods-BrainStress-BrainStressUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D4CB72F81C1C6C7C446A9E556C1A69C2 /* Build configuration list for PBXNativeTarget "Pods-BrainStress-BrainStressUITests" */;
+			buildConfigurationList = 8B8F57B75364FEC3DCF3CFB5EECA5850 /* Build configuration list for PBXNativeTarget "Pods-BrainStress-BrainStressUITests" */;
 			buildPhases = (
-				1CB9F13F0FCC21FFDEA193445EA8F98D /* Headers */,
-				7FE31BEAF0F24FBDCA0B67D3B7653D5D /* Sources */,
-				B968D7C6D963819869DCBD7AD4182BF2 /* Frameworks */,
-				BD96E84D9346750C23A5B1E86DC3DDCD /* Resources */,
+				B9B94CEA428FA3EE1EA70B97B49A908E /* Headers */,
+				07ED40D1CD917A7EAA9B1BE62898D64A /* Sources */,
+				837528AEFECA7DDC2BA05B227DBB9F6A /* Frameworks */,
+				7666990F6CE59DEB29B36017418E04FD /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				177057F6EC7C4789714AB6B342CA3F8B /* PBXTargetDependency */,
+				E9411E0A1EAC798D39A0B9E634D73034 /* PBXTargetDependency */,
+				41D0952C06E21F1CFFA2797B1B9569FA /* PBXTargetDependency */,
 			);
 			name = "Pods-BrainStress-BrainStressUITests";
 			productName = "Pods-BrainStress-BrainStressUITests";
 			productReference = 6E4AFC1145B6A3E641B28E7CFA6F9F4C /* Pods_BrainStress_BrainStressUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7930731B8F39DED11D3A9F697176D598 /* Build configuration list for PBXNativeTarget "SwiftUIPager" */;
+			buildPhases = (
+				F6569E62557A8327C2F0F7A41A30B641 /* Headers */,
+				A17A3673A845EA719FC7E84DF85915DA /* Sources */,
+				400A3E2BDFFB4DB89CB9110028C739FA /* Frameworks */,
+				7D64AF94DB4000CA3B69C2DEBB481A95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftUIPager;
+			productName = SwiftUIPager;
+			productReference = EE18735978C1FD3A42D4D3D0356F3CA6 /* SwiftUIPager.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */ = {
@@ -380,7 +518,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				8A0F32BBD835D0A5C10F179FDBACDC00 /* PBXTargetDependency */,
+				82DAD0338D9E71CE29BF526DBF217E4C /* PBXTargetDependency */,
 			);
 			name = "Pods-BrainStressTests";
 			productName = "Pods-BrainStressTests";
@@ -405,7 +543,7 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 5329068A102F3EDCFE59C2015520AC44 /* Products */;
+			productRefGroup = 5057BC63D15C2BCE3DBA207BB0920948 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
@@ -413,12 +551,27 @@
 				2201C9209F9F950572996421909CE8DE /* Pods-BrainStress-BrainStressUITests */,
 				E0C87C80B657FEA220FBB6114A0B14F2 /* Pods-BrainStressTests */,
 				B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */,
+				7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		6049A9FE4C5DF01449F47EB9DB9401A9 /* Resources */ = {
+		7666990F6CE59DEB29B36017418E04FD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7D64AF94DB4000CA3B69C2DEBB481A95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7E9A0B2E6E919D5197D1755CEF816A38 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,13 +579,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		A8645B289EFCD27C4334F0DF62673388 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BD96E84D9346750C23A5B1E86DC3DDCD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,6 +595,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		07ED40D1CD917A7EAA9B1BE62898D64A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84DCCCF9858466E77452F44D0FFFD453 /* Pods-BrainStress-BrainStressUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		10E0EF43B7BB4941BB190AE1C6000251 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E8F4A66478C69CFBCFEB0F1BFE2486 /* Pods-BrainStress-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		45CDDCD5FE1BDC0E3D565FFEC73E7AB6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -472,51 +634,71 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7FE31BEAF0F24FBDCA0B67D3B7653D5D /* Sources */ = {
+		A17A3673A845EA719FC7E84DF85915DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B8F97E3E9420ED84BD808DA37F07B7B /* Pods-BrainStress-BrainStressUITests-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		888E869D8AA8DF843AA605000F305242 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6A6B66DFF4843FACA957A070FADA7BD1 /* Pods-BrainStress-dummy.m in Sources */,
+				DA866CB14DDA0CDB876FB19DAB49106B /* Buildable.swift in Sources */,
+				D64F1C32B2FB50CFDBC63BF7ADF21206 /* CGPoint+Angle.swift in Sources */,
+				FD5E28378B71EC65A3F3AD421CB1E458 /* ContentLoadingPolicy.swift in Sources */,
+				EB62ECD3396EBAF8B8FBD8E920299E73 /* GesturePriority.swift in Sources */,
+				4FA7D04FC0DB58C58D37102AFD35BAAF /* OnDeactivateModifier.swift in Sources */,
+				EF9A8F4244B6E8667BBFBBD24CCBF78F /* Pager+Buildable.swift in Sources */,
+				7DC30D3A94A98B060F95CAA267BA10D6 /* Pager.swift in Sources */,
+				1EF5DB8D2DE4334C390DD6AA844DCDC0 /* PagerContent+Buildable.swift in Sources */,
+				273317304F927FF3386BE90A3ACCF089 /* PagerContent+Helper.swift in Sources */,
+				0A7157252020A15EF3966A072F0A9810 /* PagerContent.swift in Sources */,
+				2E5BA995773DF242F54C9E9A636F69EF /* PagerProxy.swift in Sources */,
+				8E504939631F5E1ABC8C45BD9EE2A052 /* PageWrapper.swift in Sources */,
+				E3559A24F472EEE4A2C49533C5F5D425 /* PagingAnimation.swift in Sources */,
+				1DD3BFB8101138C9C6FCC93A82F1813F /* PositionAlignment.swift in Sources */,
+				456714378A776A2D7C8C1B1D297797E0 /* SwiftUIPager-dummy.m in Sources */,
+				2D85A6357BED5F14D79DDC562CDA568D /* SwipeDirection.swift in Sources */,
+				48DD08BB06349631EA38D0982E8A325E /* SwipeInteractionArea.swift in Sources */,
+				0E74D4D474CCD3A2D771716D3AFE2537 /* View+Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		177057F6EC7C4789714AB6B342CA3F8B /* PBXTargetDependency */ = {
+		41D0952C06E21F1CFFA2797B1B9569FA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = SwiftCSV;
-			target = B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */;
-			targetProxy = F7EF48CFDE2ADCA4AC6F2AF98E9B88DF /* PBXContainerItemProxy */;
+			name = SwiftUIPager;
+			target = 7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */;
+			targetProxy = BAFFB1FD4DB5B9AE8157CB9F3C59A00E /* PBXContainerItemProxy */;
 		};
-		1829126CC378E99FF53B67F85CCC3424 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SwiftCSV;
-			target = B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */;
-			targetProxy = 2CB1606DA314526B38A9E7CC94A081DD /* PBXContainerItemProxy */;
-		};
-		8A0F32BBD835D0A5C10F179FDBACDC00 /* PBXTargetDependency */ = {
+		82DAD0338D9E71CE29BF526DBF217E4C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-BrainStress";
 			target = 14CCACFAEF7651A6CD8F590F53CFFAED /* Pods-BrainStress */;
-			targetProxy = E7585A46448C763C38A0F692447FAD8D /* PBXContainerItemProxy */;
+			targetProxy = 3493A53C582DC0256FB9CD24625E39EB /* PBXContainerItemProxy */;
+		};
+		A43FA8F107B93FFDB54856463F1EB04C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftUIPager;
+			target = 7EDD561B01B453B33504B0EACB2107CC /* SwiftUIPager */;
+			targetProxy = 9D4F0A8ABCDF31DF047BDD78F60749E2 /* PBXContainerItemProxy */;
+		};
+		D55E403C828E4C5E8D58BF7BE24B125C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCSV;
+			target = B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */;
+			targetProxy = A1373A40304BAF2F4E3836070F62D477 /* PBXContainerItemProxy */;
+		};
+		E9411E0A1EAC798D39A0B9E634D73034 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SwiftCSV;
+			target = B7465E4C13FFC9CE6D359E31F65D6825 /* SwiftCSV */;
+			targetProxy = 8F2584DD4920771074082AD4C47E1CBB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		068AFDACBE17DC4DBC87ECE0D3078B67 /* Release */ = {
+		383F0B7C74329245BF49284316F1CDFE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 87C95C6EE823F81D98E429935E4DD4A4 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */;
+			baseConfigurationReference = 61B16FD28E9FF94684882E2D54704F81 /* SwiftUIPager.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -527,68 +709,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftUIPager/SwiftUIPager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager.modulemap";
+				PRODUCT_MODULE_NAME = SwiftUIPager;
+				PRODUCT_NAME = SwiftUIPager;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
-		};
-		3344AEAD941D60EEC538239518E54E45 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FC7FDBCF4D81100E4176C10456205106 /* Pods-BrainStress.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-BrainStress/Pods-BrainStress-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-BrainStress/Pods-BrainStress.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
+			name = Debug;
 		};
 		487FD112A053D36C1B0BA38888A4EF67 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -628,7 +769,42 @@
 			};
 			name = Debug;
 		};
-		57C81C0F01F370A878AC5BA20D1D46DF /* Debug */ = {
+		58B62F74CEEF30DE4B633F456F350179 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42923D5E3FD6EB049DB389E86C982C0E /* SwiftCSV.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftCSV/SwiftCSV-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
+				PRODUCT_MODULE_NAME = SwiftCSV;
+				PRODUCT_NAME = SwiftCSV;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		64953801F32239167A7346F195E93633 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2225110F2845A67C281D2A0523E1A4D9 /* Pods-BrainStress-BrainStressUITests.debug.xcconfig */;
 			buildSettings = {
@@ -666,44 +842,9 @@
 			};
 			name = Debug;
 		};
-		58B62F74CEEF30DE4B633F456F350179 /* Debug */ = {
+		8382525BF75F33F7A81BFA182151C3DF /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1AC6233D9BBF6AAF53FAAA76A4D06E98 /* SwiftCSV.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftCSV/SwiftCSV-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftCSV/SwiftCSV-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/SwiftCSV/SwiftCSV.modulemap";
-				PRODUCT_MODULE_NAME = SwiftCSV;
-				PRODUCT_NAME = SwiftCSV;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		831779EFC7C047FB10638B214B643E1F /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3C4E12AD325B9C0EE4CF41A110AE1909 /* Pods-BrainStress.debug.xcconfig */;
+			baseConfigurationReference = FC7FDBCF4D81100E4176C10456205106 /* Pods-BrainStress.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -734,10 +875,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		8A3650F6C8AC2EFFA814EA61C37468B1 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -803,6 +945,43 @@
 			};
 			name = Debug;
 		};
+		AA9C35D1D834D3DE103428E8BF00CB15 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 79D804570484EFA258E876A1EB2EDEC6 /* SwiftUIPager.release.xcconfig */;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftUIPager/SwiftUIPager-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/SwiftUIPager/SwiftUIPager.modulemap";
+				PRODUCT_MODULE_NAME = SwiftUIPager;
+				PRODUCT_NAME = SwiftUIPager;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.1;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		AF1F8D2941B0228930706FA0F2C9BB78 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -863,6 +1042,45 @@
 			};
 			name = Release;
 		};
+		B1AE65D3000FB75982CF658FFEE06DF6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 87C95C6EE823F81D98E429935E4DD4A4 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		B4EED8BB20E9F266883E3010B0EA9D26 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2912CA390AC54DF0A5B70746758FBBE8 /* Pods-BrainStressTests.release.xcconfig */;
@@ -902,9 +1120,47 @@
 			};
 			name = Release;
 		};
+		B85D460531E0E04ED8B981DF8FAF473E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C4E12AD325B9C0EE4CF41A110AE1909 /* Pods-BrainStress.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-BrainStress/Pods-BrainStress-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-BrainStress/Pods-BrainStress.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		DBA43334BF2EE90EA4F8C961236FA6E5 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D9F1FE174D4DCA81C375E5E7BC60B487 /* SwiftCSV.release.xcconfig */;
+			baseConfigurationReference = 695D6706C434639951A42817800073A5 /* SwiftCSV.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -950,11 +1206,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		8BECF73EF03AFB96753609B6C8E201DF /* Build configuration list for PBXNativeTarget "Pods-BrainStress" */ = {
+		7930731B8F39DED11D3A9F697176D598 /* Build configuration list for PBXNativeTarget "SwiftUIPager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				831779EFC7C047FB10638B214B643E1F /* Debug */,
-				3344AEAD941D60EEC538239518E54E45 /* Release */,
+				383F0B7C74329245BF49284316F1CDFE /* Debug */,
+				AA9C35D1D834D3DE103428E8BF00CB15 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8AC795718DA6E0EBA89BF56595C1926E /* Build configuration list for PBXNativeTarget "Pods-BrainStress" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B85D460531E0E04ED8B981DF8FAF473E /* Debug */,
+				8382525BF75F33F7A81BFA182151C3DF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8B8F57B75364FEC3DCF3CFB5EECA5850 /* Build configuration list for PBXNativeTarget "Pods-BrainStress-BrainStressUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64953801F32239167A7346F195E93633 /* Debug */,
+				B1AE65D3000FB75982CF658FFEE06DF6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -964,15 +1238,6 @@
 			buildConfigurations = (
 				487FD112A053D36C1B0BA38888A4EF67 /* Debug */,
 				B4EED8BB20E9F266883E3010B0EA9D26 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D4CB72F81C1C6C7C446A9E556C1A69C2 /* Build configuration list for PBXNativeTarget "Pods-BrainStress-BrainStressUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				57C81C0F01F370A878AC5BA20D1D46DF /* Debug */,
-				068AFDACBE17DC4DBC87ECE0D3078B67 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
