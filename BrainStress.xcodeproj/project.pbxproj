@@ -36,7 +36,6 @@
 		465AF0F6252B903800524ED9 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0F5252B903800524ED9 /* BackgroundView.swift */; };
 		46652C00253F280F00B6B3B0 /* FirstTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46652BFF253F280F00B6B3B0 /* FirstTimeView.swift */; };
 		46652C05253F295500B6B3B0 /* FirstTimeTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46652C04253F295500B6B3B0 /* FirstTimeTwo.swift */; };
-		46652C0A253F300D00B6B3B0 /* PageDotsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46652C09253F300D00B6B3B0 /* PageDotsView.swift */; };
 		46652C0F253F308400B6B3B0 /* FirstTimeThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46652C0E253F308400B6B3B0 /* FirstTimeThree.swift */; };
 		466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */; };
 		466B23BD2534980600DCCC5A /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23BC2534980600DCCC5A /* KeyView.swift */; };
@@ -64,6 +63,7 @@
 		46989000252C77BF006EF37B /* FilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FFF252C77BF006EF37B /* FilterButton.swift */; };
 		46989005252C7D85006EF37B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46989004252C7D85006EF37B /* UIColor.swift */; };
 		46D90953252DF81900E40E6F /* TestScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D90952252DF81900E40E6F /* TestScreen.swift */; };
+		46F5991725404ACB00C0BDBA /* Button1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5991625404ACB00C0BDBA /* Button1.swift */; };
 		93032DFB78D07D2EFC407670 /* Pods_BrainStress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2742EA28EE527A66462709 /* Pods_BrainStress.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,7 +120,6 @@
 		465AF0F5252B903800524ED9 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		46652BFF253F280F00B6B3B0 /* FirstTimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeView.swift; sourceTree = "<group>"; };
 		46652C04253F295500B6B3B0 /* FirstTimeTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeTwo.swift; sourceTree = "<group>"; };
-		46652C09253F300D00B6B3B0 /* PageDotsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageDotsView.swift; sourceTree = "<group>"; };
 		46652C0E253F308400B6B3B0 /* FirstTimeThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeThree.swift; sourceTree = "<group>"; };
 		466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathKeyboardView.swift; sourceTree = "<group>"; };
 		466B23BC2534980600DCCC5A /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
@@ -149,6 +148,7 @@
 		46989004252C7D85006EF37B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		46D9094E252DCDF900E40E6F /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		46D90952252DF81900E40E6F /* TestScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestScreen.swift; sourceTree = "<group>"; };
+		46F5991625404ACB00C0BDBA /* Button1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Button1.swift; sourceTree = "<group>"; };
 		5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4232A655BB98BB0233DC22 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress-BrainStressUITests.release.xcconfig"; path = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C8839068A2B54B3785DE3162 /* Pods-BrainStressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStressTests.release.xcconfig"; path = "Target Support Files/Pods-BrainStressTests/Pods-BrainStressTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -424,7 +424,7 @@
 		46970FCE253ED2E100AAC15F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				46652C09253F300D00B6B3B0 /* PageDotsView.swift */,
+				46F5991625404ACB00C0BDBA /* Button1.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -718,6 +718,7 @@
 				464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */,
 				467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */,
 				46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */,
+				46F5991725404ACB00C0BDBA /* Button1.swift in Sources */,
 				4686DB02253054A10048B7C1 /* BrainStressKeyboard.swift in Sources */,
 				467FCFD6252DB85000AF4A9B /* Double.swift in Sources */,
 				4686DAF8253054220048B7C1 /* GameMidView.swift in Sources */,
@@ -750,7 +751,6 @@
 				46652C0F253F308400B6B3B0 /* FirstTimeThree.swift in Sources */,
 				465AF0CF252B8D0A00524ED9 /* Color.swift in Sources */,
 				465AF0E0252B8E4D00524ED9 /* RotatingGearView.swift in Sources */,
-				46652C0A253F300D00B6B3B0 /* PageDotsView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

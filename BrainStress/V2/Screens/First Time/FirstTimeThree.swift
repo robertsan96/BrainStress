@@ -8,43 +8,77 @@
 import SwiftUI
 
 struct FirstTimeThree: View {
+    
+    @State var nickname: String = ""
+    @State var canContinue: Bool = false
+    
     var body: some View {
         VStack {
             ZStack {
                 GeometryReader { proxy in
-                    Image("bg3")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all)
-                        .frame(maxWidth: proxy.size.width,
-                               maxHeight: proxy.size.height)
-                }
-                Rectangle()
-                    .edgesIgnoringSafeArea(.all)
-                    .foregroundColor(Color.black)
-                    .opacity(0.6)
-                GeometryReader { proxy in
                     VStack {
-                        VStack {}.frame(height: 100)
+                        VStack {
+                            Spacer()
+                            Circle()
+                                .frame(height: 100)
+                                .foregroundColor(Color("Dark1"))
+                                .overlay(
+                                    Image(systemName: "person.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .scaleEffect(0.5)
+                                        .foregroundColor(Color("AccentColor"))
+                                )
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                        .padding()
                         VStack {
                             Text("Who are you?")
-                                .font(.system(size: 48, design: .rounded))
+                                .font(.system(size: 36, design: .rounded))
                                 .fontWeight(.thin)
-                                .foregroundColor(Color.white)
                                 .padding()
+                            Spacer()
+                            VStack {
+                                TextField("Your name", text: $nickname)
+                                    .onChange(of: nickname) { _ in
+                                        canContinue = !nickname.isEmpty && (nickname.count >= 4)
+                                    }
+                                    .foregroundColor(Color("AccentColor"))
+                                    .font(.system(size: 21, weight: .bold, design: .rounded))
+                                    .multilineTextAlignment(.center)
+                                Rectangle()
+                                    .frame(height: 1)
+                                    .border(Color("AccentColor"), width: 1)
+                            }
+                            .frame(maxWidth: 300)
+                            Spacer()
+                            
+                            VStack {
+                                NavigationLink(
+                                    destination: MainView(),
+                                    label: {
+                                        Button1(enabled: $canContinue)
+                                    })
+                                    .disabled(!canContinue)
+                            }.frame(width: 150, height: 52)
+                            Spacer()
+                            Spacer()
                         }
                         Spacer()
-                        PageDotsView(dots: 3, activeDot: 3)
-                            .padding(.bottom, 50)
+                        Spacer()
+                        Spacer()
                     }.frame(maxWidth: .infinity)
                 }
             }
         }
+        .background(Color("Bg1"))
     }
 }
 
 struct FirstTimeThree_Previews: PreviewProvider {
     static var previews: some View {
         FirstTimeThree()
+            .preferredColorScheme(.dark)
     }
 }

@@ -10,24 +10,23 @@ import SwiftUI
 struct FirstTimeView: View {
     
     var body: some View {
-        ZStack {
-            
-            GeometryReader { proxy in
-                TabView {
-                    FirstTimeOne()
-                        .cornerRadius(1)
-                        .padding(.top, -44)
-                    FirstTimeTwo()
-                        .cornerRadius(1)
-                        .padding(.top, -44)
-                    FirstTimeThree()
-                        .cornerRadius(1)
-                        .padding(.top, -44)
+        NavigationView {
+            ZStack {
+                Rectangle()
+                    .edgesIgnoringSafeArea(.all)
+                    .foregroundColor(Color("Bg1"))
+                GeometryReader { proxy in
+                    TabView {
+                        FirstTimeOne()
+                        FirstTimeTwo()
+                        FirstTimeThree()
+                    }
+                    .background(Color("Bg1"))
+                    .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
             }
+            .navigationBarHidden(true)
         }
-        .edgesIgnoringSafeArea(.all)
     }
 }
 

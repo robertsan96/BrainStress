@@ -12,24 +12,27 @@ struct FirstTimeOne: View {
         VStack {
             ZStack {
                 GeometryReader { proxy in
-                    Image("bg1")
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .edgesIgnoringSafeArea(.all).frame(maxWidth: proxy.size.width,
-                                                           maxHeight: proxy.size.height)
-                }
-                Rectangle()
-                    .edgesIgnoringSafeArea(.all)
-                    .foregroundColor(Color.black)
-                    .opacity(0.6)
-                GeometryReader { proxy in
                     VStack {
-                        VStack {}.frame(height: 100)
+                        VStack {
+                            Spacer()
+                            Circle()
+                                .frame(height: 100)
+                                .foregroundColor(Color("Dark1"))
+                                .overlay(
+                                    Image(systemName: "hands.sparkles.fill")
+                                        .resizable()
+                                        .scaledToFit()
+                                        .scaleEffect(0.5)
+                                        .foregroundColor(Color("AccentColor"))
+                                )
+                        }
+                        .frame(maxWidth: .infinity)
+                        .frame(height: 200)
+                        .padding()
                         VStack {
                             Text("Hello!")
-                                .font(.system(size: 48, design: .rounded))
+                                .font(.system(size: 36, design: .rounded))
                                 .fontWeight(.thin)
-                                .foregroundColor(Color.white)
                                 .padding()
                             Text("Nice to meet you, \nanonymous!")
                                 .font(.system(size: 24, design: .rounded))
@@ -38,17 +41,23 @@ struct FirstTimeOne: View {
                                 .foregroundColor(Color("SubtitleColor"))
                         }
                         Spacer()
-                        PageDotsView(dots: 3, activeDot: 1)
-                            .padding(.bottom, 50)
+                        Spacer()
+                        Spacer()
                     }.frame(maxWidth: .infinity)
                 }
             }
         }
+        .background(Color("Bg1"))
     }
 }
 
 struct FirstTimeOne_Previews: PreviewProvider {
     static var previews: some View {
-        FirstTimeOne()
+        Group {
+            FirstTimeOne()
+                .preferredColorScheme(.dark)
+            FirstTimeOne()
+                .preferredColorScheme(.light)
+        }
     }
 }
