@@ -56,11 +56,15 @@ struct FirstTimeThree: View {
                             
                             VStack {
                                 NavigationLink(
-                                    destination: MainView(),
+                                    destination: HomeView(),
                                     label: {
                                         Button1(enabled: $canContinue)
                                     })
                                     .disabled(!canContinue)
+                                    .simultaneousGesture(TapGesture().onEnded({ tap in
+                                        if !canContinue { return }
+                                        UserDefaultsManager.shared.set(nickname: nickname)
+                                    }))
                             }.frame(width: 150, height: 52)
                             Spacer()
                             Spacer()

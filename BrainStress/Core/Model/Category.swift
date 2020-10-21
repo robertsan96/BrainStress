@@ -10,15 +10,25 @@ import Foundation
 class Category: Identifiable,
                 Hashable,
                 Equatable,
-                ExpressibleByStringLiteral {
+                ExpressibleByStringLiteral,
+                CardPresentable {
+    
     typealias StringLiteralType = String
     
     var name: String
+    var imageName: String?
+    var overlayColor: String?
     
     required init(stringLiteral name: String) {
         self.name = name
     }
 
+    init(stringLiteral name: String, imageName: String?, overlayColor: String?) {
+        self.name = name
+        self.imageName = imageName
+        self.overlayColor = overlayColor
+    }
+    
     static func == (lhs: Category, rhs: Category) -> Bool {
         lhs.name == rhs.name
     }

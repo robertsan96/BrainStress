@@ -13,7 +13,7 @@ struct GameView: View {
     
     var body: some View {
         ZStack {
-            BackgroundView().edgesIgnoringSafeArea(.all)
+//            BackgroundView().edgesIgnoringSafeArea(.all)
             switch gameModel.gameState {
             case .warmUp: GameWarmUpView()
             case .playing, .paused:

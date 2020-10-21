@@ -40,20 +40,22 @@ struct GameBottomView: View {
                 }
                 .frame(maxWidth: .infinity)
             case .text:
-                BrainStressKeyboard() { da in
-                    gameModel.quizItemUAnswer = da
-                    gameModel.addAnswerToList(answer: da)
-                }
+                //                BrainStressKeyboard() { da in
+                //                    gameModel.quizItemUAnswer = da
+                //                    gameModel.addAnswerToList(answer: da)
+                //                }
+                Text("da")
             default: Text("Something went wrong.")
             }
+        default: Text("de umpluturra")
         }
     }
-}
-
-struct GameBottomView_Previews: PreviewProvider {
-    static var previews: some View {
-        GameBottomView()
-            .environmentObject(GameModel(quiz: QuizData.Geography.capitals1()))
-            .preferredColorScheme(.dark)
+    
+    struct GameBottomView_Previews: PreviewProvider {
+        static var previews: some View {
+            GameBottomView()
+                .environmentObject(GameModel(quiz: QuizData.Geography.capitals1()))
+                .preferredColorScheme(.dark)
+        }
     }
 }

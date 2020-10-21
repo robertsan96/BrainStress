@@ -13,8 +13,6 @@ struct GameWarmUpView: View {
     
     var body: some View {
         VStack {
-            LogoView()
-                .frame(maxHeight: 200)
             Spacer()
 
             Text("Warm up...")

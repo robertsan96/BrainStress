@@ -16,8 +16,7 @@ struct GameEndView: View {
     
     var body: some View {
         VStack {
-            LogoView()
-                .frame(maxHeight: 200)
+                
             Spacer()
             switch gameModel.gameState {
             case .end(let won):
@@ -76,7 +75,7 @@ struct GameEndView: View {
                     Button(action: {
                         presentationMode.wrappedValue.dismiss()
                     }, label: {
-                        RoundedButton1(enabled: .constant(true), title: "Home")
+//                        RoundedButton1(enabled: .constant(true), title: "Home")
                     })
                 }
                 Spacer()

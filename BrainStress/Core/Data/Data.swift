@@ -8,11 +8,33 @@
 import Foundation
 import SwiftCSV
 
-enum QuizCategory: Category, CaseIterable {
+enum QuizCategory: CaseIterable {
     
+    case math
+    case geography
+    case trickyQuestions
+    case automotive
+    case motto
     
-    case math = "Math"
-    case geography = "Geography"
+    func category() -> Category {
+        switch self {
+        case .math: return Category(stringLiteral: "Math",
+                                    imageName: "CardPictureGreece",
+                                    overlayColor: "CardOverlayMath")
+        case .geography: return Category(stringLiteral: "Geography",
+                                         imageName: "CardPictureSunset",
+                                         overlayColor: "CardOverlayGeography")
+        case .trickyQuestions: return Category(stringLiteral: "Tricky Questions",
+                                         imageName: "CardPictureGNR",
+                                         overlayColor: "CardOverlayTrickyQuestions")
+        case .automotive: return Category(stringLiteral: "Automotive",
+                                         imageName: "CardPictureCar",
+                                         overlayColor: "CardOverlayAutomotive")
+        case .motto: return Category(stringLiteral: "Mottos",
+                                         imageName: "CardPictureRobert",
+                                         overlayColor: "CardOverlayMotto")
+        }
+    }
 }
 
 struct QuizData {
