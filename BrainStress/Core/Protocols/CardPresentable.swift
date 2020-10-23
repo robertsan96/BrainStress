@@ -12,4 +12,5 @@ protocol CardPresentable {
     var name: String { get set }
     var imageName: String? { get set }
     var overlayColor: String? { get set }
+    var textColor: String? { get set }
 }

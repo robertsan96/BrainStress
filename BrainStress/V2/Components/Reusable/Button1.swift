@@ -10,6 +10,7 @@ import SwiftUI
 struct Button1: View {
     
     @Binding var enabled: Bool
+    @State var fontSize: CGFloat = 24
     
     var body: some View {
         VStack {
@@ -18,7 +19,7 @@ struct Button1: View {
                 .cornerRadius(15)
                 .overlay(
                     Text("Play")
-                        .font(.system(size: 24,
+                        .font(.system(size: fontSize,
                                       weight: .bold,
                                       design: .rounded))
                         .foregroundColor(Color.white)

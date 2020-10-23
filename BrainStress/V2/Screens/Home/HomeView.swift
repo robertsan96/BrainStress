@@ -24,7 +24,7 @@ struct HomeView: View {
                                           weight: .light,
                                           design: .rounded))
                             .multilineTextAlignment(.leading)
-                        Text("Robert!")
+                        Text(viewModel.welcomeNickname)
                             .font(.system(size: 32, weight: .black, design: .rounded))
                     }
                     Spacer()
@@ -34,28 +34,45 @@ struct HomeView: View {
                 .frame(height: 130)
                 ScrollView(.vertical, showsIndicators: false, content: {
                     VStack {
-                        ForEach(viewModel.categories.chunked(into: 2), id:\.self) { set in
-                            HStack {
-                                ForEach(set, id:\.self) { category in
-                                    CardView(config: category)
-                                        .frame(maxWidth: .infinity)
-                                        .frame(height: 90)
+                        VStack {
+                            ForEach(viewModel.categories.chunked(into: 2), id:\.self) { set in
+                                HStack {
+                                    ForEach(set, id:\.self) { category in
+                                        CardView(config: category)
+                                            .frame(maxWidth: .infinity)
+                                            .frame(height: 90)
+                                    }
                                 }
                             }
-                        }
-                    }.padding()
+                        }.padding()
+                        VStack {
+                            HStack {
+                                Text("Quizzes")
+                                    .font(.system(size: 36, weight: .bold, design: .rounded))
+                                Spacer()
+                            }
+                            ForEach(viewModel.quizzes, id:\.self) { quiz in
+                                CardWithSidebarView(leftContent: {
+                                    CardQuizLeft()
+                                }, rightContent: {
+                                    Dedicated_QuizCardInteriorView(quiz: quiz)
+                                })
+                            }
+                        }.padding()
+                    }
                 })
             }
         }
+        .background(Color("Bg1"))
         .navigationBarHidden(true)
     }
     
     class ViewModel: NSObject, ObservableObject {
         
         var categories = [
-            Category(stringLiteral: "All",
-                     imageName: "",
-                     overlayColor: "CardOverlayAll"),
+            Category(withName: "All",
+                     withImageName: "",
+                     withOverlayColor: "CardOverlayAll"),
             
             QuizCategory.math.category(),
             QuizCategory.geography.category(),
@@ -64,6 +81,28 @@ struct HomeView: View {
             QuizCategory.automotive.category(),
             
             QuizCategory.motto.category()
+        ]
+        
+        var quizzes: [Quiz] = [
+            QuizData.Math.addition1(),
+            QuizData.Math.addition2(),
+            QuizData.Math.addition3(),
+            QuizData.Math.addition4(),
+            
+            QuizData.Math.divisions1(),
+            QuizData.Math.divisions2(),
+            QuizData.Math.divisions3(),
+            QuizData.Math.divisions4(),
+            
+            QuizData.Math.subtraction1(),
+            QuizData.Math.subtraction2(),
+            QuizData.Math.subtraction3(),
+            QuizData.Math.subtraction4(),
+            
+            QuizData.Math.multiplications1(),
+            QuizData.Math.multiplications2(),
+            QuizData.Math.multiplications3(),
+            QuizData.Math.multiplications4(),
         ]
         
         var welcomeMessage: String {
@@ -76,12 +115,17 @@ struct HomeView: View {
             default: return "Hello,"
             }
         }
+        
+        var welcomeNickname: String {
+            let nickName = UserDefaultsManager.shared.getNickname()
+            return nickName.isEmpty ? "Anonymous" : nickName
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .preferredColorScheme(.dark)
+            .preferredColorScheme(.light)
     }
 }

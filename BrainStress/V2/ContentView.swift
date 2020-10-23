@@ -13,7 +13,13 @@ struct ContentView: View {
     var nickname = UserDefaultsManager.shared.getNickname()
 
     var body: some View {
-        FirstTimeView()
+        NavigationView {
+            if nickname.isEmpty {
+                FirstTimeView()
+            } else {
+                HomeView()
+            }
+        }
     }
 }
 

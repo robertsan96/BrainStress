@@ -26,6 +26,7 @@ struct CardView: View {
                 HStack {
                     Text(config.name)
                         .font(.system(size: 16, weight: .heavy, design: .rounded))
+                        .foregroundColor(Color(config.textColor ?? "TextColor"))
                     Spacer()
                 }
             }

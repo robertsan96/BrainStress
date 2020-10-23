@@ -7,33 +7,29 @@
 
 import Foundation
 
-class Category: Identifiable,
-                Hashable,
-                Equatable,
-                ExpressibleByStringLiteral,
-                CardPresentable {
-    
-    typealias StringLiteralType = String
+class Category: Hashable, CardPresentable {
     
     var name: String
     var imageName: String?
     var overlayColor: String?
-    
-    required init(stringLiteral name: String) {
-        self.name = name
-    }
+    var textColor: String?
 
-    init(stringLiteral name: String, imageName: String?, overlayColor: String?) {
+    init(withName name: String,
+         withImageName imageName: String? = nil,
+         withOverlayColor overlayColor: String? = nil,
+         withTextColor textColor: String? = nil) {
         self.name = name
         self.imageName = imageName
         self.overlayColor = overlayColor
-    }
-    
-    static func == (lhs: Category, rhs: Category) -> Bool {
-        lhs.name == rhs.name
+        self.textColor = textColor ?? "CardTextColor"
     }
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(name)
+        hasher.combine(imageName)
+    }
+    
+    static func == (lhs: Category, rhs: Category) -> Bool {
+        lhs.name == rhs.name
     }
 }

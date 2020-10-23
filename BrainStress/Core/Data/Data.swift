@@ -18,21 +18,21 @@ enum QuizCategory: CaseIterable {
     
     func category() -> Category {
         switch self {
-        case .math: return Category(stringLiteral: "Math",
-                                    imageName: "CardPictureGreece",
-                                    overlayColor: "CardOverlayMath")
-        case .geography: return Category(stringLiteral: "Geography",
-                                         imageName: "CardPictureSunset",
-                                         overlayColor: "CardOverlayGeography")
-        case .trickyQuestions: return Category(stringLiteral: "Tricky Questions",
-                                         imageName: "CardPictureGNR",
-                                         overlayColor: "CardOverlayTrickyQuestions")
-        case .automotive: return Category(stringLiteral: "Automotive",
-                                         imageName: "CardPictureCar",
-                                         overlayColor: "CardOverlayAutomotive")
-        case .motto: return Category(stringLiteral: "Mottos",
-                                         imageName: "CardPictureRobert",
-                                         overlayColor: "CardOverlayMotto")
+        case .math: return Category(withName: "Math",
+                                    withImageName: "CardPictureGreece",
+                                    withOverlayColor: "CardOverlayMath")
+        case .geography: return Category(withName: "Geography",
+                                         withImageName: "CardPictureSunset",
+                                         withOverlayColor: "CardOverlayGeography")
+        case .trickyQuestions: return Category(withName: "Tricky Questions",
+                                               withImageName: "CardPictureGNR",
+                                               withOverlayColor: "CardOverlayTrickyQuestions")
+        case .automotive: return Category(withName: "Automotive",
+                                          withImageName: "CardPictureCar",
+                                          withOverlayColor: "CardOverlayAutomotive")
+        case .motto: return Category(withName: "Mottos",
+                                     withImageName: "CardPictureRobert",
+                                     withOverlayColor: "CardOverlayMotto")
         }
     }
 }
@@ -326,7 +326,7 @@ struct QuizItemData {
             }
             return generatedQuizItems
         }
-
+        
         
         static func generate(items: Int) -> [QuizItem] {
             var generatedQuizItems: [QuizItem] = []
