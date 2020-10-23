@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardView: View {
     
+    @Binding var active: Bool
     @State var config: CardPresentable
     
     var body: some View {
@@ -18,7 +19,9 @@ struct CardView: View {
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
                 .overlay(
                     Rectangle()
-                        .foregroundColor(Color(config.overlayColor ?? "").opacity(0.9))
+                        .foregroundColor(Color(config.overlayColor ?? "")
+                                            .opacity(0.9))
+                        .overlay(active ? Color.clear : Color.black.opacity(0.8))
                 )
                 .cornerRadius(15)
             VStack {
@@ -32,13 +35,15 @@ struct CardView: View {
             }
             .padding()
         }
+        .opacity(active ? 1 : 0.8)
     }
 }
 
 struct CardView_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            CardView(config: QuizCategory.math.category())
+            CardView(active: .constant(true),
+                     config: QuizCategory.math.category())
                 .frame(maxWidth: .infinity)
                 .frame(height: 90)
         }.previewLayout(.fixed(width: 200, height: 90))

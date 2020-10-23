@@ -38,9 +38,14 @@ struct HomeView: View {
                             ForEach(viewModel.categories.chunked(into: 2), id:\.self) { set in
                                 HStack {
                                     ForEach(set, id:\.self) { category in
-                                        CardView(config: category)
-                                            .frame(maxWidth: .infinity)
-                                            .frame(height: 90)
+                                        Button(action: {
+                                            viewModel.activeCategory = category
+                                        }, label: {
+                                            CardView(active: .constant(category == viewModel.activeCategory),
+                                                     config: category)
+                                                .frame(maxWidth: .infinity)
+                                                .frame(height: 90)
+                                        })
                                     }
                                 }
                             }
@@ -51,12 +56,21 @@ struct HomeView: View {
                                     .font(.system(size: 36, weight: .bold, design: .rounded))
                                 Spacer()
                             }
-                            ForEach(viewModel.quizzes, id:\.self) { quiz in
-                                CardWithSidebarView(leftContent: {
-                                    CardQuizLeft()
-                                }, rightContent: {
-                                    Dedicated_QuizCardInteriorView(quiz: quiz)
-                                })
+                            if viewModel.quizzes.count == 0 {
+                                VStack {
+                                    Text("Pretty empty here 😐")
+                                        .font(.system(size: 16, weight: .light, design: .rounded))
+                                }
+                                .frame(maxWidth: .infinity)
+                                .frame(height: 250)
+                            } else {
+                                ForEach(viewModel.quizzes, id:\.self) { quiz in
+                                    CardWithSidebarView(leftContent: {
+                                        CardQuizLeft()
+                                    }, rightContent: {
+                                        Dedicated_QuizCardInteriorView(quiz: quiz)
+                                    })
+                                }
                             }
                         }.padding()
                     }
@@ -69,8 +83,14 @@ struct HomeView: View {
     
     class ViewModel: NSObject, ObservableObject {
         
+        @Published var activeCategory: CategoryModel {
+            didSet {
+                setQuizzes(byCategory: activeCategory)
+            }
+        }
+        
         var categories = [
-            Category(withName: "All",
+            CategoryModel(withName: "All",
                      withImageName: "",
                      withOverlayColor: "CardOverlayAll"),
             
@@ -83,27 +103,7 @@ struct HomeView: View {
             QuizCategory.motto.category()
         ]
         
-        var quizzes: [Quiz] = [
-            QuizData.Math.addition1(),
-            QuizData.Math.addition2(),
-            QuizData.Math.addition3(),
-            QuizData.Math.addition4(),
-            
-            QuizData.Math.divisions1(),
-            QuizData.Math.divisions2(),
-            QuizData.Math.divisions3(),
-            QuizData.Math.divisions4(),
-            
-            QuizData.Math.subtraction1(),
-            QuizData.Math.subtraction2(),
-            QuizData.Math.subtraction3(),
-            QuizData.Math.subtraction4(),
-            
-            QuizData.Math.multiplications1(),
-            QuizData.Math.multiplications2(),
-            QuizData.Math.multiplications3(),
-            QuizData.Math.multiplications4(),
-        ]
+        var quizzes = QuizData.quizzes
         
         var welcomeMessage: String {
             let hour = Calendar.current.component(.hour, from: Date())
@@ -120,12 +120,24 @@ struct HomeView: View {
             let nickName = UserDefaultsManager.shared.getNickname()
             return nickName.isEmpty ? "Anonymous" : nickName
         }
+        
+        override init() {
+            activeCategory = categories.first!
+            super.init()
+            setQuizzes(byCategory: activeCategory)
+        }
+        
+        public func setQuizzes(byCategory category: CategoryModel) {
+            quizzes = QuizData.quizzes.filter({ q in
+                (q.category.category() == activeCategory) || activeCategory.name == "All"
+            })
+        }
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         HomeView()
-            .preferredColorScheme(.light)
+            .preferredColorScheme(.dark)
     }
 }

@@ -16,21 +16,21 @@ enum QuizCategory: CaseIterable {
     case automotive
     case motto
     
-    func category() -> Category {
+    func category() -> CategoryModel {
         switch self {
-        case .math: return Category(withName: "Math",
+        case .math: return CategoryModel(withName: "Math",
                                     withImageName: "CardPictureGreece",
                                     withOverlayColor: "CardOverlayMath")
-        case .geography: return Category(withName: "Geography",
+        case .geography: return CategoryModel(withName: "Geography",
                                          withImageName: "CardPictureSunset",
                                          withOverlayColor: "CardOverlayGeography")
-        case .trickyQuestions: return Category(withName: "Tricky Questions",
+        case .trickyQuestions: return CategoryModel(withName: "Tricky Questions",
                                                withImageName: "CardPictureGNR",
                                                withOverlayColor: "CardOverlayTrickyQuestions")
-        case .automotive: return Category(withName: "Automotive",
+        case .automotive: return CategoryModel(withName: "Automotive",
                                           withImageName: "CardPictureCar",
                                           withOverlayColor: "CardOverlayAutomotive")
-        case .motto: return Category(withName: "Mottos",
+        case .motto: return CategoryModel(withName: "Mottos",
                                      withImageName: "CardPictureRobert",
                                      withOverlayColor: "CardOverlayMotto")
         }
@@ -38,6 +38,31 @@ enum QuizCategory: CaseIterable {
 }
 
 struct QuizData {
+    
+    static var quizzes: [Quiz] = [
+        QuizData.Math.addition1(),
+        QuizData.Math.addition2(),
+        QuizData.Math.addition3(),
+        QuizData.Math.addition4(),
+        
+        QuizData.Math.divisions1(),
+        QuizData.Math.divisions2(),
+        QuizData.Math.divisions3(),
+        QuizData.Math.divisions4(),
+        
+        QuizData.Math.subtraction1(),
+        QuizData.Math.subtraction2(),
+        QuizData.Math.subtraction3(),
+        QuizData.Math.subtraction4(),
+        
+        QuizData.Math.multiplications1(),
+        QuizData.Math.multiplications2(),
+        QuizData.Math.multiplications3(),
+        QuizData.Math.multiplications4(),
+        
+        QuizData.Geography.capitals1(),
+        QuizData.Geography.geography1()
+    ]
     
     struct Math {
         

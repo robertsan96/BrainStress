@@ -7,7 +7,7 @@
 
 import Foundation
 
-class Category: Hashable, CardPresentable {
+class CategoryModel: Hashable, Equatable, CardPresentable {
     
     var name: String
     var imageName: String?
@@ -29,7 +29,7 @@ class Category: Hashable, CardPresentable {
         hasher.combine(imageName)
     }
     
-    static func == (lhs: Category, rhs: Category) -> Bool {
+    static func == (lhs: CategoryModel, rhs: CategoryModel) -> Bool {
         lhs.name == rhs.name
     }
 }
