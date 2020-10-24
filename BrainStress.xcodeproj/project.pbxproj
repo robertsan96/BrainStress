@@ -21,6 +21,7 @@
 		46240C29252E675E000F34E7 /* GameTopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C28252E675E000F34E7 /* GameTopView.swift */; };
 		46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C2D252F44A6000F34E7 /* GameEndView.swift */; };
 		463E3F48254493BF002980A7 /* WarmupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F47254493BF002980A7 /* WarmupView.swift */; };
+		463E3F5B25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F5A25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift */; };
 		464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */; };
 		465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF09F252B75D300524ED9 /* BrainStressApp.swift */; };
 		465AF0A2252B75D300524ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0A1252B75D300524ED9 /* ContentView.swift */; };
@@ -56,7 +57,6 @@
 		46F5995A2540744500C0BDBA /* Array.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F599592540744500C0BDBA /* Array.swift */; };
 		46F5995F2540C06A00C0BDBA /* CardQuizLeft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F5995E2540C06A00C0BDBA /* CardQuizLeft.swift */; };
 		46F599642541538B00C0BDBA /* CardWithSidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F599632541538B00C0BDBA /* CardWithSidebarView.swift */; };
-		46F599722542C7FB00C0BDBA /* Dedicated_QuizCardInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F599712542C7FB00C0BDBA /* Dedicated_QuizCardInteriorView.swift */; };
 		93032DFB78D07D2EFC407670 /* Pods_BrainStress.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB2742EA28EE527A66462709 /* Pods_BrainStress.framework */; };
 /* End PBXBuildFile section */
 
@@ -92,6 +92,7 @@
 		46240C28252E675E000F34E7 /* GameTopView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopView.swift; sourceTree = "<group>"; };
 		46240C2D252F44A6000F34E7 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		463E3F47254493BF002980A7 /* WarmupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupView.swift; sourceTree = "<group>"; };
+		463E3F5A25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dedicated_QuizCardInteriorView.swift; sourceTree = "<group>"; };
 		464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToSoftwareKeyboard.swift; sourceTree = "<group>"; };
 		465AF09C252B75D300524ED9 /* BrainStress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465AF09F252B75D300524ED9 /* BrainStressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressApp.swift; sourceTree = "<group>"; };
@@ -134,7 +135,6 @@
 		46F599592540744500C0BDBA /* Array.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Array.swift; sourceTree = "<group>"; };
 		46F5995E2540C06A00C0BDBA /* CardQuizLeft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuizLeft.swift; sourceTree = "<group>"; };
 		46F599632541538B00C0BDBA /* CardWithSidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardWithSidebarView.swift; sourceTree = "<group>"; };
-		46F599712542C7FB00C0BDBA /* Dedicated_QuizCardInteriorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dedicated_QuizCardInteriorView.swift; sourceTree = "<group>"; };
 		5D22F788A8EA6AE1847B8E13 /* Pods_BrainStressTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BrainStressTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B4232A655BB98BB0233DC22 /* Pods-BrainStress-BrainStressUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStress-BrainStressUITests.release.xcconfig"; path = "Target Support Files/Pods-BrainStress-BrainStressUITests/Pods-BrainStress-BrainStressUITests.release.xcconfig"; sourceTree = "<group>"; };
 		C8839068A2B54B3785DE3162 /* Pods-BrainStressTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BrainStressTests.release.xcconfig"; path = "Target Support Files/Pods-BrainStressTests/Pods-BrainStressTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -382,7 +382,7 @@
 		46970FCE253ED2E100AAC15F /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				46F599702542C7E700C0BDBA /* Dedicated */,
+				463E3F5A25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift */,
 				46F5996F2542C7DB00C0BDBA /* Reusable */,
 			);
 			path = Components;
@@ -438,14 +438,6 @@
 				46F599632541538B00C0BDBA /* CardWithSidebarView.swift */,
 			);
 			path = Reusable;
-			sourceTree = "<group>";
-		};
-		46F599702542C7E700C0BDBA /* Dedicated */ = {
-			isa = PBXGroup;
-			children = (
-				46F599712542C7FB00C0BDBA /* Dedicated_QuizCardInteriorView.swift */,
-			);
-			path = Dedicated;
 			sourceTree = "<group>";
 		};
 		C0F8C943D6DB4AF34C362538 /* Frameworks */ = {
@@ -699,6 +691,7 @@
 			files = (
 				465AF0A2252B75D300524ED9 /* ContentView.swift in Sources */,
 				46F5995F2540C06A00C0BDBA /* CardQuizLeft.swift in Sources */,
+				463E3F5B25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift in Sources */,
 				463E3F48254493BF002980A7 /* WarmupView.swift in Sources */,
 				4686DAEE252F6D590048B7C1 /* KeyboardObserving.swift in Sources */,
 				46F5991D25405CCD00C0BDBA /* HomeView.swift in Sources */,
@@ -722,7 +715,6 @@
 				46989005252C7D85006EF37B /* UIColor.swift in Sources */,
 				46240C1C252E5EFD000F34E7 /* BrainStressFont.swift in Sources */,
 				465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */,
-				46F599722542C7FB00C0BDBA /* Dedicated_QuizCardInteriorView.swift in Sources */,
 				46240C24252E5F8B000F34E7 /* GameWarmUpView.swift in Sources */,
 				46076ABC253594BF00B5C5D2 /* CSVManager.swift in Sources */,
 				467FCFD1252DB33D00AF4A9B /* Operator.swift in Sources */,

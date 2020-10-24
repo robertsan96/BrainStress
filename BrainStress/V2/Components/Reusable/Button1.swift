@@ -10,6 +10,7 @@ import SwiftUI
 struct Button1: View {
     
     @Binding var enabled: Bool
+    @State var title: String
     @State var fontSize: CGFloat = 24
     
     var body: some View {
@@ -18,7 +19,7 @@ struct Button1: View {
                 .foregroundColor(Color("AccentColor"))
                 .cornerRadius(15)
                 .overlay(
-                    Text("Play")
+                    Text(title)
                         .font(.system(size: fontSize,
                                       weight: .bold,
                                       design: .rounded))
@@ -30,6 +31,6 @@ struct Button1: View {
 
 struct Button1_Previews: PreviewProvider {
     static var previews: some View {
-        Button1(enabled: .constant(false))
+        Button1(enabled: .constant(false), title: "Play")
     }
 }

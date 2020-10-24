@@ -7,7 +7,9 @@
 
 import SwiftUI
 
-struct Dedicated_QuizCardInteriorView: View {
+struct Dedicated_QuizCardInteriorView<Destination: View>: View {
+    
+    var destination: Destination
     
     @ObservedObject var viewModel = ViewModel()
     @State var quiz: Quiz
@@ -49,7 +51,11 @@ struct Dedicated_QuizCardInteriorView: View {
                 }
                 Spacer()
                 VStack {
-                    Button1(enabled: .constant(true), fontSize: 12)
+                    NavigationLink(
+                        destination: destination,
+                        label: {
+                            Button1(enabled: .constant(true), title: "Play", fontSize: 12)
+                        })
                 }
                 .frame(maxWidth: 90, maxHeight: 40)
             }
@@ -75,6 +81,10 @@ struct Dedicated_QuizCardInteriorView: View {
 
 struct Dedicated_QuizCardInteriorView_Previews: PreviewProvider {
     static var previews: some View {
-        Dedicated_QuizCardInteriorView(quiz: QuizData.Math.addition1())
+        NavigationView {
+            Dedicated_QuizCardInteriorView(destination: Text("da"),
+                                           quiz: QuizData.Math.addition1())
+                .navigationBarHidden(true)
+        }
     }
 }

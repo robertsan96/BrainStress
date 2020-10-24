@@ -11,11 +11,17 @@ struct WarmupView: View {
     
     @EnvironmentObject var gameModel: GameModel
     
+    @State var shouldNavigate: Bool = false
+    
     var body: some View {
         ZStack {
+            Rectangle()
+                .edgesIgnoringSafeArea(.all)
+                .foregroundColor(Color("Bg1"))
             VStack {
                 Spacer()
                 Text(gameModel.quiz.title)
+                    .multilineTextAlignment(.center)
                     .font(.system(size: 37, weight: .bold, design: .rounded))
                 Spacer()
                 Circle()
@@ -27,6 +33,20 @@ struct WarmupView: View {
                             .foregroundColor(Color("AccentColor"))
                     )
                 Spacer()
+                NavigationLink(
+                    destination: Text("Game"),
+                    isActive: gameModel.timeRemainingFoWarmUp == 0 ?
+                        .constant(true) :
+                        $shouldNavigate,
+                    label: {
+                        Button1(enabled: .constant(true), title: "Skip")
+                    })
+                    .frame(width: 200, height: 70)
+                    .simultaneousGesture(TapGesture().onEnded({ _ in
+                        shouldNavigate = true
+                        gameModel.timeRemainingFoWarmUp = 0
+                    }))
+                Spacer()
                 Text(gameModel.quiz.description)
                     .multilineTextAlignment(.center)
                     .font(.system(size: 16, weight: .light, design: .rounded))
@@ -35,15 +55,20 @@ struct WarmupView: View {
             .frame(maxWidth: .infinity)
             .padding()
         }
-        .background(Color("Bg1"))
-        .navigationBarHidden(true)
+        .navigationBarHidden(false)
+        .onAppear() {
+            gameModel.startGame()
+        }
     }
 }
 
 struct WarmupView_Previews: PreviewProvider {
     static var previews: some View {
-        WarmupView()
-            .environmentObject(GameModel(quiz: QuizData.Math.addition1()))
-            .preferredColorScheme(.dark)
+        NavigationView {
+            WarmupView()
+                .environmentObject(GameModel(quiz: QuizData.Math.addition1()))
+                .preferredColorScheme(.dark)
+                .navigationBarHidden(true)
+        }
     }
 }

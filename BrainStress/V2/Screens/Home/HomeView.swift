@@ -68,7 +68,9 @@ struct HomeView: View {
                                     CardWithSidebarView(leftContent: {
                                         CardQuizLeft()
                                     }, rightContent: {
-                                        Dedicated_QuizCardInteriorView(quiz: quiz)
+                                        Dedicated_QuizCardInteriorView(destination: WarmupView()
+                                                                        .environmentObject(GameModel(quiz: quiz)),
+                                                                       quiz: quiz)
                                     })
                                 }
                             }
@@ -91,8 +93,8 @@ struct HomeView: View {
         
         var categories = [
             CategoryModel(withName: "All",
-                     withImageName: "",
-                     withOverlayColor: "CardOverlayAll"),
+                          withImageName: "",
+                          withOverlayColor: "CardOverlayAll"),
             
             QuizCategory.math.category(),
             QuizCategory.geography.category(),
@@ -137,7 +139,10 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
-            .preferredColorScheme(.dark)
+        NavigationView {
+            HomeView()
+                .preferredColorScheme(.dark)
+                .navigationBarHidden(true)
+        }
     }
 }

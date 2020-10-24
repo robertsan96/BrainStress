@@ -58,7 +58,7 @@ struct FirstTimeThree: View {
                                 NavigationLink(
                                     destination: HomeView(),
                                     label: {
-                                        Button1(enabled: $canContinue)
+                                        Button1(enabled: $canContinue, title: "Play")
                                     })
                                     .disabled(!canContinue)
                                     .simultaneousGesture(TapGesture().onEnded({ tap in

@@ -49,10 +49,12 @@ class GameModel: ObservableObject {
     init(quiz: Quiz) {
         self.quiz = quiz
         self.originalQuiz = quiz
-        
-        timerConfig()
     }
     
+    /// Should be called by Warmup screen :) on appear.
+    func startGame() {
+        timerConfig()
+    }
 }
 
 // MARK: Configs
