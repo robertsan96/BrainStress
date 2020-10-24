@@ -21,10 +21,11 @@ class GameModel: ObservableObject {
     // Quiz
     
     /// Used for score computing.
-    private let originalQuiz: Quiz
+    let originalQuiz: Quiz
     
     @Published var quiz: Quiz
     @Published var quizItem: QuizItem?
+    @Published var quizItemNumber: Int = 1
     
     @Published var quizItemsSolved: [QuizItem] = []
     @Published var quizItemsFailed: [QuizItem] = []
@@ -133,6 +134,7 @@ extension GameModel {
         }
         quizItem = firstItem
         timeRemainingQuizItem = Int(quizItem?.time.time[quiz.difficulty] ?? 5)
+        quizItemNumber += 1
     }
     
     func itemRemove() {
@@ -187,6 +189,28 @@ extension GameModel {
             // We won't end the quiz item if multiple choice.
             break
         default: break
+        }
+    }
+}
+
+// MARK: UI Helpers
+
+extension GameModel {
+    
+    func isActive(itemNumber number: Int) -> Bool {
+        guard let activeItem = quizItem else { return false }
+        return originalQuiz.items[number] == activeItem
+    }
+    
+    func isSolved(itemNumber number: Int) -> Bool {
+        let originalQuizItem = originalQuiz.items[number]
+        return quizItemsSolved.contains(originalQuizItem)
+    }
+    
+    func inQueue(itemNumber number: Int) -> Bool {
+        let originalQuizItem = originalQuiz.items[number]
+        return quiz.items.contains { quizItem -> Bool in
+            quizItem == originalQuizItem
         }
     }
 }

@@ -68,8 +68,7 @@ struct HomeView: View {
                                     CardWithSidebarView(leftContent: {
                                         CardQuizLeft()
                                     }, rightContent: {
-                                        Dedicated_QuizCardInteriorView(destination: WarmupView()
-                                                                        .environmentObject(GameModel(quiz: quiz)),
+                                        Dedicated_QuizCardInteriorView(destination: WarmupView(gameModel: GameModel(quiz: quiz)),
                                                                        quiz: quiz)
                                     })
                                 }

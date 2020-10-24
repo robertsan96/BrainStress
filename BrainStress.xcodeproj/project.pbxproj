@@ -22,6 +22,8 @@
 		46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46240C2D252F44A6000F34E7 /* GameEndView.swift */; };
 		463E3F48254493BF002980A7 /* WarmupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F47254493BF002980A7 /* WarmupView.swift */; };
 		463E3F5B25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F5A25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift */; };
+		463E3F632544A4B7002980A7 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F622544A4B7002980A7 /* GameView.swift */; };
+		463E3F712544AC51002980A7 /* GameTopQuizItemScroller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 463E3F702544AC51002980A7 /* GameTopQuizItemScroller.swift */; };
 		464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */; };
 		465AF0A0252B75D300524ED9 /* BrainStressApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF09F252B75D300524ED9 /* BrainStressApp.swift */; };
 		465AF0A2252B75D300524ED9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 465AF0A1252B75D300524ED9 /* ContentView.swift */; };
@@ -35,7 +37,7 @@
 		46652C0F253F308400B6B3B0 /* FirstTimeThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46652C0E253F308400B6B3B0 /* FirstTimeThree.swift */; };
 		466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */; };
 		466B23BD2534980600DCCC5A /* KeyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 466B23BC2534980600DCCC5A /* KeyView.swift */; };
-		467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFAF252CBEE300AF4A9B /* GameView.swift */; };
+		467FCFB0252CBEE300AF4A9B /* GameView_Old.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFAF252CBEE300AF4A9B /* GameView_Old.swift */; };
 		467FCFBB252DB01100AF4A9B /* QuizItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFBA252DB01100AF4A9B /* QuizItem.swift */; };
 		467FCFC3252DB12100AF4A9B /* Difficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFC2252DB12100AF4A9B /* Difficulty.swift */; };
 		467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 467FCFC8252DB1E200AF4A9B /* Data.swift */; };
@@ -93,6 +95,8 @@
 		46240C2D252F44A6000F34E7 /* GameEndView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEndView.swift; sourceTree = "<group>"; };
 		463E3F47254493BF002980A7 /* WarmupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarmupView.swift; sourceTree = "<group>"; };
 		463E3F5A25449CB3002980A7 /* Dedicated_QuizCardInteriorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dedicated_QuizCardInteriorView.swift; sourceTree = "<group>"; };
+		463E3F622544A4B7002980A7 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		463E3F702544AC51002980A7 /* GameTopQuizItemScroller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTopQuizItemScroller.swift; sourceTree = "<group>"; };
 		464A4F8D252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdaptsToSoftwareKeyboard.swift; sourceTree = "<group>"; };
 		465AF09C252B75D300524ED9 /* BrainStress.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BrainStress.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465AF09F252B75D300524ED9 /* BrainStressApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainStressApp.swift; sourceTree = "<group>"; };
@@ -112,7 +116,7 @@
 		46652C0E253F308400B6B3B0 /* FirstTimeThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeThree.swift; sourceTree = "<group>"; };
 		466B23B625347C5B00DCCC5A /* MathKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathKeyboardView.swift; sourceTree = "<group>"; };
 		466B23BC2534980600DCCC5A /* KeyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyView.swift; sourceTree = "<group>"; };
-		467FCFAF252CBEE300AF4A9B /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		467FCFAF252CBEE300AF4A9B /* GameView_Old.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView_Old.swift; sourceTree = "<group>"; };
 		467FCFBA252DB01100AF4A9B /* QuizItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizItem.swift; sourceTree = "<group>"; };
 		467FCFC2252DB12100AF4A9B /* Difficulty.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Difficulty.swift; sourceTree = "<group>"; };
 		467FCFC8252DB1E200AF4A9B /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
@@ -232,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				463E3F47254493BF002980A7 /* WarmupView.swift */,
+				463E3F622544A4B7002980A7 /* GameView.swift */,
 			);
 			path = Game;
 			sourceTree = "<group>";
@@ -340,7 +345,7 @@
 		467FCFAE252CBED200AF4A9B /* Games */ = {
 			isa = PBXGroup;
 			children = (
-				467FCFAF252CBEE300AF4A9B /* GameView.swift */,
+				467FCFAF252CBEE300AF4A9B /* GameView_Old.swift */,
 				467FCFDA252DC27700AF4A9B /* GameViewModel.swift */,
 				46240C23252E5F8B000F34E7 /* GameWarmUpView.swift */,
 				46240C28252E675E000F34E7 /* GameTopView.swift */,
@@ -436,6 +441,7 @@
 				46F5992725406D2800C0BDBA /* CardView.swift */,
 				46F5995E2540C06A00C0BDBA /* CardQuizLeft.swift */,
 				46F599632541538B00C0BDBA /* CardWithSidebarView.swift */,
+				463E3F702544AC51002980A7 /* GameTopQuizItemScroller.swift */,
 			);
 			path = Reusable;
 			sourceTree = "<group>";
@@ -700,7 +706,7 @@
 				4686DAFD253054640048B7C1 /* GameBottomView.swift in Sources */,
 				466B23B725347C5B00DCCC5A /* MathKeyboardView.swift in Sources */,
 				4686DB07253433D00048B7C1 /* AppModel.swift in Sources */,
-				467FCFB0252CBEE300AF4A9B /* GameView.swift in Sources */,
+				467FCFB0252CBEE300AF4A9B /* GameView_Old.swift in Sources */,
 				46F5995A2540744500C0BDBA /* Array.swift in Sources */,
 				46076AC62536DEBC00B5C5D2 /* GeneralQuestion.swift in Sources */,
 				46970FD0253ED2F400AAC15F /* FirstTimeOne.swift in Sources */,
@@ -708,7 +714,9 @@
 				467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */,
 				46F599642541538B00C0BDBA /* CardWithSidebarView.swift in Sources */,
 				46240C2E252F44A6000F34E7 /* GameEndView.swift in Sources */,
+				463E3F712544AC51002980A7 /* GameTopQuizItemScroller.swift in Sources */,
 				46F5991725404ACB00C0BDBA /* Button1.swift in Sources */,
+				463E3F632544A4B7002980A7 /* GameView.swift in Sources */,
 				467FCFD6252DB85000AF4A9B /* Double.swift in Sources */,
 				4686DAF8253054220048B7C1 /* GameMidView.swift in Sources */,
 				4686DAF3252F6D6D0048B7C1 /* View.swift in Sources */,

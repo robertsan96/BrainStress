@@ -9,7 +9,7 @@ import SwiftUI
 
 struct WarmupView: View {
     
-    @EnvironmentObject var gameModel: GameModel
+    @ObservedObject var gameModel: GameModel
     
     @State var shouldNavigate: Bool = false
     
@@ -34,7 +34,7 @@ struct WarmupView: View {
                     )
                 Spacer()
                 NavigationLink(
-                    destination: Text("Game"),
+                    destination: GameView().environmentObject(gameModel),
                     isActive: gameModel.timeRemainingFoWarmUp == 0 ?
                         .constant(true) :
                         $shouldNavigate,
@@ -65,8 +65,7 @@ struct WarmupView: View {
 struct WarmupView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            WarmupView()
-                .environmentObject(GameModel(quiz: QuizData.Math.addition1()))
+            WarmupView(gameModel: GameModel(quiz: QuizData.Math.addition1()))
                 .preferredColorScheme(.dark)
                 .navigationBarHidden(true)
         }

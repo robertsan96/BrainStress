@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GameView: View {
+struct GameView_old: View {
     
     @EnvironmentObject var gameModel: GameModel
     
@@ -36,7 +36,7 @@ struct GameView: View {
     }
 }
 
-struct GameView_Previews: PreviewProvider {
+struct GameView_Old_Previews: PreviewProvider {
     
     static var previews: some View {
         NavigationView {
