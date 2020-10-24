@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import SwiftUIPager
 
 struct ContentView: View {
     

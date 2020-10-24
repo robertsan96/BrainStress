@@ -41,7 +41,7 @@ class GameModel: ObservableObject {
     
     @Published var timeRemainingQuizItem: Int = 5
     @Published var timeRemainingFeedback: Int = 2
-    @Published var timeRemainingFoWarmUp: Int = 0
+    @Published var timeRemainingFoWarmUp: Int = 3
     
     let timer = Timer.publish(every: 1, on: .main, in: .default).autoconnect()
     var timerCancellables: Set<AnyCancellable> = Set()
