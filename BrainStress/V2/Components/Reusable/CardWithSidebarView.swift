@@ -9,6 +9,7 @@ import SwiftUI
 
 struct CardWithSidebarView<LeftContent: View, RightContent: View>: View {
     
+    @State var minHeight: CGFloat = 200
     var leftContent: () -> LeftContent
     var rightContent: () -> RightContent
     
@@ -22,7 +23,7 @@ struct CardWithSidebarView<LeftContent: View, RightContent: View>: View {
                 Spacer()
             }
         }
-        .frame(maxWidth: .infinity, minHeight: 200)
+        .frame(maxWidth: .infinity, minHeight: minHeight)
         .background(Color("Dark2"))
         .cornerRadius(15)
     }

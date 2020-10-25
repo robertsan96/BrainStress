@@ -34,20 +34,24 @@ struct GameEndView: View {
                 Spacer()
                 ScrollView {
                     VStack {
-                        ForEach(gameModel.originalQuiz.items, id:\.self) { item in
-                            CardWithSidebarView {
-                                CardQuizLeft()
+                        ForEach(gameModel.originalQuiz.items, id:\.self) { (item: QuizItem) in
+                            CardWithSidebarView(minHeight: 100) {
+                                CardQuizVerdict(correct: gameModel.quizItemsSolved.contains(item))
                             } rightContent: {
-                                VStack {
+                                VStack(alignment: .leading) {
                                     Text(item.text)
                                         .font(.system(size: 18, weight: .bold, design: .rounded))
                                     Spacer()
+                                    Text(item.answer.answer.first ?? "")
+                                        .foregroundColor(Color("AccentColor"))
+                                        .font(.system(size: 18, weight: .bold, design: .rounded))
                                 }
                                 .padding()
                             }
                         }
                     }
                 }
+                .padding()
             }
         }
     }
