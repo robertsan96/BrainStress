@@ -55,7 +55,7 @@ struct WarmupView: View {
             .frame(maxWidth: .infinity)
             .padding()
         }
-        .navigationBarHidden(false)
+        .navigationBarHidden(true)
         .onAppear() {
             gameModel.startGame()
         }

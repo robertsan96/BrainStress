@@ -50,6 +50,7 @@ struct GameTopQuizItemScroller: View {
                     }
                 }
             }
+            .disabled(true)
         }
         .padding()
     }

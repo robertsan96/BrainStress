@@ -19,20 +19,20 @@ enum QuizCategory: CaseIterable {
     func category() -> CategoryModel {
         switch self {
         case .math: return CategoryModel(withName: "Math",
-                                    withImageName: "CardPictureGreece",
-                                    withOverlayColor: "CardOverlayMath")
+                                         withImageName: "CardPictureGreece",
+                                         withOverlayColor: "CardOverlayMath")
         case .geography: return CategoryModel(withName: "Geography",
-                                         withImageName: "CardPictureSunset",
-                                         withOverlayColor: "CardOverlayGeography")
+                                              withImageName: "CardPictureSunset",
+                                              withOverlayColor: "CardOverlayGeography")
         case .trickyQuestions: return CategoryModel(withName: "Tricky Questions",
-                                               withImageName: "CardPictureGNR",
-                                               withOverlayColor: "CardOverlayTrickyQuestions")
+                                                    withImageName: "CardPictureGNR",
+                                                    withOverlayColor: "CardOverlayTrickyQuestions")
         case .automotive: return CategoryModel(withName: "Automotive",
-                                          withImageName: "CardPictureCar",
-                                          withOverlayColor: "CardOverlayAutomotive")
+                                               withImageName: "CardPictureCar",
+                                               withOverlayColor: "CardOverlayAutomotive")
         case .motto: return CategoryModel(withName: "Mottos",
-                                     withImageName: "CardPictureRobert",
-                                     withOverlayColor: "CardOverlayMotto")
+                                          withImageName: "CardPictureRobert",
+                                          withOverlayColor: "CardOverlayMotto")
         }
     }
 }
@@ -262,7 +262,7 @@ struct QuizData {
             return Quiz(id: "QM_CAPITALS_1",
                         title: "Capitals",
                         description: "Let's find out how much geography you know!",
-                        items: QuizItemData.GeneralQuestions.generate(items: 5),
+                        items: QuizItemData.GeneralQuestions.generate(items: 4),
                         category: QuizCategory.geography,
                         difficulty: .normal)
         }
@@ -359,32 +359,24 @@ struct QuizItemData {
             for _ in 0..<items {
                 let r1 = parsedCountries.randomElement()!
                 let qA = r1.capital
-                let qT = "Capital of \n\(r1.name)"
-                let answerType: QuizItemAnswerType = Bool.random() ?
-                    .singleChoice :
-                    .text
+                let qT = "Capital of \(r1.name)"
+                let answerType: QuizItemAnswerType = .singleChoice
                 
                 let quizTime = QuizItemTime(time: [.normal: 15])
                 let quizAnsw: QuizItemAnswer
                 
-                if answerType == .text {
-                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
-                } else if answerType == .singleChoice {
-                    let possibleIncorrects = parsedCountries
-                        .filter { country -> Bool in
-                            country.name != r1.name
-                        }
-                        .shuffled()
-                        .prefix(Int.random(in: 1...3))
-                        .map({ c in
-                            c.capital
-                        })
-                    quizAnsw = QuizItemAnswer(type: answerType,
-                                              answer: [qA],
-                                              incorrects: possibleIncorrects)
-                } else {
-                    quizAnsw = QuizItemAnswer(type: answerType, answer: [qA])
-                }
+                let possibleIncorrects = parsedCountries
+                    .filter { country -> Bool in
+                        country.name != r1.name
+                    }
+                    .shuffled()
+                    .prefix(Int.random(in: 1...3))
+                    .map({ c in
+                        c.capital
+                    })
+                quizAnsw = QuizItemAnswer(type: answerType,
+                                          answer: [qA],
+                                          incorrects: possibleIncorrects)
                 
                 let quizItem = QuizItem(text: qT,
                                         time: quizTime,

@@ -209,8 +209,31 @@ extension GameModel {
     
     func inQueue(itemNumber number: Int) -> Bool {
         let originalQuizItem = originalQuiz.items[number]
-        return quiz.items.contains { quizItem -> Bool in
-            quizItem == originalQuizItem
+        return quiz.items.contains(originalQuizItem)
+    }
+    
+    func timeRemainingForHumans() -> String {
+        let time = Date.secondsToHoursMinutesSeconds(seconds: timeRemainingQuizItem)
+        var humanReadable = ""
+        if time.0 > 0 {
+            if time.0 < 10 {
+                humanReadable.append("0\(time.0):")
+            } else {
+                humanReadable.append("\(time.0):")
+            }
         }
+
+        if time.1 < 10 {
+            humanReadable.append("0\(time.1):")
+        } else {
+            humanReadable.append("\(time.1):")
+        }
+        if time.2 < 10 {
+            humanReadable.append("0\(time.2)")
+        } else {
+            humanReadable.append("\(time.2)")
+        }
+        
+        return humanReadable
     }
 }

@@ -27,7 +27,7 @@ struct GameView_old: View {
                         .padding(.bottom, 10)
                 }
             case .end(_):
-                GameEndView()
+                EmptyView()
             default: Text("Ok dk")
             }
         }

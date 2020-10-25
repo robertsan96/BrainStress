@@ -31,6 +31,8 @@ struct Quiz: Hashable {
 
 struct QuizItem: Hashable {
     
+    var id = UUID()
+    
     var text: String
     var time: QuizItemTime
     
@@ -38,7 +40,7 @@ struct QuizItem: Hashable {
     var category: QuizCategory
     
     static func == (lhs: QuizItem, rhs: QuizItem) -> Bool {
-        lhs.text == rhs.text
+        lhs.id == rhs.id
     }
 }
 
