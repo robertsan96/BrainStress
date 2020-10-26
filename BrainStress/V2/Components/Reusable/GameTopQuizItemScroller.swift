@@ -59,7 +59,7 @@ struct GameTopQuizItemScroller: View {
 struct GameTopQuizItemScroller_Previews: PreviewProvider {
     static var previews: some View {
         GameTopQuizItemScroller()
-            .environmentObject(GameModel(quiz: QuizData.Math.addition1()))
+            .environmentObject(GameModel(quiz: QuizData.Math().addition1()))
             .preferredColorScheme(.dark)
     }
 }

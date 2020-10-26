@@ -65,7 +65,7 @@ struct WarmupView: View {
 struct WarmupView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            WarmupView(gameModel: GameModel(quiz: QuizData.Math.addition1()))
+            WarmupView(gameModel: GameModel(quiz: QuizData.Math().addition1()))
                 .preferredColorScheme(.dark)
                 .navigationBarHidden(true)
         }

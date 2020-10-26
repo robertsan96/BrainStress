@@ -39,34 +39,34 @@ enum QuizCategory: CaseIterable {
 
 struct QuizData {
     
-    static var quizzes: [Quiz] = [
-        QuizData.Math.addition1(),
-        QuizData.Math.addition2(),
-        QuizData.Math.addition3(),
-        QuizData.Math.addition4(),
+    var quizzes: [Quiz] = [
+        QuizData.Math().addition1(),
+        QuizData.Math().addition2(),
+        QuizData.Math().addition3(),
+        QuizData.Math().addition4(),
         
-        QuizData.Math.divisions1(),
-        QuizData.Math.divisions2(),
-        QuizData.Math.divisions3(),
-        QuizData.Math.divisions4(),
+        QuizData.Math().divisions1(),
+        QuizData.Math().divisions2(),
+        QuizData.Math().divisions3(),
+        QuizData.Math().divisions4(),
         
-        QuizData.Math.subtraction1(),
-        QuizData.Math.subtraction2(),
-        QuizData.Math.subtraction3(),
-        QuizData.Math.subtraction4(),
+        QuizData.Math().subtraction1(),
+        QuizData.Math().subtraction2(),
+        QuizData.Math().subtraction3(),
+        QuizData.Math().subtraction4(),
         
-        QuizData.Math.multiplications1(),
-        QuizData.Math.multiplications2(),
-        QuizData.Math.multiplications3(),
-        QuizData.Math.multiplications4(),
+        QuizData.Math().multiplications1(),
+        QuizData.Math().multiplications2(),
+        QuizData.Math().multiplications3(),
+        QuizData.Math().multiplications4(),
         
-        QuizData.Geography.capitals1(),
-        QuizData.Geography.geography1()
+        QuizData.Geography().capitals1(),
+        QuizData.Geography().geography1()
     ]
     
     struct Math {
         
-        static func dummyLevel() -> Quiz {
+        func dummyLevel() -> Quiz {
             return Quiz(id: "QM_DUMMY_1",
                         title: "Additions",
                         description: "Some basic maths for first graders.",
@@ -77,7 +77,7 @@ struct QuizData {
                         difficulty: .easy)
         }
         
-        static func addition1() -> Quiz {
+        func addition1() -> Quiz {
             
             return Quiz(id: "QM_ADDITIONS_1",
                         title: "Additions",
@@ -89,7 +89,7 @@ struct QuizData {
                         difficulty: .easy)
         }
         
-        static func addition2() -> Quiz {
+        func addition2() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_2",
                         title: "Additions",
                         description: "A bit more advanced.",
@@ -100,7 +100,7 @@ struct QuizData {
                         difficulty: .normal)
         }
         
-        static func addition3() -> Quiz {
+        func addition3() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_3",
                         title: "Additions",
                         description: "Ugh, it gets harder here.",
@@ -111,7 +111,7 @@ struct QuizData {
                         difficulty: .hard)
         }
         
-        static func addition4() -> Quiz {
+        func addition4() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_4",
                         title: "Additions",
                         description: "No way you can finalize this.",
@@ -122,7 +122,7 @@ struct QuizData {
                         difficulty: .insane)
         }
         
-        static func subtraction1() -> Quiz {
+        func subtraction1() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_1",
                         title: "Subtractions",
                         description: "The soul grows by subtraction, not addition.",
@@ -133,7 +133,7 @@ struct QuizData {
                         difficulty: .easy)
         }
         
-        static func subtraction2() -> Quiz {
+        func subtraction2() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_2",
                         title: "Subtractions",
                         description: "Feeling angry? Let's add some more stress.",
@@ -144,7 +144,7 @@ struct QuizData {
                         difficulty: .normal)
         }
         
-        static func subtraction3() -> Quiz {
+        func subtraction3() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_3",
                         title: "Subtractions",
                         description: "If you have a bad day, play this. Your day will get even worse.",
@@ -155,7 +155,7 @@ struct QuizData {
                         difficulty: .hard)
         }
         
-        static func subtraction4() -> Quiz {
+        func subtraction4() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_4",
                         title: "Subtractions",
                         description: "This game shouldn't be here... no one can finalize it.",
@@ -166,7 +166,7 @@ struct QuizData {
                         difficulty: .insane)
         }
         
-        static func multiplications1() -> Quiz {
+        func multiplications1() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_1",
                         title: "Multiplications",
                         description: "Some basic maths for first graders.",
@@ -177,7 +177,7 @@ struct QuizData {
                         difficulty: .easy)
         }
         
-        static func multiplications2() -> Quiz {
+        func multiplications2() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_2",
                         title: "Multiplications",
                         description: "Really?",
@@ -188,7 +188,7 @@ struct QuizData {
                         difficulty: .normal)
         }
         
-        static func multiplications3() -> Quiz {
+        func multiplications3() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_3",
                         title: "Multiplications",
                         description: "We promise you have no chance.",
@@ -199,7 +199,7 @@ struct QuizData {
                         difficulty: .hard)
         }
         
-        static func multiplications4() -> Quiz {
+        func multiplications4() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_4",
                         title: "Multiplications",
                         description: "Feeling useless? Think about this game.",
@@ -210,7 +210,7 @@ struct QuizData {
                         difficulty: .insane)
         }
         
-        static func divisions1() -> Quiz {
+        func divisions1() -> Quiz {
             return Quiz(id: "QM_DIVISIONS_1",
                         title: "Divisions",
                         description: "Easy-peasy.",
@@ -221,7 +221,7 @@ struct QuizData {
                         difficulty: .easy)
         }
         
-        static func divisions2() -> Quiz {
+        func divisions2() -> Quiz {
             return Quiz(id: "QM_DIVISIONS_2",
                         title: "Divisions",
                         description: "Gets harder..",
@@ -232,7 +232,7 @@ struct QuizData {
                         difficulty: .normal)
         }
         
-        static func divisions3() -> Quiz {
+        func divisions3() -> Quiz {
             return Quiz(id: "QM_DIVISIONS_3",
                         title: "Divisions",
                         description: "Hahahaha! No chance.",
@@ -243,7 +243,7 @@ struct QuizData {
                         difficulty: .hard)
         }
         
-        static func divisions4() -> Quiz {
+        func divisions4() -> Quiz {
             return Quiz(id: "QM_DIVISIONS_4",
                         title: "Divisions",
                         description: "Ain't nobody got time for that.",
@@ -257,7 +257,7 @@ struct QuizData {
     
     struct Geography {
         
-        static func capitals1() -> Quiz {
+        func capitals1() -> Quiz {
             
             return Quiz(id: "QM_CAPITALS_1",
                         title: "Capitals",
@@ -267,7 +267,7 @@ struct QuizData {
                         difficulty: .normal)
         }
         
-        static func geography1() -> Quiz {
+        func geography1() -> Quiz {
             
             return Quiz(id: "QM_GEOGRAPHY_1",
                         title: "Mix",

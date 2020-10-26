@@ -22,14 +22,47 @@ struct GameEndView: View {
                         Text("Results")
                             .font(.system(size: 25, weight: .semibold, design: .rounded))
                         Spacer()
-                        Button(action: {}, label: {
-                            Image(systemName: "xmark.circle.fill")
-                                .resizable()
-                                .frame(width: 30)
-                                .frame(height: 30)
-                        })
+                        NavigationLink(
+                            destination: HomeView(),
+                            label: {
+                                Image(systemName: "xmark.circle.fill")
+                                    .resizable()
+                                    .frame(width: 30)
+                                    .frame(height: 30)
+                                    .foregroundColor(Color("AccentColor"))
+                            })
                     }
                     .padding()
+                    
+                    VStack {
+                        HStack {
+                            switch gameModel.gameState {
+                            case .end(let win):
+                                Text(win ? "Passed" : "Failed")
+                                    .font(.system(size: 21, weight: .bold, design: .rounded))
+                                    .foregroundColor(win ? Color.green : Color.red)
+                            default:
+                                Text("Hmm.")
+                                    .font(.system(size: 21, weight: .bold, design: .rounded))
+                            }
+                            Spacer()
+                        }
+                        HStack {
+                            Text("Correct Answers: \(gameModel.quizItemsSolved.count)")
+                                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            Spacer()
+                        }
+                        HStack {
+                            Text("Wrong Answers: \(gameModel.quizItemsFailed.count)")
+                                .font(.system(size: 16, weight: .semibold, design: .rounded))
+                            Spacer()
+                        }
+                    }
+                    .padding([.leading, .trailing, .bottom])
+                    
+                    Rectangle()
+                        .frame(height: 1)
+                        .foregroundColor(Color("Dark4"))
                 }
                 Spacer()
                 ScrollView {
@@ -60,7 +93,7 @@ struct GameEndView: View {
 struct GameEndView_Previews: PreviewProvider {
     static var previews: some View {
         GameEndView()
-            .environmentObject(GameModel(quiz: QuizData.Geography.capitals1()))
+            .environmentObject(GameModel(quiz: QuizData.Geography().capitals1()))
             .preferredColorScheme(.dark)
     }
 }

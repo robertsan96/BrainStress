@@ -104,7 +104,7 @@ struct HomeView: View {
             QuizCategory.motto.category()
         ]
         
-        var quizzes = QuizData.quizzes
+        var quizzes = QuizData().quizzes
         
         var welcomeMessage: String {
             let hour = Calendar.current.component(.hour, from: Date())
@@ -129,7 +129,7 @@ struct HomeView: View {
         }
         
         public func setQuizzes(byCategory category: CategoryModel) {
-            quizzes = QuizData.quizzes.filter({ q in
+            quizzes = QuizData().quizzes.filter({ q in
                 (q.category.category() == activeCategory) || activeCategory.name == "All"
             })
         }

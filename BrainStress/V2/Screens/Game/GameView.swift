@@ -93,7 +93,7 @@ struct GameView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             PreviewWrapper()
-                .environmentObject(GameModel(quiz: QuizData.Geography.capitals1()))
+                .environmentObject(GameModel(quiz: QuizData.Geography().capitals1()))
         }
     }
 }

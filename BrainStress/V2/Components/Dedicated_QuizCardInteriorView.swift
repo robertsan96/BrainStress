@@ -83,7 +83,7 @@ struct Dedicated_QuizCardInteriorView_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
             Dedicated_QuizCardInteriorView(destination: Text("da"),
-                                           quiz: QuizData.Math.addition1())
+                                           quiz: QuizData.Math().addition1())
                 .navigationBarHidden(true)
         }
     }
