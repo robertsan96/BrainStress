@@ -295,11 +295,19 @@ struct QuizItemData {
                 
                 let r1 = Double(difficulty.mathInterval(forOperator: qOperator).randomElement()!)
                 let r2 = Double(difficulty.mathInterval(forOperator: qOperator).randomElement()!)
-                let qA = qOperator.compute(left: r1, right: r2).clean
-                let qT = "\(r1.clean) \(qOperator.symbol()) \(r2.clean)"
+                let qA = qOperator.compute(left: r1, right: r2)
+                let qT = "\(r1.clean) \(qOperator.symbol()) \(r2.clean) = ?"
                 
                 let quizTime = time
-                let quizAnsw = QuizItemAnswer(type: .text, answer: [qA])
+                
+                let incorrects: [String] = [
+                    "\((qA + Double(Int(qA/4*2)) - Double(Int.random(in: 1...3))).clean)",
+                    "\((qA - Double(Int(qA/2)) - Double(Int.random(in: 1...3))).clean)",
+                    "\((qA + Double(Int(qA/2)) + Double(Int.random(in: 1...3))).clean)",
+                ]
+                let quizAnsw = QuizItemAnswer(type: .singleChoice,
+                                              answer: [qA.clean],
+                                              incorrects: incorrects)
                 let quizItem = QuizItem(text: qT,
                                         time: quizTime,
                                         answer: quizAnsw,

@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct CardQuizLeft: View {
+    
+    @State var quiz: Quiz
+    
     var body: some View {
         ZStack {
             Rectangle()
@@ -19,7 +22,7 @@ struct CardQuizLeft: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(Color.white)
-                    Text("12")
+                    Text("\(quiz.getTime().clean)")
                         .font(.system(size: 8,
                                       weight: .light,
                                       design: .rounded))
@@ -31,7 +34,7 @@ struct CardQuizLeft: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(Color.white)
-                    Text("insane")
+                    Text(quiz.difficulty.rawValue)
                         .font(.system(size: 8,
                                       weight: .light,
                                       design: .rounded))
@@ -43,7 +46,7 @@ struct CardQuizLeft: View {
                         .resizable()
                         .scaledToFit()
                         .foregroundColor(Color.white)
-                    Text("20")
+                    Text("\(quiz.items.count)")
                         .font(.system(size: 8,
                                       weight: .light,
                                       design: .rounded))
@@ -57,6 +60,6 @@ struct CardQuizLeft: View {
 
 struct CardQuizLeft_Previews: PreviewProvider {
     static var previews: some View {
-        CardQuizLeft()
+        CardQuizLeft(quiz: QuizData.Math().addition1())
     }
 }

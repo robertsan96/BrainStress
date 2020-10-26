@@ -29,7 +29,7 @@ struct Dedicated_QuizCardInteriorView<Destination: View>: View {
                             .font(.system(size: 7, weight: .black, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                         Text(viewModel.getPlays(quizId: quiz.id))
-                            .font(.system(size: 24, weight: .medium, design: .rounded))
+                            .font(.system(size: 22, weight: .medium, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                     }
                     VStack(alignment: .leading) {
@@ -37,7 +37,7 @@ struct Dedicated_QuizCardInteriorView<Destination: View>: View {
                             .font(.system(size: 7, weight: .black, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                         Text(viewModel.getWins(quizId: quiz.id))
-                            .font(.system(size: 24, weight: .medium, design: .rounded))
+                            .font(.system(size: 22, weight: .medium, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                     }
                     VStack(alignment: .leading) {
@@ -45,7 +45,7 @@ struct Dedicated_QuizCardInteriorView<Destination: View>: View {
                             .font(.system(size: 7, weight: .black, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                         Text(viewModel.getFails(quizId: quiz.id))
-                            .font(.system(size: 24, weight: .medium, design: .rounded))
+                            .font(.system(size: 22, weight: .medium, design: .rounded))
                             .foregroundColor(Color("Dark3"))
                     }
                 }

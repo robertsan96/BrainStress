@@ -64,9 +64,9 @@ struct HomeView: View {
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 250)
                             } else {
-                                ForEach(viewModel.quizzes, id:\.self) { quiz in
+                                ForEach(viewModel.quizzes, id:\.self.id) { quiz in
                                     CardWithSidebarView(leftContent: {
-                                        CardQuizLeft()
+                                        CardQuizLeft(quiz: quiz)
                                     }, rightContent: {
                                         Dedicated_QuizCardInteriorView(destination: WarmupView(gameModel: GameModel(quiz: quiz)),
                                                                        quiz: quiz)
