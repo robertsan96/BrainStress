@@ -92,7 +92,7 @@ struct QuizData {
         func addition2() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_2",
                         title: "Additions",
-                        description: "A bit more advanced.",
+                        description: "Still, basic maths, but the numbers increase.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .add),
@@ -103,7 +103,7 @@ struct QuizData {
         func addition3() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_3",
                         title: "Additions",
-                        description: "Ugh, it gets harder here.",
+                        description: "Ugh, you shouldn't be able to finish this one.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .add),
@@ -114,7 +114,7 @@ struct QuizData {
         func addition4() -> Quiz {
             return Quiz(id: "QM_ADDITIONS_4",
                         title: "Additions",
-                        description: "No way you can finalize this.",
+                        description: "If you ever feel useless, think about this quiz...",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .add),
@@ -147,7 +147,7 @@ struct QuizData {
         func subtraction3() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_3",
                         title: "Subtractions",
-                        description: "If you have a bad day, play this. Your day will get even worse.",
+                        description: "If you have a bad day, play this. You'll want your bad day back.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .hard,
                                                                qOperator: .substract),
@@ -158,7 +158,7 @@ struct QuizData {
         func subtraction4() -> Quiz {
             return Quiz(id: "QM_SUBTRACTIONS_4",
                         title: "Subtractions",
-                        description: "This game shouldn't be here... no one can finalize it.",
+                        description: "This game shouldn't be there... no one can finalize it.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .substract),
@@ -169,7 +169,7 @@ struct QuizData {
         func multiplications1() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_1",
                         title: "Multiplications",
-                        description: "Some basic maths for first graders.",
+                        description: "Some basic multiplications..",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .easy,
                                                                qOperator: .multiply),
@@ -202,7 +202,7 @@ struct QuizData {
         func multiplications4() -> Quiz {
             return Quiz(id: "QM_MULTIPLICATIONS_4",
                         title: "Multiplications",
-                        description: "Feeling useless? Think about this game.",
+                        description: "Feeling useless? Think about this quiz.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .insane,
                                                                qOperator: .multiply),
@@ -224,7 +224,7 @@ struct QuizData {
         func divisions2() -> Quiz {
             return Quiz(id: "QM_DIVISIONS_2",
                         title: "Divisions",
-                        description: "Gets harder..",
+                        description: "Divisions done well.",
                         items: QuizItemData.MathItems.generate(mathItems: 20,
                                                                difficulty: .normal,
                                                                qOperator: .division),
@@ -261,8 +261,9 @@ struct QuizData {
             
             return Quiz(id: "QM_CAPITALS_1",
                         title: "Capitals",
-                        description: "Let's find out how much geography you know!",
-                        items: QuizItemData.GeneralQuestions.generate(items: 4),
+                        description: "This quiz game is going to ask you countries which we expect " +
+                            "you should know their capitals.",
+                        items: QuizItemData.GeneralQuestions.generate(model: Country.self, items: 20),
                         category: QuizCategory.geography,
                         difficulty: .normal)
         }
@@ -273,6 +274,20 @@ struct QuizData {
                         title: "Mix",
                         description: "Rivers, mountains, volcanos ...",
                         items: QuizItemData.GeneralQuestions.generateGeneral(items: 20),
+                        category: QuizCategory.geography,
+                        difficulty: .normal)
+        }
+    }
+    
+    struct Companies {
+        
+        func mottos1() -> Quiz {
+            
+            return Quiz(id: "QM_MOTTOS_1",
+                        title: "Mottos",
+                        description: "Let's test how much influence do corporations have in marketing. " +
+                        "This quiz is going to test if you know random company mottos.",
+                        items: QuizItemData.GeneralQuestions.generate(model: Country.self, items: 20),
                         category: QuizCategory.geography,
                         difficulty: .normal)
         }
@@ -361,36 +376,12 @@ struct QuizItemData {
         }
         
         
-        static func generate(items: Int) -> [QuizItem] {
+        static func generate<Model: Quizable & CSVParsable>(model: Model.Type, items: Int) -> [QuizItem] {
             var generatedQuizItems: [QuizItem] = []
-            let parsedCountries = CSVManager.parseCountryCapitalsCSV()
+            let parsedCountries: [Model] = CSVManager.parseCSV(csv: .countryCapitals)
             for _ in 0..<items {
                 let r1 = parsedCountries.randomElement()!
-                let qA = r1.capital
-                let qT = "Capital of \(r1.name)"
-                let answerType: QuizItemAnswerType = .singleChoice
-                
-                let quizTime = QuizItemTime(time: [.normal: 15])
-                let quizAnsw: QuizItemAnswer
-                
-                let possibleIncorrects = parsedCountries
-                    .filter { country -> Bool in
-                        country.name != r1.name
-                    }
-                    .shuffled()
-                    .prefix(Int.random(in: 1...3))
-                    .map({ c in
-                        c.capital
-                    })
-                quizAnsw = QuizItemAnswer(type: answerType,
-                                          answer: [qA],
-                                          incorrects: possibleIncorrects)
-                
-                let quizItem = QuizItem(text: qT,
-                                        time: quizTime,
-                                        answer: quizAnsw,
-                                        category: QuizCategory.geography)
-                
+                let quizItem = r1.quizItem(extraModels: parsedCountries)
                 generatedQuizItems.append(quizItem)
             }
             return generatedQuizItems
@@ -400,6 +391,9 @@ struct QuizItemData {
 
 struct QuizMessageData {
     
+    static func da<Model: Quizable & CSVParsable>(arr: [Model]) -> QuizItem {
+        return QuizItem(id: UUID(), text: "", time: QuizItemTime(), answer: QuizItemAnswer(type: .numeric, answer: []), category: .math)
+    }
     struct EndingMessages {
         
         static func winningMessages() -> [String] {
