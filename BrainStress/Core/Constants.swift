@@ -10,6 +10,7 @@ import Foundation
 struct Constants {
     
     static let kUserNickname = "USER_NICKNAME"
+    static let homeViewWelcomeAlertShown = "SHOW_ALERT_ON_WELCOME"
     
     static func kQuizWins(quizId: String) -> String {
         return "\(quizId)_QUIZ_WINS"

@@ -55,3 +55,14 @@ extension UserDefaultsManager {
         UserDefaults.standard.setValue(fails + 1, forKey: kFails)
     }
 }
+
+extension UserDefaultsManager {
+    
+    func set(showAlertOnHome: Bool) {
+        UserDefaults.standard.setValue(showAlertOnHome, forKey: Constants.homeViewWelcomeAlertShown)
+    }
+    
+    func getShowAlertOnHome() -> Bool {
+        UserDefaults.standard.bool(forKey: Constants.homeViewWelcomeAlertShown)
+    }
+}

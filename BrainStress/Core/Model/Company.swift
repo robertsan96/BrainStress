@@ -52,7 +52,7 @@ class Company: CSVParsable, Quizable {
         let quizItem = QuizItem(text: qT,
                                 time: quizTime,
                                 answer: quizAnsw,
-                                category: QuizCategory.motto)
+                                category: QuizCategory.corporate)
         
         return quizItem
     }

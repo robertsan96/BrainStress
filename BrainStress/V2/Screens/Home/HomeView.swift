@@ -78,6 +78,11 @@ struct HomeView: View {
                 })
             }
         }
+        .alert(isPresented: .constant(viewModel.shouldShowWelcomeAlert)) {
+            Alert(title: Text("Hello, \(UserDefaultsManager.shared.getNickname())!"),
+                  message: Text("Welcome to Brain Stress Quizzes! As we are still working on the functionalities of this app, you might encounter weird behaviors, inconveniences while playing and other unwanted stuff we all hate! Please be patient, we're a small team working hard :)! Any feedback on the App Store is welcome!"),
+                  dismissButton: .cancel())
+        }
         .background(Color("Bg1"))
         .navigationBarHidden(true)
     }
@@ -90,6 +95,8 @@ struct HomeView: View {
             }
         }
         
+        @Published var shouldShowWelcomeAlert: Bool = false
+        
         var categories = [
             CategoryModel(withName: "All",
                           withImageName: "",
@@ -101,7 +108,7 @@ struct HomeView: View {
             QuizCategory.trickyQuestions.category(),
             QuizCategory.automotive.category(),
             
-            QuizCategory.motto.category()
+            QuizCategory.corporate.category()
         ]
         
         var quizzes = QuizData().quizzes
@@ -126,12 +133,19 @@ struct HomeView: View {
             activeCategory = categories.first!
             super.init()
             setQuizzes(byCategory: activeCategory)
+            homeWelcomeAlert()
         }
         
         public func setQuizzes(byCategory category: CategoryModel) {
             quizzes = QuizData().quizzes.filter({ q in
                 (q.category.category() == activeCategory) || activeCategory.name == "All"
             })
+        }
+        
+        public func homeWelcomeAlert() {
+            let welcomeAlertShown = UserDefaultsManager.shared.getShowAlertOnHome()
+            self.shouldShowWelcomeAlert = !welcomeAlertShown
+            UserDefaultsManager.shared.set(showAlertOnHome: !welcomeAlertShown)
         }
     }
 }
