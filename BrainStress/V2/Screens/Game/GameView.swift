@@ -26,12 +26,12 @@ struct GameView: View {
                             Text(gameModel.quiz.title)
                                 .font(.system(size: 25, weight: .semibold, design: .rounded))
                             Spacer()
-                            Button(action: {}, label: {
-                                Image(systemName: "xmark.circle.fill")
-                                    .resizable()
-                                    .frame(width: 30)
-                                    .frame(height: 30)
-                            })
+//                            Button(action: {}, label: {
+//                                Image(systemName: "xmark.circle.fill")
+//                                    .resizable()
+//                                    .frame(width: 30)
+//                                    .frame(height: 30)
+//                            })
                         }
                         .padding()
                         GameTopQuizItemScroller()
