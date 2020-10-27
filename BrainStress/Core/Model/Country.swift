@@ -7,11 +7,6 @@
 
 import Foundation
 
-protocol Quizable {
-    
-    func quizItem<Model: Quizable & CSVParsable>(extraModels: [Model]) -> QuizItem
-}
-
 class Country: CSVParsable, Quizable {
 
     var name: String
@@ -45,7 +40,7 @@ class Country: CSVParsable, Quizable {
                 country.name != name
             }
             .shuffled()
-            .prefix(Int.random(in: 1...3))
+            .prefix(3)
             .map({ c in
                 c.capital
             })

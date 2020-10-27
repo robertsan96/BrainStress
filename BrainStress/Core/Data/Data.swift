@@ -61,7 +61,9 @@ struct QuizData {
         QuizData.Math().multiplications4(),
         
         QuizData.Geography().capitals1(),
-        QuizData.Geography().geography1()
+        QuizData.Geography().geography1(),
+        
+        QuizData.Companies().mottos1()
     ]
     
     struct Math {
@@ -263,7 +265,7 @@ struct QuizData {
                         title: "Capitals",
                         description: "This quiz game is going to ask you countries which we expect " +
                             "you should know their capitals.",
-                        items: QuizItemData.GeneralQuestions.generate(model: Country.self, items: 20),
+                        items: QuizItemData.GeneralQuestions.generate(model: Country.self, items: 20, csv: .countryCapitals),
                         category: QuizCategory.geography,
                         difficulty: .normal)
         }
@@ -287,8 +289,8 @@ struct QuizData {
                         title: "Mottos",
                         description: "Let's test how much influence do corporations have in marketing. " +
                         "This quiz is going to test if you know random company mottos.",
-                        items: QuizItemData.GeneralQuestions.generate(model: Country.self, items: 20),
-                        category: QuizCategory.geography,
+                        items: QuizItemData.GeneralQuestions.generate(model: Company.self, items: 20, csv: CSVs.mottos1),
+                        category: QuizCategory.motto,
                         difficulty: .normal)
         }
     }
@@ -376,9 +378,11 @@ struct QuizItemData {
         }
         
         
-        static func generate<Model: Quizable & CSVParsable>(model: Model.Type, items: Int) -> [QuizItem] {
+        static func generate<Model: Quizable & CSVParsable>(model: Model.Type,
+                                                            items: Int,
+                                                            csv: CSVs) -> [QuizItem] {
             var generatedQuizItems: [QuizItem] = []
-            let parsedCountries: [Model] = CSVManager.parseCSV(csv: .countryCapitals)
+            let parsedCountries: [Model] = CSVManager.parseCSV(csv: csv)
             for _ in 0..<items {
                 let r1 = parsedCountries.randomElement()!
                 let quizItem = r1.quizItem(extraModels: parsedCountries)

@@ -47,6 +47,8 @@
 		469572DD254609C4005A2A3E /* CardQuizVerdict.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469572DC254609C4005A2A3E /* CardQuizVerdict.swift */; };
 		469572EB2546B5AF005A2A3E /* Company.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469572EA2546B5AF005A2A3E /* Company.swift */; };
 		469572F02546B6F8005A2A3E /* CSVParsable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469572EF2546B6F8005A2A3E /* CSVParsable.swift */; };
+		469572F52547FEF2005A2A3E /* Quizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 469572F42547FEF2005A2A3E /* Quizable.swift */; };
+		469572FA2547FFD2005A2A3E /* Mottos_1.csv in Resources */ = {isa = PBXBuildFile; fileRef = 469572F92547FFD2005A2A3E /* Mottos_1.csv */; };
 		46970FD0253ED2F400AAC15F /* FirstTimeOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46970FCF253ED2F400AAC15F /* FirstTimeOne.swift */; };
 		46988FF3252C7559006EF37B /* QuizCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46988FF2252C7559006EF37B /* QuizCategory.swift */; };
 		46989005252C7D85006EF37B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46989004252C7D85006EF37B /* UIColor.swift */; };
@@ -124,6 +126,8 @@
 		469572DC254609C4005A2A3E /* CardQuizVerdict.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuizVerdict.swift; sourceTree = "<group>"; };
 		469572EA2546B5AF005A2A3E /* Company.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Company.swift; sourceTree = "<group>"; };
 		469572EF2546B6F8005A2A3E /* CSVParsable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVParsable.swift; sourceTree = "<group>"; };
+		469572F42547FEF2005A2A3E /* Quizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quizable.swift; sourceTree = "<group>"; };
+		469572F92547FFD2005A2A3E /* Mottos_1.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Mottos_1.csv; sourceTree = "<group>"; };
 		46970FCF253ED2F400AAC15F /* FirstTimeOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstTimeOne.swift; sourceTree = "<group>"; };
 		46988FF2252C7559006EF37B /* QuizCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizCategory.swift; sourceTree = "<group>"; };
 		46989004252C7D85006EF37B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		46076AA725358CD500B5C5D2 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				469572F92547FFD2005A2A3E /* Mottos_1.csv */,
 				46076AD52536E2E900B5C5D2 /* Geography_1.csv */,
 				46076AAB25358D0400B5C5D2 /* Country_Capitals.csv */,
 				465AF0A3252B75D500524ED9 /* Assets.xcassets */,
@@ -390,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				46F5992D2540708100C0BDBA /* CardPresentable.swift */,
+				469572F42547FEF2005A2A3E /* Quizable.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -528,6 +534,7 @@
 			files = (
 				465AF0A7252B75D500524ED9 /* Preview Assets.xcassets in Resources */,
 				465AF0A4252B75D500524ED9 /* Assets.xcassets in Resources */,
+				469572FA2547FFD2005A2A3E /* Mottos_1.csv in Resources */,
 				46076AAC25358D0400B5C5D2 /* Country_Capitals.csv in Resources */,
 				46076AD62536E2E900B5C5D2 /* Geography_1.csv in Resources */,
 			);
@@ -673,6 +680,7 @@
 				46970FD0253ED2F400AAC15F /* FirstTimeOne.swift in Sources */,
 				469572D82546075D005A2A3E /* GameEndView.swift in Sources */,
 				464A4F8E252BB8A600AD35FD /* AdaptsToSoftwareKeyboard.swift in Sources */,
+				469572F52547FEF2005A2A3E /* Quizable.swift in Sources */,
 				463E3F762545E2F7002980A7 /* Date.swift in Sources */,
 				467FCFC9252DB1E200AF4A9B /* Data.swift in Sources */,
 				46F599642541538B00C0BDBA /* CardWithSidebarView.swift in Sources */,
