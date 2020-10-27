@@ -145,7 +145,9 @@ struct HomeView: View {
         public func homeWelcomeAlert() {
             let welcomeAlertShown = UserDefaultsManager.shared.getShowAlertOnHome()
             self.shouldShowWelcomeAlert = !welcomeAlertShown
-            UserDefaultsManager.shared.set(showAlertOnHome: !welcomeAlertShown)
+            if !welcomeAlertShown {
+                UserDefaultsManager.shared.set(showAlertOnHome: true)
+            }
         }
     }
 }

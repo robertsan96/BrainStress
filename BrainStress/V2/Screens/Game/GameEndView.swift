@@ -75,9 +75,14 @@ struct GameEndView: View {
                                     Text(item.text)
                                         .font(.system(size: 18, weight: .bold, design: .rounded))
                                     Spacer()
-                                    Text(item.answer.answer.first ?? "")
-                                        .foregroundColor(Color("AccentColor"))
-                                        .font(.system(size: 18, weight: .bold, design: .rounded))
+                                    HStack(alignment: .center) {
+                                        Text("Correct:")
+                                            .foregroundColor(Color("SubtitleColor"))
+                                            .font(.system(size: 12, weight: .bold, design: .rounded))
+                                        Text(item.answer.answer.first ?? "")
+                                            .foregroundColor(Color("AccentColor"))
+                                            .font(.system(size: 18, weight: .bold, design: .rounded))
+                                    }
                                 }
                                 .padding()
                             }
